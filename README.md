@@ -125,3 +125,6 @@ To add new models or detection categories:
 4. Update the DETECTION_SEARCH_PROMPTS in image_to_query.js
 5. Update the DETECTION_CONTENT_MAP in detection_content.js
 
+6. *******************************"The system is designed to detect plant diseases and identify the type of soil. Upon execution, the code automatically redirects to the custom-built website, where it analyzes and displays the detected soil type and plant disease. The platform then provides detailed information, including symptoms, causes, preventive measures, and recommended solutions for the identified issues."*******************
+7. if u want to access my pt files u can...., from here https://drive.google.com/drive/folders/19IAs19poiXtE_3fFSWcriwrGeI8ARB1t?usp=sharing
+
