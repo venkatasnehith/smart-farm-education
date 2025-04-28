@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vermicomposting Guide - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/vermicomposting.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .article-header h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .article-meta {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .article-section {
+            margin-bottom: 3rem;
+        }
+        .article-section h2 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .article-section p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .worm-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .worm-card h3 {
+            color: #2c5282;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        .worm-details {
+            margin-top: 1rem;
+        }
+        .worm-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        .worm-details li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        .worm-details li:before {
+            content: "•";
+            color: #2c5282;
+            position: absolute;
+            left: 0;
+        }
+        .info-box {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .info-box h4 {
+            color: #2b6cb0;
+            margin-bottom: 0.5rem;
+        }
+        .info-box p {
+            color: #4a5568;
+            margin: 0;
+        }
+        .setup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .tip-box {
+            background: #f0fff4;
+            border-left: 4px solid #48bb78;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .tip-box h4 {
+            color: #2f855a;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="article-header">
+        <h1>Vermicomposting Guide</h1>
+        <p>Using earthworms for efficient organic waste decomposition</p>
+    </div>
+
+    <main class="article-content">
+        <div class="article-meta">
+            <span><i class="fas fa-calendar"></i> Last Updated: March 14, 2024</span>
+            <span class="mx-3">|</span>
+            <span><i class="fas fa-clock"></i> 12 min read</span>
+        </div>
+
+        <div class="article-section">
+            <h2>Introduction to Vermicomposting</h2>
+            <p>Vermicomposting is the process of using earthworms to convert organic waste into high-quality compost. This method produces nutrient-rich castings that are excellent for plant growth.</p>
+            
+            <div class="info-box">
+                <h4>Benefits of Vermicomposting</h4>
+                <p>Worm castings are rich in nutrients, beneficial microorganisms, and growth hormones that enhance plant health and soil structure.</p>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Choosing Your Worms</h2>
+            <div class="setup-grid">
+                <div class="worm-card">
+                    <h3>Red Wigglers (Eisenia fetida)</h3>
+                    <div class="worm-details">
+                        <ul>
+                            <li>Most common composting worm</li>
+                            <li>Excellent waste processors</li>
+                            <li>Reproduce quickly</li>
+                            <li>Thrive in captivity</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="worm-card">
+                    <h3>European Nightcrawlers</h3>
+                    <div class="worm-details">
+                        <ul>
+                            <li>Larger than red wigglers</li>
+                            <li>Good for fishing bait</li>
+                            <li>Process more waste</li>
+                            <li>Prefer deeper bins</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="worm-card">
+                    <h3>Indian Blues</h3>
+                    <div class="worm-details">
+                        <ul>
+                            <li>Tropical species</li>
+                            <li>Fast reproducers</li>
+                            <li>Heat tolerant</li>
+                            <li>Good for warm climates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Setting Up Your Worm Bin</h2>
+            
+            <div class="worm-card">
+                <h3>Container Requirements</h3>
+                <div class="worm-details">
+                    <ul>
+                        <li>Shallow, dark container</li>
+                        <li>Good drainage holes</li>
+                        <li>Secure lid with air holes</li>
+                        <li>1-2 square feet per pound of worms</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="worm-card">
+                <h3>Bedding Materials</h3>
+                <div class="worm-details">
+                    <ul>
+                        <li>Shredded paper/cardboard</li>
+                        <li>Coconut coir</li>
+                        <li>Aged compost</li>
+                        <li>Dry leaves</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tip-box">
+                <h4>Moisture Level</h4>
+                <p>Maintain bedding moisture at 70-80%. It should feel like a wrung-out sponge when squeezed.</p>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Feeding Your Worms</h2>
+            <div class="worm-card">
+                <h3>Suitable Foods</h3>
+                <div class="worm-details">
+                    <ul>
+                        <li>Fruit and vegetable scraps</li>
+                        <li>Coffee grounds and filters</li>
+                        <li>Tea bags</li>
+                        <li>Crushed eggshells</li>
+                        <li>Plain paper products</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="worm-card">
+                <h3>Foods to Avoid</h3>
+                <div class="worm-details">
+                    <ul>
+                        <li>Meat and dairy</li>
+                        <li>Oily foods</li>
+                        <li>Citrus fruits</li>
+                        <li>Onions and garlic</li>
+                        <li>Processed foods</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Maintenance and Harvesting</h2>
+            <div class="worm-card">
+                <h3>Regular Maintenance</h3>
+                <div class="worm-details">
+                    <ul>
+                        <li>Monitor moisture levels</li>
+                        <li>Check temperature (55-77°F)</li>
+                        <li>Feed every 1-2 weeks</li>
+                        <li>Remove excess water</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="worm-card">
+                <h3>Harvesting Methods</h3>
+                <div class="worm-details">
+                    <ul>
+                        <li>Light separation method</li>
+                        <li>Migration method</li>
+                        <li>Hand sorting</li>
+                        <li>Screen sifting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Troubleshooting</h2>
+            <div class="worm-card">
+                <h3>Common Problems</h3>
+                <div class="worm-details">
+                    <ul>
+                        <li>Escaping worms: Check moisture/temperature</li>
+                        <li>Bad odors: Reduce feeding</li>
+                        <li>Fruit flies: Bury food scraps</li>
+                        <li>Mold: Improve air circulation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                    <li><a href="../category-organic.html">Organic Farming</a></li>
+                    <li><a href="../category-equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

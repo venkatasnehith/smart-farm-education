@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Management - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/livestock-disease.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .article-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .disease-card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .symptom-list {
+            list-style: none;
+            padding: 0;
+        }
+        .symptom-list li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+        .symptom-list li:before {
+            content: "!";
+            color: #e53e3e;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .treatment-box {
+            background: #f0fff4;
+            border-left: 4px solid #48bb78;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="article-header">
+        <h1>Disease Management in Livestock</h1>
+        <p>Identifying and treating common livestock diseases</p>
+    </div>
+
+    <main class="article-content">
+        <div class="article-meta">
+            <span><i class="fas fa-calendar"></i> Last Updated: Mar 14, 2024</span>
+            <span class="mx-3">|</span>
+            <span><i class="fas fa-clock"></i> 15 min read</span>
+        </div>
+
+        <section>
+            <h2>Common Diseases</h2>
+            
+            <div class="disease-card">
+                <h3>Respiratory Diseases</h3>
+                <div class="symptom-list">
+                    <h4>Symptoms:</h4>
+                    <ul>
+                        <li>Coughing and nasal discharge</li>
+                        <li>Difficulty breathing</li>
+                        <li>Reduced appetite</li>
+                        <li>Fever</li>
+                    </ul>
+                </div>
+                <div class="treatment-box">
+                    <h4>Treatment Approach:</h4>
+                    <ul>
+                        <li>Isolate affected animals</li>
+                        <li>Provide proper ventilation</li>
+                        <li>Administer prescribed antibiotics</li>
+                        <li>Monitor temperature</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="disease-card">
+                <h3>Digestive Disorders</h3>
+                <div class="symptom-list">
+                    <h4>Symptoms:</h4>
+                    <ul>
+                        <li>Diarrhea</li>
+                        <li>Reduced feed intake</li>
+                        <li>Bloating</li>
+                        <li>Weight loss</li>
+                    </ul>
+                </div>
+                <div class="treatment-box">
+                    <h4>Treatment Approach:</h4>
+                    <ul>
+                        <li>Adjust feed ration</li>
+                        <li>Provide electrolytes</li>
+                        <li>Monitor water intake</li>
+                        <li>Consult veterinarian for medication</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Disease Prevention</h2>
+            <div class="disease-card">
+                <h3>Preventive Measures</h3>
+                <ul>
+                    <li>Regular cleaning and disinfection</li>
+                    <li>Proper nutrition</li>
+                    <li>Vaccination programs</li>
+                    <li>Stress management</li>
+                    <li>Biosecurity protocols</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Treatment Protocols</h2>
+            <div class="disease-card">
+                <h3>General Guidelines</h3>
+                <ul>
+                    <li>Early detection is crucial</li>
+                    <li>Follow veterinary advice</li>
+                    <li>Complete prescribed treatments</li>
+                    <li>Keep treatment records</li>
+                    <li>Monitor recovery progress</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Record Keeping</h2>
+            <div class="disease-card">
+                <h3>Essential Records</h3>
+                <ul>
+                    <li>Disease occurrence dates</li>
+                    <li>Treatment details</li>
+                    <li>Medication used</li>
+                    <li>Recovery time</li>
+                    <li>Prevention measures taken</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                    <li><a href="../category-organic.html">Organic Farming</a></li>
+                    <li><a href="../category-equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil pH Testing Guide - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .guide-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/ph-testing.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .guide-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .guide-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .guide-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .guide-content h2 {
+            color: var(--primary-dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+        .guide-content h3 {
+            color: var(--primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .guide-content p, .guide-content ul, .guide-content ol {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: #444;
+        }
+        .guide-content ul, .guide-content ol {
+            padding-left: 1.5rem;
+        }
+        .guide-content li {
+            margin-bottom: 0.5rem;
+        }
+        .guide-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .guide-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .guide-table th, .guide-table td {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+        }
+        .guide-table th {
+            background-color: var(--primary);
+            color: white;
+            text-align: left;
+        }
+        .guide-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .tip-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .tip-box h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .tip-box p {
+            margin-bottom: 0;
+        }
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        .nav-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .nav-btn:hover {
+            background-color: var(--primary-dark);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="guide-header">
+        <h1>Soil pH Testing Guide</h1>
+        <p>Complete guide to testing and managing soil pH levels for optimal crop growth</p>
+    </div>
+
+    <div class="guide-container">
+        <div class="guide-content">
+            <h2>Understanding Soil pH</h2>
+            <p>Soil pH is a measure of how acidic or alkaline your soil is, using a scale from 0 to 14, with 7 being neutral. Values below 7 indicate acidic soil, while values above 7 indicate alkaline soil. Most plants thrive in soil with a pH between 6.0 and 7.5, although some plants prefer more acidic or more alkaline conditions.</p>
+            
+            <p>The pH level affects how available nutrients are to plants. In soil that's too acidic or too alkaline, certain nutrients become locked up and unavailable to plants, even if they're present in the soil.</p>
+
+            <h3>Why pH Matters for Plant Growth</h3>
+            <p>Soil pH influences several factors critical to plant health:</p>
+            <ul>
+                <li>Nutrient availability and uptake</li>
+                <li>Soil microorganism activity</li>
+                <li>Root development and growth</li>
+                <li>Susceptibility to diseases</li>
+                <li>Overall plant vigor and yield</li>
+            </ul>
+
+            <img src="../images/ph-chart.jpg" alt="Soil pH and Nutrient Availability Chart" class="guide-image">
+
+            <h2>Soil pH Testing Methods</h2>
+            
+            <h3>Home Testing Kits</h3>
+            <p>Several types of home soil pH testing kits are available:</p>
+            <ul>
+                <li><strong>pH Test Strips:</strong> Affordable and easy to use; moderate accuracy</li>
+                <li><strong>Liquid Chemical Test Kits:</strong> Mix soil sample with chemical solution; observe color change</li>
+                <li><strong>Digital pH Meters:</strong> More accurate but require proper calibration</li>
+            </ul>
+
+            <div class="tip-box">
+                <h4>Pro Tip</h4>
+                <p>For more accurate results, take multiple samples from different areas of your field or garden and test each separately. This will help identify pH variations across your growing area.</p>
+            </div>
+
+            <h3>Professional Laboratory Testing</h3>
+            <p>For the most accurate results, consider sending soil samples to a professional soil testing laboratory. These labs can provide comprehensive soil analysis including pH, nutrient levels, and specific recommendations for your soil type and crops.</p>
+
+            <h2>How to Test Soil pH</h2>
+            <ol>
+                <li>Collect soil samples from multiple locations in your field (at least 6-10 spots)</li>
+                <li>Remove surface debris and dig 4-6 inches deep for each sample</li>
+                <li>Mix the samples together in a clean bucket</li>
+                <li>Allow the soil to dry if it's wet</li>
+                <li>Follow the specific instructions for your chosen testing method</li>
+                <li>Record your results and date of testing</li>
+            </ol>
+
+            <img src="../images/soil-sampling.jpg" alt="Soil Sampling Process" class="guide-image">
+
+            <h2>Interpreting pH Test Results</h2>
+            
+            <table class="guide-table">
+                <tr>
+                    <th>pH Range</th>
+                    <th>Classification</th>
+                    <th>Suitable Crops</th>
+                </tr>
+                <tr>
+                    <td>Below 5.5</td>
+                    <td>Strongly acidic</td>
+                    <td>Blueberries, potatoes, strawberries</td>
+                </tr>
+                <tr>
+                    <td>5.5 - 6.0</td>
+                    <td>Moderately acidic</td>
+                    <td>Tomatoes, peppers, carrots</td>
+                </tr>
+                <tr>
+                    <td>6.0 - 7.0</td>
+                    <td>Slightly acidic to neutral</td>
+                    <td>Most vegetables and grains</td>
+                </tr>
+                <tr>
+                    <td>7.0 - 7.5</td>
+                    <td>Neutral to slightly alkaline</td>
+                    <td>Beans, peas, cabbage</td>
+                </tr>
+                <tr>
+                    <td>Above 7.5</td>
+                    <td>Alkaline</td>
+                    <td>Asparagus, beets, spinach</td>
+                </tr>
+            </table>
+
+            <h2>Adjusting Soil pH</h2>
+            
+            <h3>Lowering Soil pH (Making Soil More Acidic)</h3>
+            <p>If your soil is too alkaline and you need to lower the pH:</p>
+            <ul>
+                <li><strong>Elemental Sulfur:</strong> Most effective long-term solution (1-2 pounds per 100 square feet can lower pH by approximately 1 unit)</li>
+                <li><strong>Aluminum Sulfate:</strong> Works more quickly than elemental sulfur</li>
+                <li><strong>Iron Sulfate:</strong> Can address both pH and iron deficiency issues</li>
+                <li><strong>Acidic Organic Matter:</strong> Pine needles, oak leaves, and peat moss can help gradually lower pH</li>
+            </ul>
+
+            <h3>Raising Soil pH (Making Soil More Alkaline)</h3>
+            <p>If your soil is too acidic and you need to raise the pH:</p>
+            <ul>
+                <li><strong>Agricultural Lime (Calcium Carbonate):</strong> Most common method (20-50 pounds per 1,000 square feet can raise pH by approximately 1 unit)</li>
+                <li><strong>Dolomitic Lime:</strong> Contains magnesium and calcium; good for magnesium-deficient soils</li>
+                <li><strong>Wood Ash:</strong> Contains potassium and calcium; use sparingly (no more than 20 pounds per 1,000 square feet)</li>
+            </ul>
+
+            <div class="tip-box">
+                <h4>Important Note</h4>
+                <p>pH adjustments take time - often several months for full effect. Retest your soil after 3-6 months to monitor changes, and apply amendments gradually rather than all at once.</p>
+            </div>
+
+            <h2>Maintaining Optimal Soil pH</h2>
+            <p>Once you've achieved the desired pH level, these practices will help maintain it:</p>
+            <ul>
+                <li>Test soil pH annually</li>
+                <li>Use fertilizers appropriate for your soil pH</li>
+                <li>Practice crop rotation</li>
+                <li>Apply organic matter consistently</li>
+                <li>Be aware that irrigation water quality can affect soil pH over time</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>Regular soil pH testing is a fundamental practice for successful crop production. By understanding and managing your soil's pH, you can ensure optimal nutrient availability and create the best growing conditions for your crops. Remember that soil pH management is an ongoing process that requires regular monitoring and adjustment.</p>
+
+            <div class="guide-nav">
+                <a href="../category-soil.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Back to Soil Management</a>
+                <a href="soil-testing.html" class="nav-btn">General Soil Testing <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

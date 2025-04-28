@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tractor Selection Guide - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/tractor-guide.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .article-header h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .article-meta {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .article-section {
+            margin-bottom: 3rem;
+        }
+        .article-section h2 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .article-section p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .tractor-type {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .tractor-type h3 {
+            color: #2c5282;
+            margin-bottom: 1rem;
+        }
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+        .features-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        .features-list li:before {
+            content: "✓";
+            color: #2c5282;
+            position: absolute;
+            left: 0;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .comparison-table th {
+            background: #f5f5f5;
+            font-weight: 600;
+        }
+        .comparison-table tr:nth-child(even) {
+            background: #fafafa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="article-header">
+        <h1>Tractor Selection Guide</h1>
+        <p>How to choose the right tractor for your farming needs</p>
+    </div>
+
+    <main class="article-content">
+        <div class="article-meta">
+            <span><i class="fas fa-calendar"></i> Last Updated: March 15, 2024</span>
+            <span class="mx-3">|</span>
+            <span><i class="fas fa-clock"></i> 15 min read</span>
+        </div>
+
+        <div class="article-section">
+            <h2>Understanding Your Needs</h2>
+            <p>Selecting the right tractor is crucial for efficient farming operations. Consider these key factors before making your decision:</p>
+            <ul class="features-list">
+                <li>Size of your farm</li>
+                <li>Type of terrain</li>
+                <li>Primary tasks and operations</li>
+                <li>Budget constraints</li>
+                <li>Fuel efficiency requirements</li>
+            </ul>
+        </div>
+
+        <div class="article-section">
+            <h2>Types of Tractors</h2>
+            
+            <div class="tractor-type">
+                <h3>Compact Tractors (20-40 HP)</h3>
+                <p>Ideal for small farms and landscaping work.</p>
+                <ul class="features-list">
+                    <li>Perfect for properties under 10 acres</li>
+                    <li>Excellent maneuverability</li>
+                    <li>Versatile attachment options</li>
+                    <li>Lower fuel consumption</li>
+                </ul>
+            </div>
+
+            <div class="tractor-type">
+                <h3>Utility Tractors (40-100 HP)</h3>
+                <p>Best for medium-sized farms and diverse operations.</p>
+                <ul class="features-list">
+                    <li>Suitable for 10-100 acre farms</li>
+                    <li>Good balance of power and efficiency</li>
+                    <li>Wide range of implements available</li>
+                    <li>Comfortable operator station</li>
+                </ul>
+            </div>
+
+            <div class="tractor-type">
+                <h3>Row Crop Tractors (100-200 HP)</h3>
+                <p>Designed for large-scale crop farming.</p>
+                <ul class="features-list">
+                    <li>Ideal for farms over 100 acres</li>
+                    <li>High power for heavy-duty work</li>
+                    <li>Advanced technology features</li>
+                    <li>Maximum productivity</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Power Requirements by Task</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Minimum HP</th>
+                        <th>Recommended HP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lawn Mowing</td>
+                        <td>15 HP</td>
+                        <td>20-25 HP</td>
+                    </tr>
+                    <tr>
+                        <td>Light Tillage</td>
+                        <td>25 HP</td>
+                        <td>35-45 HP</td>
+                    </tr>
+                    <tr>
+                        <td>Heavy Plowing</td>
+                        <td>45 HP</td>
+                        <td>60-75 HP</td>
+                    </tr>
+                    <tr>
+                        <td>Row Crop Work</td>
+                        <td>75 HP</td>
+                        <td>100-150 HP</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="article-section">
+            <h2>Key Features to Consider</h2>
+            <div class="tractor-type">
+                <h3>Transmission Options</h3>
+                <ul class="features-list">
+                    <li>Manual: Most economical, good for simple tasks</li>
+                    <li>Hydrostatic: Easy to use, ideal for loader work</li>
+                    <li>Power Shift: Best for varying tasks and conditions</li>
+                </ul>
+            </div>
+
+            <div class="tractor-type">
+                <h3>Comfort Features</h3>
+                <ul class="features-list">
+                    <li>Cab vs. Open Station</li>
+                    <li>Air conditioning and heating</li>
+                    <li>Seat suspension</li>
+                    <li>Control layout and accessibility</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Making Your Decision</h2>
+            <p>Consider these final points before making your purchase:</p>
+            <ul class="features-list">
+                <li>Dealer reputation and service availability</li>
+                <li>Warranty coverage</li>
+                <li>Parts availability</li>
+                <li>Resale value</li>
+                <li>Training and support</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                    <li><a href="../category-organic.html">Organic Farming</a></li>
+                    <li><a href="../category-equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

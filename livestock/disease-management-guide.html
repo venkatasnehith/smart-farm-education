@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Management Guide - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/disease-management.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .article-header h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .article-meta {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .article-section {
+            margin-bottom: 3rem;
+        }
+        .article-section h2 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .article-section p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .info-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .info-card h3 {
+            color: #2c5282;
+            margin-bottom: 1rem;
+        }
+        .tips-list {
+            list-style: none;
+            padding: 0;
+        }
+        .tips-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        .tips-list li:before {
+            content: "✓";
+            color: #2c5282;
+            position: absolute;
+            left: 0;
+        }
+        .disease-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        @media (max-width: 768px) {
+            .disease-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .disease-types {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .disease-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .disease-name {
+            font-weight: 600;
+            color: #2c5282;
+            margin-bottom: 0.5rem;
+        }
+        .disease-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="article-header">
+        <h1>Disease Management</h1>
+        <p>Identifying and treating common livestock diseases</p>
+    </div>
+
+    <main class="article-content">
+        <div class="article-meta">
+            <span><i class="fas fa-calendar"></i> Last Updated: March 14, 2024</span>
+            <span class="mx-3">|</span>
+            <span><i class="fas fa-clock"></i> 15 min read</span>
+        </div>
+
+        <div class="article-section">
+            <h2>Disease Prevention Strategies</h2>
+            <p>Effective disease management starts with prevention. Understanding and implementing proper preventive measures can significantly reduce disease occurrence in livestock.</p>
+            
+            <div class="disease-grid">
+                <div class="info-card">
+                    <h3>Biosecurity Measures</h3>
+                    <ul class="tips-list">
+                        <li>Visitor restrictions</li>
+                        <li>Quarantine procedures</li>
+                        <li>Sanitation protocols</li>
+                        <li>Equipment cleaning</li>
+                        <li>Vehicle disinfection</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>Environmental Control</h3>
+                    <ul class="tips-list">
+                        <li>Proper ventilation</li>
+                        <li>Temperature regulation</li>
+                        <li>Humidity control</li>
+                        <li>Waste management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Common Diseases</h2>
+            <div class="disease-types">
+                <div class="disease-item">
+                    <div class="disease-name">Respiratory Diseases</div>
+                    <div class="disease-description">Infections affecting the respiratory system, including pneumonia and bronchitis</div>
+                </div>
+                <div class="disease-item">
+                    <div class="disease-name">Digestive Disorders</div>
+                    <div class="disease-description">Conditions affecting the digestive system, such as enteritis and bloat</div>
+                </div>
+                <div class="disease-item">
+                    <div class="disease-name">Parasitic Infections</div>
+                    <div class="disease-description">Internal and external parasites affecting livestock health</div>
+                </div>
+                <div class="disease-item">
+                    <div class="disease-name">Metabolic Diseases</div>
+                    <div class="disease-description">Disorders affecting metabolism and nutrient absorption</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Disease Identification</h2>
+            <div class="info-card">
+                <h3>Clinical Signs</h3>
+                <ul class="tips-list">
+                    <li>Changes in behavior</li>
+                    <li>Physical symptoms</li>
+                    <li>Feeding patterns</li>
+                    <li>Body temperature</li>
+                    <li>Respiratory signs</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Diagnostic Tools</h3>
+                <ul class="tips-list">
+                    <li>Physical examination</li>
+                    <li>Laboratory testing</li>
+                    <li>Blood analysis</li>
+                    <li>Fecal examination</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Treatment Protocols</h2>
+            <div class="info-card">
+                <h3>Treatment Approaches</h3>
+                <ul class="tips-list">
+                    <li>Medication administration</li>
+                    <li>Supportive care</li>
+                    <li>Isolation procedures</li>
+                    <li>Recovery monitoring</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Treatment Records</h3>
+                <ul class="tips-list">
+                    <li>Medication details</li>
+                    <li>Treatment duration</li>
+                    <li>Response monitoring</li>
+                    <li>Follow-up care</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Disease Outbreak Management</h2>
+            <div class="info-card">
+                <h3>Immediate Actions</h3>
+                <ul class="tips-list">
+                    <li>Isolate affected animals</li>
+                    <li>Contact veterinarian</li>
+                    <li>Implement biosecurity</li>
+                    <li>Document cases</li>
+                    <li>Notify authorities if required</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Prevention of Spread</h3>
+                <ul class="tips-list">
+                    <li>Movement restrictions</li>
+                    <li>Enhanced cleaning</li>
+                    <li>Staff protocols</li>
+                    <li>Monitoring other animals</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                    <li><a href="../category-organic.html">Organic Farming</a></li>
+                    <li><a href="../category-equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

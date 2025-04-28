@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Fertilizers Guide - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .guide-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/organic-fertilizers.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .guide-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .guide-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .guide-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .guide-content h2 {
+            color: var(--primary-dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+        .guide-content h3 {
+            color: var(--primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .guide-content p, .guide-content ul, .guide-content ol {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: #444;
+        }
+        .guide-content ul, .guide-content ol {
+            padding-left: 1.5rem;
+        }
+        .guide-content li {
+            margin-bottom: 0.5rem;
+        }
+        .guide-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .guide-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .guide-table th, .guide-table td {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+        }
+        .guide-table th {
+            background-color: var(--primary);
+            color: white;
+            text-align: left;
+        }
+        .guide-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .tip-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .tip-box h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .tip-box p {
+            margin-bottom: 0;
+        }
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        .nav-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .nav-btn:hover {
+            background-color: var(--primary-dark);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="guide-header">
+        <h1>Organic Fertilizers Guide</h1>
+        <p>Natural fertilization methods and organic nutrients</p>
+    </div>
+
+    <div class="guide-container">
+        <div class="guide-content">
+            <h2>Understanding Organic Fertilizers</h2>
+            <p>Organic fertilizers are derived from plant, animal, or mineral sources that contain carbon and undergo minimal processing. Unlike synthetic fertilizers, which provide nutrients in an immediately available form, organic fertilizers work with soil biology to release nutrients gradually and improve soil structure and health over time.</p>
+            
+            <p>The benefits of organic fertilizers extend beyond simply supplying nutrients - they contribute to long-term soil fertility, sustainable production, and environmental health. By understanding how these materials work, farmers can make informed choices about integrating them into their fertility management plans.</p>
+            
+            <img src="../images/organic-soil-health.jpg" alt="Healthy soil with organic matter" class="guide-image">
+            
+            <h2>Types of Organic Fertilizers</h2>
+            
+            <h3>Plant-Based Fertilizers</h3>
+            <p>Derived from plant materials, these fertilizers typically have a balanced nutrient profile:</p>
+            
+            <table class="guide-table">
+                <tr>
+                    <th>Type</th>
+                    <th>Primary Nutrients</th>
+                    <th>Application Rate</th>
+                    <th>Best Used For</th>
+                </tr>
+                <tr>
+                    <td>Compost</td>
+                    <td>Varies (0.5-2% N, 0.5-1% P, 1-2% K)</td>
+                    <td>1-3 inches as topdressing</td>
+                    <td>General soil improvement, all crops</td>
+                </tr>
+                <tr>
+                    <td>Alfalfa Meal</td>
+                    <td>2-3% N, 0.5-1% P, 2-3% K</td>
+                    <td>5-10 lbs per 100 sq ft</td>
+                    <td>Vegetable gardens, rose beds</td>
+                </tr>
+                <tr>
+                    <td>Kelp/Seaweed</td>
+                    <td>1-2% N, 0.5-1% P, 2-5% K, micronutrients</td>
+                    <td>1-2 lbs per 100 sq ft</td>
+                    <td>Stress reduction, micronutrient source</td>
+                </tr>
+                <tr>
+                    <td>Green Manure</td>
+                    <td>Varies by crop species</td>
+                    <td>Cover entire field before termination</td>
+                    <td>Soil building, nitrogen fixation (legumes)</td>
+                </tr>
+                <tr>
+                    <td>Cottonseed Meal</td>
+                    <td>6-7% N, 2-3% P, 1-2% K</td>
+                    <td>5-10 lbs per 100 sq ft</td>
+                    <td>Acid-loving plants, slower release nitrogen</td>
+                </tr>
+            </table>
+            
+            <h3>Animal-Based Fertilizers</h3>
+            <p>Generally higher in nitrogen and phosphorus, these materials come from animal byproducts or manures:</p>
+            
+            <table class="guide-table">
+                <tr>
+                    <th>Type</th>
+                    <th>Primary Nutrients</th>
+                    <th>Application Rate</th>
+                    <th>Best Used For</th>
+                </tr>
+                <tr>
+                    <td>Composted Manure</td>
+                    <td>Varies (1-3% N, 1-2% P, 1-2% K)</td>
+                    <td>1/4-1/2 inch layer</td>
+                    <td>General soil improvement, all crops</td>
+                </tr>
+                <tr>
+                    <td>Blood Meal</td>
+                    <td>12-13% N, 1-2% P, 0.5-1% K</td>
+                    <td>2-3 lbs per 100 sq ft</td>
+                    <td>Quick nitrogen boost for leafy crops</td>
+                </tr>
+                <tr>
+                    <td>Bone Meal</td>
+                    <td>3-4% N, 10-12% P, 0% K</td>
+                    <td>5-10 lbs per 100 sq ft</td>
+                    <td>Root crops, bulbs, phosphorus-deficient soils</td>
+                </tr>
+                <tr>
+                    <td>Fish Emulsion</td>
+                    <td>4-5% N, 1-2% P, 1-2% K</td>
+                    <td>Dilute 1:20 with water</td>
+                    <td>Quick boost during growing season</td>
+                </tr>
+                <tr>
+                    <td>Feather Meal</td>
+                    <td>10-12% N, 0% P, 0% K</td>
+                    <td>3-5 lbs per 100 sq ft</td>
+                    <td>Slow-release nitrogen source</td>
+                </tr>
+            </table>
+            
+            <h3>Mineral-Based Fertilizers</h3>
+            <p>Natural mineral sources that provide specific nutrients or soil amendments:</p>
+            
+            <table class="guide-table">
+                <tr>
+                    <th>Type</th>
+                    <th>Primary Nutrients/Benefits</th>
+                    <th>Application Rate</th>
+                    <th>Best Used For</th>
+                </tr>
+                <tr>
+                    <td>Rock Phosphate</td>
+                    <td>20-30% P (slow release)</td>
+                    <td>5-10 lbs per 100 sq ft</td>
+                    <td>Long-term phosphorus provision</td>
+                </tr>
+                <tr>
+                    <td>Greensand</td>
+                    <td>5-7% K, micronutrients</td>
+                    <td>5-10 lbs per 100 sq ft</td>
+                    <td>Potassium source, soil conditioning</td>
+                </tr>
+                <tr>
+                    <td>Langbeinite (K-Mag)</td>
+                    <td>18-22% K, 10-12% Mg, 22-23% S</td>
+                    <td>2-5 lbs per 100 sq ft</td>
+                    <td>Potassium, magnesium, and sulfur source</td>
+                </tr>
+                <tr>
+                    <td>Azomite</td>
+                    <td>70+ trace minerals</td>
+                    <td>1-2 lbs per 100 sq ft</td>
+                    <td>Trace mineral supplementation</td>
+                </tr>
+                <tr>
+                    <td>Lime (Calcium Carbonate)</td>
+                    <td>Raises pH, adds calcium</td>
+                    <td>5-50 lbs per 100 sq ft (based on soil test)</td>
+                    <td>Correcting soil acidity</td>
+                </tr>
+            </table>
+            
+            <div class="tip-box">
+                <h4>Application Tip</h4>
+                <p>Always base application rates on soil test results when possible. The rates provided in these tables are general guidelines - adjust based on your specific soil conditions, crop needs, and local environmental factors.</p>
+            </div>
+            
+            <h2>How Organic Fertilizers Work</h2>
+            
+            <h3>The Nutrient Cycle</h3>
+            <p>Organic fertilizers work with soil biology in a natural nutrient cycle:</p>
+            <ol>
+                <li><strong>Decomposition:</strong> Soil microorganisms break down organic materials</li>
+                <li><strong>Mineralization:</strong> Complex compounds convert to plant-available mineral forms</li>
+                <li><strong>Uptake:</strong> Plants absorb nutrients from soil solution</li>
+                <li><strong>Recycling:</strong> Plant residues return to soil and the cycle continues</li>
+            </ol>
+            
+            <p>This cycle differs significantly from synthetic fertilizers, which deliver nutrients directly to plants but may bypass important biological processes that contribute to long-term soil health.</p>
+            
+            <h3>Release Patterns</h3>
+            <p>Understanding nutrient release timing is crucial for effective use of organic fertilizers:</p>
+            <ul>
+                <li><strong>Slow Release:</strong> Most organic fertilizers release nutrients gradually as they decompose</li>
+                <li><strong>Temperature Dependent:</strong> Release rates increase with soil temperature (microbial activity increases)</li>
+                <li><strong>Moisture Dependent:</strong> Adequate soil moisture is necessary for decomposition</li>
+                <li><strong>Varying Rates:</strong> Some materials (like blood meal) release nutrients more quickly than others (like bone meal)</li>
+            </ul>
+            
+            <img src="../images/nutrient-release-chart.jpg" alt="Chart showing nutrient release patterns" class="guide-image">
+            
+            <h2>Benefits of Organic Fertilizers</h2>
+            
+            <h3>Soil Improvement</h3>
+            <p>Beyond nutrient provision, organic fertilizers enhance soil in multiple ways:</p>
+            <ul>
+                <li><strong>Structure Enhancement:</strong> Improve soil aggregation and reduce compaction</li>
+                <li><strong>Water Retention:</strong> Increase soil's ability to hold moisture</li>
+                <li><strong>Microbial Activity:</strong> Support diverse and active soil food web</li>
+                <li><strong>Erosion Resistance:</strong> Enhance soil stability and reduce erosion risk</li>
+                <li><strong>Cation Exchange Capacity:</strong> Improve nutrient retention and availability</li>
+            </ul>
+            
+            <h3>Environmental Benefits</h3>
+            <p>The ecological advantages of organic fertilizers include:</p>
+            <ul>
+                <li><strong>Reduced Leaching:</strong> Slower nutrient release reduces groundwater contamination</li>
+                <li><strong>Carbon Sequestration:</strong> Many organic materials help store carbon in soil</li>
+                <li><strong>Resource Recycling:</strong> Often utilize byproducts that would otherwise be waste</li>
+                <li><strong>Reduced Energy Footprint:</strong> Lower processing and transportation requirements</li>
+                <li><strong>Biodiversity Support:</strong> Healthier soil supports more diverse ecosystems</li>
+            </ul>
+            
+            <h3>Crop Quality Improvements</h3>
+            <p>Research suggests organic fertilization can positively affect crop quality:</p>
+            <ul>
+                <li>Higher vitamin and mineral content in some crops</li>
+                <li>Improved flavor profiles in certain vegetables and fruits</li>
+                <li>Enhanced plant resistance to stress and disease</li>
+                <li>Better post-harvest quality and shelf life</li>
+            </ul>
+            
+            <h2>Application Methods and Timing</h2>
+            
+            <h3>Pre-Plant Applications</h3>
+            <p>Incorporating organic fertilizers before planting:</p>
+            <ul>
+                <li><strong>Broadcast Application:</strong> Spread evenly over soil surface and incorporate</li>
+                <li><strong>Band Application:</strong> Apply in bands where rows will be planted</li>
+                <li><strong>Deep Placement:</strong> Place fertilizer deeper in soil for perennial crops</li>
+                <li><strong>Timing:</strong> 2-4 weeks before planting for slow-release materials</li>
+            </ul>
+            
+            <h3>In-Season Applications</h3>
+            <p>Side-dressing or topdressing during crop growth:</p>
+            <ul>
+                <li><strong>Side-dressing:</strong> Apply in bands alongside growing plants</li>
+                <li><strong>Topdressing:</strong> Apply evenly over soil surface around plants</li>
+                <li><strong>Foliar Applications:</strong> Spray dilute liquid fertilizers directly on leaves</li>
+                <li><strong>Fertigation:</strong> Apply liquid organic fertilizers through irrigation systems</li>
+            </ul>
+            
+            <div class="tip-box">
+                <h4>Season Planning Tip</h4>
+                <p>For cool-season crops planted in early spring, apply organic fertilizers in fall or very early spring to allow sufficient time for mineralization. For warm-season crops, apply a few weeks before planting or at planting time when soil temperatures support microbial activity.</p>
+            </div>
+            
+            <h2>Making Your Own Organic Fertilizers</h2>
+            
+            <h3>Compost Production</h3>
+            <p>Creating your own compost is one of the most economical ways to produce organic fertilizer:</p>
+            <ol>
+                <li>Collect appropriate green (nitrogen-rich) and brown (carbon-rich) materials</li>
+                <li>Layer materials in appropriate ratios (roughly 3 parts carbon to 1 part nitrogen)</li>
+                <li>Maintain proper moisture (like a wrung-out sponge) and aeration</li>
+                <li>Turn pile regularly to speed decomposition</li>
+                <li>Monitor temperature as an indicator of microbial activity</li>
+                <li>Harvest finished compost when original materials are no longer recognizable</li>
+            </ol>
+            
+            <h3>Compost Tea</h3>
+            <p>A liquid fertilizer made by steeping compost in water:</p>
+            <ol>
+                <li>Fill a container with water (preferably non-chlorinated)</li>
+                <li>Add mature compost in a porous bag (similar to a tea bag)</li>
+                <li>Add a small amount of unsulfured molasses as a microbial food source</li>
+                <li>Aerate for 24-48 hours to promote beneficial microbe growth</li>
+                <li>Strain and apply to soil or as foliar spray</li>
+            </ol>
+            
+            <h3>Green Manure Cover Crops</h3>
+            <p>Plants grown specifically to be turned into the soil as fertilizer:</p>
+            <ul>
+                <li><strong>Legumes:</strong> Clover, vetch, peas (fix nitrogen from atmosphere)</li>
+                <li><strong>Grasses:</strong> Rye, oats (add organic matter and capture nutrients)</li>
+                <li><strong>Brassicas:</strong> Mustard, radish (deep roots break compaction)</li>
+                <li>Plant in unused garden areas or after harvest</li>
+                <li>Cut down and incorporate into soil before they set seed</li>
+                <li>Allow 2-4 weeks decomposition before planting main crop</li>
+            </ul>
+            
+            <img src="../images/cover-crop-incorporation.jpg" alt="Incorporating cover crops into soil" class="guide-image">
+            
+            <h2>Organic Fertilization Challenges and Solutions</h2>
+            
+            <h3>Challenge: Slow Release</h3>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+                <li>Apply well in advance of crop needs</li>
+                <li>Use a combination of faster and slower-release materials</li>
+                <li>Maintain soil conditions (temperature, moisture) that favor mineralization</li>
+                <li>Consider supplementing with quick-release options (like fish emulsion) when necessary</li>
+            </ul>
+            
+            <h3>Challenge: Variable Nutrient Content</h3>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+                <li>Test materials when possible or use published average values</li>
+                <li>Keep records of applications and crop responses to fine-tune over time</li>
+                <li>Consider blending multiple materials to balance nutrient ratios</li>
+                <li>Monitor plants for deficiency symptoms and adjust as needed</li>
+            </ul>
+            
+            <h3>Challenge: Cost and Availability</h3>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+                <li>Prioritize on-farm sources (compost, cover crops, manure)</li>
+                <li>Buy in bulk when possible</li>
+                <li>Develop relationships with local sources (farms, processing facilities)</li>
+                <li>Focus applications on areas with greatest need based on soil tests</li>
+            </ul>
+            
+            <h3>Challenge: Labor Requirements</h3>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+                <li>Invest in appropriate application equipment</li>
+                <li>Use less bulky concentrated organic amendments when appropriate</li>
+                <li>Incorporate fertility-building into crop rotation</li>
+                <li>Schedule labor-intensive applications during slower seasons</li>
+            </ul>
+            
+            <h2>Soil Testing and Monitoring</h2>
+            
+            <p>Effective organic fertilization depends on understanding your soil's current status and monitoring changes over time:</p>
+            
+            <h3>Soil Testing Frequency</h3>
+            <ul>
+                <li>Complete analysis every 2-3 years</li>
+                <li>Annual pH monitoring</li>
+                <li>Additional testing when changing management practices</li>
+            </ul>
+            
+            <h3>Key Soil Parameters to Monitor</h3>
+            <ul>
+                <li><strong>Macronutrients:</strong> NPK levels and balance</li>
+                <li><strong>Secondary nutrients:</strong> Calcium, magnesium, sulfur</li>
+                <li><strong>Micronutrients:</strong> Particularly in known deficient areas</li>
+                <li><strong>Organic matter percentage:</strong> Indicator of soil health</li>
+                <li><strong>pH:</strong> Affects nutrient availability</li>
+                <li><strong>Cation Exchange Capacity:</strong> Soil's ability to hold nutrients</li>
+            </ul>
+            
+            <div class="tip-box">
+                <h4>pH Management Tip</h4>
+                <p>Although lime is the most common material for raising soil pH, there are organic alternatives for acidifying soil when needed, including elemental sulfur (allowed in organic production), pine needles, and acidic peat moss.</p>
+            </div>
+            
+            <h2>Conclusion</h2>
+            <p>Organic fertilizers provide a sustainable approach to crop fertility that builds soil health while producing nutritious crops. By understanding the various types of materials available, their nutrient release patterns, and application methods, farmers can develop effective fertility programs that reduce environmental impact while maintaining productivity. The transition to organic fertilization often requires patience as soil biology rebuilds, but the long-term benefits to soil health, environmental quality, and potentially crop value make it a worthwhile investment for many farming operations.</p>
+            
+            <div class="guide-nav">
+                <a href="../category-crops.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Back to Crop Management</a>
+                <a href="integrated-pest-management.html" class="nav-btn">Integrated Pest Management <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

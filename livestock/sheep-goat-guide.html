@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheep and Goat Farming Guide - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/sheep-goat.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .article-header h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .article-meta {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .article-section {
+            margin-bottom: 3rem;
+        }
+        .article-section h2 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .article-section p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .info-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .info-card h3 {
+            color: #2c5282;
+            margin-bottom: 1rem;
+        }
+        .tips-list {
+            list-style: none;
+            padding: 0;
+        }
+        .tips-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        .tips-list li:before {
+            content: "✓";
+            color: #2c5282;
+            position: absolute;
+            left: 0;
+        }
+        .management-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        @media (max-width: 768px) {
+            .management-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .breed-types {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .breed-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .breed-name {
+            font-weight: 600;
+            color: #2c5282;
+            margin-bottom: 0.5rem;
+        }
+        .breed-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="article-header">
+        <h1>Sheep and Goat Farming</h1>
+        <p>Comprehensive guide to small ruminant management</p>
+    </div>
+
+    <main class="article-content">
+        <div class="article-meta">
+            <span><i class="fas fa-calendar"></i> Last Updated: March 14, 2024</span>
+            <span class="mx-3">|</span>
+            <span><i class="fas fa-clock"></i> 15 min read</span>
+        </div>
+
+        <div class="article-section">
+            <h2>Introduction to Small Ruminant Farming</h2>
+            <p>Sheep and goat farming offers diverse opportunities for both meat and dairy production. These animals are adaptable to various environments and can be managed effectively with proper care and attention.</p>
+            
+            <div class="management-grid">
+                <div class="info-card">
+                    <h3>Getting Started</h3>
+                    <ul class="tips-list">
+                        <li>Choose suitable breeds</li>
+                        <li>Prepare housing facilities</li>
+                        <li>Set up fencing</li>
+                        <li>Establish feed sources</li>
+                        <li>Plan healthcare program</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>Production Goals</h3>
+                    <ul class="tips-list">
+                        <li>Meat production</li>
+                        <li>Dairy products</li>
+                        <li>Wool/fiber (sheep)</li>
+                        <li>Breeding stock</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Breed Selection</h2>
+            <div class="breed-types">
+                <div class="breed-item">
+                    <div class="breed-name">Meat Breeds</div>
+                    <div class="breed-description">Breeds optimized for meat production with good growth rates</div>
+                </div>
+                <div class="breed-item">
+                    <div class="breed-name">Dairy Breeds</div>
+                    <div class="breed-description">Breeds known for high milk production and quality</div>
+                </div>
+                <div class="breed-item">
+                    <div class="breed-name">Dual Purpose</div>
+                    <div class="breed-description">Breeds suitable for both meat and milk production</div>
+                </div>
+                <div class="breed-item">
+                    <div class="breed-name">Wool Breeds (Sheep)</div>
+                    <div class="breed-description">Sheep breeds with high-quality wool production</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Housing and Facilities</h2>
+            <div class="info-card">
+                <h3>Housing Requirements</h3>
+                <ul class="tips-list">
+                    <li>Adequate space per animal</li>
+                    <li>Good ventilation</li>
+                    <li>Protection from elements</li>
+                    <li>Proper drainage</li>
+                    <li>Easy-to-clean surfaces</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Fencing and Pasture</h3>
+                <ul class="tips-list">
+                    <li>Secure perimeter fencing</li>
+                    <li>Rotational grazing setup</li>
+                    <li>Shelter in pastures</li>
+                    <li>Water access points</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Nutrition Management</h2>
+            <div class="info-card">
+                <h3>Feed Requirements</h3>
+                <ul class="tips-list">
+                    <li>Quality pasture/forage</li>
+                    <li>Supplementary feed</li>
+                    <li>Mineral supplements</li>
+                    <li>Clean water supply</li>
+                    <li>Salt blocks</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Grazing Management</h3>
+                <ul class="tips-list">
+                    <li>Rotational grazing</li>
+                    <li>Pasture maintenance</li>
+                    <li>Weed control</li>
+                    <li>Seasonal planning</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Health Management</h2>
+            <div class="info-card">
+                <h3>Preventive Care</h3>
+                <ul class="tips-list">
+                    <li>Regular vaccinations</li>
+                    <li>Parasite control</li>
+                    <li>Hoof trimming</li>
+                    <li>Health monitoring</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Common Health Issues</h3>
+                <ul class="tips-list">
+                    <li>Internal parasites</li>
+                    <li>Foot rot</li>
+                    <li>Respiratory problems</li>
+                    <li>Pregnancy toxemia</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Breeding and Reproduction</h2>
+            <div class="info-card">
+                <h3>Breeding Program</h3>
+                <ul class="tips-list">
+                    <li>Breeding season planning</li>
+                    <li>Ram/buck selection</li>
+                    <li>Pregnancy management</li>
+                    <li>Lambing/kidding care</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Young Stock Management</h3>
+                <ul class="tips-list">
+                    <li>Colostrum feeding</li>
+                    <li>Early nutrition</li>
+                    <li>Health monitoring</li>
+                    <li>Weaning practices</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                    <li><a href="../category-organic.html">Organic Farming</a></li>
+                    <li><a href="../category-equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

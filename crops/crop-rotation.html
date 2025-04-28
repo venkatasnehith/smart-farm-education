@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Rotation - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .content-banner {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/crop-rotation.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .content-banner h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .content-section {
+            margin-bottom: 3rem;
+        }
+        .content-section h2 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-light);
+        }
+        .content-section p {
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        .content-section ul, .content-section ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        .content-section li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+        .content-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .rotation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        .rotation-table th, .rotation-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .rotation-table th {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+        }
+        .rotation-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            color: var(--primary-dark);
+            transform: translateX(-5px);
+        }
+        .related-content {
+            background: #f5f5f5;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+        }
+        .related-content h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+        }
+        .related-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .related-link {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .related-link:hover {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-banner">
+        <h1>Crop Rotation</h1>
+        <p>Strategic planning for optimal crop rotation and soil health</p>
+    </div>
+
+    <div class="content-container">
+        <a href="../category-crops.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Crop Management
+        </a>
+
+        <article>
+            <section class="content-section">
+                <h2>Introduction to Crop Rotation</h2>
+                <p>Crop rotation is the practice of growing a series of different types of crops in the same area across a sequence of growing seasons. This practice helps reduce soil erosion and increases soil fertility and crop yield.</p>
+                <p>Crop rotation gives various benefits to the soil. First, it mitigates the build-up of pathogens and pests that often occurs when one species is continuously cropped. Second, it can improve soil structure and fertility by alternating deep-rooted and shallow-rooted plants. Third, it can help manage soil erosion.</p>
+                <img src="../images/crop-rotation-diagram.jpg" alt="Crop Rotation Diagram" class="content-image">
+                <p>The principle of crop rotation is to grow crops that benefit each other in sequence. Depending on space, crop rotation might vary in sequence from a 3-year to 7-year cycle. It takes careful planning but provides significant benefits to your farm.</p>
+            </section>
+
+            <section class="content-section">
+                <h2>Benefits of Crop Rotation</h2>
+                <ul>
+                    <li><strong>Pest Management</strong> - Many pests prefer specific crops. By rotating crops, you disrupt the pests' life cycles and reduce their population.</li>
+                    <li><strong>Disease Control</strong> - Plant diseases often build up in soil where the same crop is grown year after year. Rotating crops helps break the cycle.</li>
+                    <li><strong>Improved Soil Structure</strong> - Different types of crops have different root systems. Alternating between deep-rooted and shallow-rooted plants helps improve soil structure at various depths.</li>
+                    <li><strong>Balanced Nutrient Use</strong> - Different crops require different nutrients. Rotating crops prevents the depletion of any single nutrient in the soil.</li>
+                    <li><strong>Nitrogen Fixation</strong> - Legumes like beans and peas fix nitrogen from the air into the soil. Including them in your rotation helps replenish nitrogen levels.</li>
+                    <li><strong>Weed Suppression</strong> - Certain crops are better at competing with certain types of weeds. Rotating crops helps suppress weed populations.</li>
+                    <li><strong>Risk Management</strong> - Growing diverse crops spreads the risk of crop failure due to weather, pests, or market fluctuations.</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>Sample Crop Rotation Plans</h2>
+                <p>Here are some effective crop rotation plans you can adapt to your farm:</p>
+                
+                <h3>Four-Year Rotation Plan</h3>
+                <table class="rotation-table">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Crop</th>
+                            <th>Benefits</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Year 1</td>
+                            <td>Legumes (beans, peas, lentils)</td>
+                            <td>Fixes nitrogen in the soil</td>
+                        </tr>
+                        <tr>
+                            <td>Year 2</td>
+                            <td>Leaf Crops (lettuce, spinach, cabbage)</td>
+                            <td>Uses the nitrogen fixed by legumes</td>
+                        </tr>
+                        <tr>
+                            <td>Year 3</td>
+                            <td>Fruiting Vegetables (tomatoes, peppers, eggplants)</td>
+                            <td>Different nutrient requirements and deeper roots</td>
+                        </tr>
+                        <tr>
+                            <td>Year 4</td>
+                            <td>Root Crops (carrots, potatoes, onions)</td>
+                            <td>Breaks pest cycles and loosens soil</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Three-Year Rotation for Grain Crops</h3>
+                <table class="rotation-table">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Crop</th>
+                            <th>Benefits</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Year 1</td>
+                            <td>Corn</td>
+                            <td>Heavy feeder, provides erosion control with residue</td>
+                        </tr>
+                        <tr>
+                            <td>Year 2</td>
+                            <td>Soybeans or other legumes</td>
+                            <td>Fixes nitrogen for next crop</td>
+                        </tr>
+                        <tr>
+                            <td>Year 3</td>
+                            <td>Small Grains (wheat, barley, oats)</td>
+                            <td>Different disease pressures, adds diversity</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="content-section">
+                <h2>Implementation Tips</h2>
+                <p>Successfully implementing crop rotation requires careful planning and record-keeping. Here are some tips to help you get started:</p>
+                
+                <ol>
+                    <li><strong>Know Your Plant Families</strong> - Group plants by families and avoid planting crops from the same family in succession.</li>
+                    <li><strong>Consider Nutrient Needs</strong> - Follow heavy feeders with light feeders or nitrogen fixers.</li>
+                    <li><strong>Map Your Garden/Farm</strong> - Create detailed maps of where crops are planted each year.</li>
+                    <li><strong>Keep Records</strong> - Document what was planted where, along with any pest or disease issues that arose.</li>
+                    <li><strong>Start Small</strong> - If you're new to crop rotation, start with a simple 3-year plan and expand as you gain experience.</li>
+                    <li><strong>Consider Cover Crops</strong> - Incorporate cover crops into your rotation for additional soil benefits.</li>
+                    <li><strong>Be Flexible</strong> - Adjust your rotation as needed based on market demands and observed results.</li>
+                </ol>
+                
+                <p>Remember that no single crop rotation plan works for all farms. Adapt these principles to your specific climate, soil conditions, and market needs.</p>
+            </section>
+
+            <div class="related-content">
+                <h3>Related Content</h3>
+                <div class="related-links">
+                    <a href="companion-planting.html" class="related-link">
+                        <i class="fas fa-seedling"></i>
+                        Companion Planting
+                    </a>
+                    <a href="seasonal-planning.html" class="related-link">
+                        <i class="fas fa-calendar"></i>
+                        Seasonal Planning
+                    </a>
+                    <a href="soil-fertility.html" class="related-link">
+                        <i class="fas fa-flask"></i>
+                        Soil Fertility Management
+                    </a>
+                    <a href="organic-farming.html" class="related-link">
+                        <i class="fas fa-leaf"></i>
+                        Organic Farming Practices
+                    </a>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Farming - FarmKnowledge</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .category-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/organic-farming.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .guide-card {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .guide-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .guide-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        
+        .guide-card h3 {
+            color: #333;
+            margin: 0 0 10px 0;
+            font-size: 1.5rem;
+        }
+        
+        .guide-card p {
+            color: #666;
+            margin: 0 0 15px 0;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .guide-meta {
+            color: #888;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .read-more-btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+        
+        .read-more-btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="category-header">
+        <h1>Organic Farming Guides</h1>
+        <p>Comprehensive guides for sustainable and organic farming practices</p>
+    </div>
+
+    <main class="guides-grid">
+        <!-- Composting Guide Card -->
+        <div class="guide-card">
+            <img src="images/composting.jpg" alt="Composting Basics">
+            <h3>Composting Basics</h3>
+            <p>Getting started with composting and basic techniques.</p>
+            <div class="guide-meta">Last updated: March 14, 2024</div>
+            <a href="organic/composting-basics-guide.html" class="read-more-btn">Read More</a>
+        </div>
+
+        <!-- Organic Certification Guide Card -->
+        <div class="guide-card">
+            <img src="images/organic-certification.jpg" alt="Organic Certification">
+            <h3>Organic Certification Guide</h3>
+            <p>Step-by-step guide to obtaining organic certification.</p>
+            <div class="guide-meta">Last updated: March 14, 2024</div>
+            <a href="organic/certification-guide.html" class="read-more-btn">Read More</a>
+        </div>
+
+        <!-- Natural Pesticides Guide Card -->
+        <div class="guide-card">
+            <img src="images/natural-pesticides.jpg" alt="Natural Pesticides">
+            <h3>Natural Pesticides Guide</h3>
+            <p>Learn about organic pest control methods and natural solutions.</p>
+            <div class="guide-meta">Last updated: March 14, 2024</div>
+            <a href="organic/natural-pesticides-guide.html" class="read-more-btn">Read More</a>
+        </div>
+
+        <!-- Vermicomposting Guide Card -->
+        <div class="guide-card">
+            <img src="images/vermicomposting.jpg" alt="Vermicomposting">
+            <h3>Vermicomposting Guide</h3>
+            <p>Learn about worm composting techniques and benefits.</p>
+            <div class="guide-meta">Last updated: March 14, 2024</div>
+            <a href="organic/vermicomposting-guide.html" class="read-more-btn">Read More</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="search.html">Search</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="category-crops.html">Crops</a></li>
+                    <li><a href="category-soil.html">Soil</a></li>
+                    <li><a href="category-irrigation.html">Irrigation</a></li>
+                    <li><a href="category-livestock.html">Livestock</a></li>
+                    <li><a href="category-organic.html">Organic Farming</a></li>
+                    <li><a href="category-equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

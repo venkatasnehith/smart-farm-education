@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Management - FarmKnowledge</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .category-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/soil-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .category-header h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .category-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .topic-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .topic-card:hover {
+            transform: translateY(-5px);
+        }
+        .topic-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .topic-content {
+            padding: 1.5rem;
+        }
+        .topic-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .topic-description {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .topic-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        .read-more {
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .read-more:hover {
+            color: var(--primary-dark);
+        }
+        .read-more-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .read-more-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        .quick-links {
+            background: #f5f5f5;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        .quick-links h2 {
+            margin-bottom: 1rem;
+        }
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .quick-link {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .quick-link:hover {
+            background: var(--primary);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="category-header">
+        <h1>Soil Management</h1>
+        <p>Learn about soil types, testing, and improvement methods</p>
+    </div>
+
+    <main class="category-content">
+        <section class="quick-links">
+            <h2>Quick Links</h2>
+            <div class="quick-links-grid">
+                <a href="#soil-types" class="quick-link">
+                    <i class="fas fa-layer-group"></i>
+                    Soil Types
+                </a>
+                <a href="#soil-testing" class="quick-link">
+                    <i class="fas fa-vial"></i>
+                    Soil Testing
+                </a>
+                <a href="#soil-health" class="quick-link">
+                    <i class="fas fa-seedling"></i>
+                    Soil Health
+                </a>
+                <a href="#soil-improvement" class="quick-link">
+                    <i class="fas fa-hand-holding-water"></i>
+                    Soil Improvement
+                </a>
+            </div>
+        </section>
+
+        <section id="soil-types">
+            <h2>Soil Types</h2>
+            <div class="topic-grid">
+                <article class="topic-card">
+                    <img src="images/clay-soil.jpg" alt="Clay Soil" class="topic-image">
+                    <div class="topic-content">
+                        <h3 class="topic-title">Understanding Clay Soil</h3>
+                        <p class="topic-description">Learn about clay soil properties, challenges, and management techniques for better farming.</p>
+                        <a href="soil/clay-soil-guide.html" class="read-more-btn">Read More</a>
+                        <div class="topic-meta">
+                            <span>Last updated: Mar 15, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="topic-card">
+                    <img src="images/sandy-soil.jpg" alt="Sandy Soil" class="topic-image">
+                    <div class="topic-content">
+                        <h3 class="topic-title">Sandy Soil Management</h3>
+                        <p class="topic-description">Discover techniques to improve sandy soil fertility and water retention.</p>
+                        <a href="soil/sandy-soil-guide.html" class="read-more-btn">Read More</a>
+                        <div class="topic-meta">
+                            <span>Last updated: Mar 14, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="topic-card">
+                    <img src="images/loamy-soil.jpg" alt="Loamy Soil" class="topic-image">
+                    <div class="topic-content">
+                        <h3 class="topic-title">Loamy Soil Benefits</h3>
+                        <p class="topic-description">Everything about loamy soil and why it's ideal for most crops.</p>
+                        <a href="soil/loamy-soil-guide.html" class="read-more-btn">Read More</a>
+                        <div class="topic-meta">
+                            <span>Last updated: Mar 13, 2024</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="soil-testing">
+            <h2>Soil Testing</h2>
+            <div class="topic-grid">
+                <article class="topic-card">
+                    <img src="images/ph-testing.jpg" alt="pH Testing" class="topic-image">
+                    <div class="topic-content">
+                        <h3 class="topic-title">Soil pH Testing Guide</h3>
+                        <p class="topic-description">Complete guide to testing and managing soil pH levels for optimal crop growth.</p>
+                        <a href="soil/ph-testing-guide.html" class="read-more-btn">Read More</a>
+                        <div class="topic-meta">
+                            <span>Last updated: Mar 15, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Add more soil testing related cards -->
+            </div>
+        </section>
+
+        <section id="soil-health">
+            <h2>Soil Health</h2>
+            <div class="topic-grid">
+                <article class="topic-card">
+                    <img src="images/organic-matter.jpg" alt="Organic Matter" class="topic-image">
+                    <div class="topic-content">
+                        <h3 class="topic-title">Organic Matter Management</h3>
+                        <p class="topic-description">Learn how to maintain and improve soil organic matter for better soil health.</p>
+                        <a href="soil/organic-matter-guide.html" class="read-more-btn">Read More</a>
+                        <div class="topic-meta">
+                            <span>Last updated: Mar 14, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Add more soil health related cards -->
+            </div>
+        </section>
+
+        <section id="soil-improvement">
+            <h2>Soil Improvement</h2>
+            <div class="topic-grid">
+                <article class="topic-card">
+                    <img src="images/composting.jpg" alt="Composting" class="topic-image">
+                    <div class="topic-content">
+                        <h3 class="topic-title">Composting Techniques</h3>
+                        <p class="topic-description">Step-by-step guide to creating and using compost for soil improvement.</p>
+                        <a href="soil/composting-guide.html" class="read-more-btn">Read More</a>
+                        <div class="topic-meta">
+                            <span>Last updated: Mar 13, 2024</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Add more soil improvement related cards -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="search.html">Search</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="category-crops.html">Crops</a></li>
+                    <li><a href="category-soil.html">Soil</a></li>
+                    <li><a href="category-irrigation.html">Irrigation</a></li>
+                    <li><a href="category-livestock.html">Livestock</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

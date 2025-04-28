@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmKnowledge - Your Farming Information Hub</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet">
+  <style>
+    /* Additional styles for task scheduler */
+    .task-scheduler {
+      padding: 30px;
+      background-color: #f0f4f8;
+      border-radius: 10px;
+      margin: 40px auto;
+      max-width: 1000px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Search Box Style */
+    .search-box {
+      display: flex;
+      max-width: 600px;
+      margin: 20px auto 0;
+    }
+    
+    #hero-search-input {
+      flex: 1;
+      padding: 12px 15px;
+      font-size: 16px;
+      border: 2px solid #ddd;
+      border-radius: 8px 0 0 8px;
+      border-right: none;
+      outline: none;
+    }
+    
+    #hero-search-input:focus {
+      border-color: #4CAF50;
+    }
+    
+    #search-btn {
+      border-radius: 0 8px 8px 0;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    #search-btn:hover {
+      background-color: #3d8b40;
+    }
+    
+    .hidden {
+      display: none !important;
+    }
+    
+    /* Image Analysis Styles */
+    .detection-results {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .result-card {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .result-header {
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      color: white;
+      gap: 10px;
+    }
+    
+    .result-header.soil {
+      background-color: #795548;
+    }
+    
+    .result-header.disease {
+      background-color: #e53935;
+    }
+    
+    .result-header h4 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    
+    .result-content {
+      padding: 15px;
+    }
+    
+    .confidence-bar {
+      height: 10px;
+      background-color: #e0e0e0;
+      border-radius: 5px;
+      margin-top: 8px;
+      overflow: hidden;
+    }
+    
+    .confidence-level {
+      height: 100%;
+      background-color: #4CAF50;
+      border-radius: 5px;
+      width: 0%;
+      transition: width 1s ease-in-out;
+    }
+    
+    .recommendations {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #e8f5e9;
+      border-left: 4px solid #4CAF50;
+      border-radius: 5px;
+    }
+    
+    .recommendations h5 {
+      margin-top: 0;
+      color: #2e7d32;
+    }
+    
+    /* Simple Calendar Styles */
+    .simple-calendar {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .calendar-nav {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    
+    .weekdays {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .weekdays div {
+      padding: 10px;
+      background-color: #f0f4f8;
+      border-radius: 5px;
+    }
+    
+    .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      text-align: center;
+    }
+    
+    .days div {
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      position: relative;
+      min-height: 40px;
+    }
+    
+    .days div:hover {
+      background-color: #f0f4f8;
+    }
+    
+    .days .today {
+      background-color: #e8f5e9;
+      border: 1px solid #4CAF50;
+      font-weight: bold;
+    }
+    
+    .days .other-month {
+      color: #bbb;
+    }
+    
+    .days .has-tasks::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: #4CAF50;
+    }
+    
+    .task-list {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    
+    .task-list h4 {
+      margin-top: 0;
+      color: #2e7d32;
+    }
+    
+    .task-list ul {
+      padding-left: 20px;
+    }
+    
+    .task-list li {
+      margin-bottom: 8px;
+    }
+    
+    .upload-btn {
+      display: inline-block;
+      background-color: #f0f4f8;
+      border: 2px dashed #2e7d32;
+      color: #2e7d32;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .upload-btn:hover {
+      background-color: #e0e8f0;
+    }
+    
+    #read-image-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    #read-image-btn:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    
+    #toggle-calendar {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="language-selector">
+    <button class="lang-btn active" data-lang="en">English</button>
+    <button class="lang-btn" data-lang="hi">हिंदी</button>
+    <button class="lang-btn" data-lang="te">తెలుగు</button>
+    <button class="accessibility-btn" id="signLanguageToggle">
+      <i class="fas fa-american-sign-language-interpreting"></i>
+    </button>
+  </div>
+  
+
+  <header>
+    <div class="logo">
+      <img src="images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+      <h1 id="site-title">FarmKnowledge</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active" id="nav-home">Home</a></li>
+        <li><a href="search.html" id="nav-search">Search</a></li>
+        <li><a href="#about" id="nav-about">About</a></li>
+        <li><a href="#contact" id="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-nav-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 id="hero-title">Grow Better with Knowledge</h1>
+        <p id="hero-subtitle">Access farming information in multiple languages to improve your agricultural practices</p>
+        <div class="search-box">
+          <input type="text" id="hero-search-input" placeholder="Search for farming information...">
+          <a href="search.html" class="btn primary-btn" id="search-btn">
+            <i class="fas fa-search"></i> Start Searching
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero-image.png" alt="Farming Hero Image">
+      </div>
+    </section>
+    <section class="daily-tip">
+      <h2>🌿 Tip of the Day</h2>
+      <p id="tip-text">Loading tip...</p>
+    </section>
+    
+    <!-- Add the Task Scheduler section -->
+    <section class="task-scheduler">
+      <div class="section-header">
+        <i class="fas fa-tasks"></i>
+        <h2 class="section-title">Task Scheduler</h2>
+      </div>
+      <p class="section-description">Manage your farming tasks and get reminders</p>
+      
+      <button id="toggle-calendar" class="btn primary-btn">
+        <i class="fas fa-calendar-alt"></i> Show Calendar
+      </button>
+      
+      <div id="calendar-container" class="hidden">
+        <div class="simple-calendar">
+          <div class="calendar-header">
+            <button id="prev-month" class="calendar-nav"><i class="fas fa-chevron-left"></i></button>
+            <h3 id="current-month">May 2024</h3>
+            <button id="next-month" class="calendar-nav"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          <div class="weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div id="calendar-days" class="days"></div>
+          <div class="task-list">
+            <h4>Your Farm Tasks</h4>
+            <ul id="farm-tasks-list">
+              <li>No tasks scheduled yet. Click on a date to add a task.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="task-image-upload">
+        <h3><i class="fas fa-image"></i> Image Analysis</h3>
+        <p>Upload an image for plant disease detection or soil type analysis</p>
+        
+        <div class="upload-container">
+          <input type="file" id="task-image-input" accept="image/*" class="hidden">
+          <label for="task-image-input" class="upload-btn">
+            <i class="fas fa-upload"></i> Choose Image
+          </label>
+          <button id="read-image-btn" class="btn primary-btn" disabled>
+            <i class="fas fa-microscope"></i> Analyze Image
+          </button>
+        </div>
+        
+        <div id="image-preview-container" class="hidden">
+          <img id="image-preview" src="" alt="Preview">
+          <div id="image-text-result" class="hidden">
+            <h4>Analysis Results:</h4>
+            <div class="detection-results">
+              <div class="result-card soil-result">
+                <div class="result-header soil">
+                  <i class="fas fa-layer-group"></i>
+                  <h4>Soil Type</h4>
+                </div>
+                <div class="result-content">
+                  <p id="soil-type">Analyzing soil...</p>
+                  <div class="confidence-bar">
+                    <div class="confidence-level" id="soil-confidence"></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="result-card disease-result">
+                <div class="result-header disease">
+                  <i class="fas fa-disease"></i>
+                  <h4>Plant Disease</h4>
+                </div>
+                <div class="result-content">
+                  <p id="disease-name">Analyzing disease...</p>
+                  <div class="confidence-bar">
+                    <div class="confidence-level" id="disease-confidence"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div id="extracted-text" class="recommendations"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="live-detection">
+      <div class="live-detection-container">
+        <div class="section-header">
+          <i class="fas fa-camera detection-icon"></i>
+          <h2 class="section-title">Live Detection</h2>
+        </div>
+        <p class="section-description">Use your webcam to instantly identify soil types and plant diseases</p>
+        
+        <div class="detection-content">
+          <div class="video-feed-container">
+            <div class="video-header">
+              <i class="fas fa-video"></i>
+              <span>Live Camera Feed</span>
+            </div>
+            <div class="video-frame">
+              <img id="videoFeed" src="" alt="Live Detection Feed">
+              <div class="loading-overlay">
+                <div class="spinner"></div>
+                <p>Connecting to camera...</p>
+              </div>
+            </div>
+            <div class="video-footer">
+              <span class="detection-status">AI analyzing video feed...</span>
+            </div>
+          </div>
+          
+          <div class="detection-results">
+            <div class="result-box soil-box">
+              <div class="result-header">
+                <i class="fas fa-seedling"></i>
+                <h3>Soil Type</h3>
+              </div>
+              <div id="soil-result" class="result-content">
+                <p class="waiting-text">Waiting for detection...</p>
+              </div>
+            </div>
+            
+            <div class="result-box disease-box">
+              <div class="result-header">
+                <i class="fas fa-disease"></i>
+                <h3>Plant Disease</h3>
+              </div>
+              <div id="disease-result" class="result-content">
+                <p class="waiting-text">Waiting for detection...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <h2 id="categories-title">Popular Categories</h2>
+      <div class="category-cards">
+        <a href="category-crops.html" class="category-card" data-category="crops">
+          <img src="images/crop.png" alt="Crops">
+          <h3 id="category-crops">Crops</h3>
+          <p>Explore various crop cultivation techniques and best practices</p>
+        </a>
+        <a href="category-soil.html" class="category-card" data-category="soil">
+          <img src="images/soil.png" alt="Soil">
+          <h3 id="category-soil">Soil</h3>
+          <p>Learn about soil types, testing, and improvement methods</p>
+        </a>
+        <a href="category-irrigation.html" class="category-card" data-category="irrigation">
+          <img src="images/irrigation.png" alt="Irrigation">
+          <h3 id="category-irrigation">Irrigation</h3>
+          <p>Discover modern irrigation systems and water management</p>
+        </a>
+        <a href="category-livestock.html" class="category-card" data-category="livestock">
+          <img src="images/livestock.png" alt="Livestock">
+          <h3 id="category-livestock">Livestock</h3>
+          <p>Guide to livestock care, breeding, and management</p>
+        </a>
+        <a href="category-equipment.html" class="category-card" data-category="equipment">
+          <img src="images/equipment.png" alt="Equipment">
+          <h3 id="category-equipment">Equipment</h3>
+          <p>Modern farming equipment and maintenance tips</p>
+        </a>
+        <a href="category-organic.html" class="category-card" data-category="organic">
+          <img src="images/organic.png" alt="Organic Farming">
+          <h3 id="category-organic">Organic Farming</h3>
+          <p>Natural farming methods and sustainable practices</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2 id="features-title">Why Choose Our Platform</h2>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <i class="fas fa-language"></i>
+          <h3 id="feature-multilingual">Multilingual Support</h3>
+          <p id="feature-multilingual-desc">Access information in English, Hindi, and Telugu</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-american-sign-language-interpreting"></i>
+          <h3 id="feature-sign">Sign Language</h3>
+          <p id="feature-sign-desc">Accessibility for deaf and hard of hearing</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-microphone"></i>
+          <h3 id="feature-voice">Voice Search</h3>
+          <p id="feature-voice-desc">Search using your voice in multiple languages</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-image"></i>
+          <h3 id="feature-visual">Visual Learning</h3>
+          <p id="feature-visual-desc">Images and visual guides for better understanding</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2 id="about-title">About Us</h2>
+      <div class="about-content">
+        <div class="about-image">
+          <img src="images/about.png" alt="About Us">
+        </div>
+        <div class="about-text">
+          <p id="about-desc">FarmKnowledge is a platform dedicated to providing accessible farming information to everyone, regardless of language barriers or disabilities. Our mission is to empower farmers with knowledge to improve their practices and yields.</p>
+          <p id="about-desc2">We believe that everyone should have access to agricultural information, which is why we've made our platform multilingual and accessible through sign language support.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 id="contact-title">Contact Us</h2>
+      <div class="contact-content">
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name" id="contact-name-label">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email" id="contact-email-label">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message" id="contact-message-label">Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn primary-btn" id="contact-submit">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <p>info@farmknowledge.com</p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <p>+1 234 567 8900</p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>123 Farm Road, Agriculture City</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/logo.jpeg" alt="FarmKnowledge Logo">
+        <h3>FarmKnowledge</h3>
+      </div>
+      <div class="footer-links">
+        <h4 id="footer-links-title">Quick Links</h4>
+        <ul>
+          <li><a href="index.html" id="footer-home">Home</a></li>
+          <li><a href="search.html" id="footer-search">Search</a></li>
+          <li><a href="#about" id="footer-about">About</a></li>
+          <li><a href="#contact" id="footer-contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-categories">
+        <h4 id="footer-categories-title">Categories</h4>
+        <ul>
+          <li><a href="search.html?query=crops" id="footer-crops">Crops</a></li>
+          <li><a href="search.html?query=soil" id="footer-soil">Soil</a></li>
+          <li><a href="search.html?query=irrigation" id="footer-irrigation">Irrigation</a></li>
+          <li><a href="search.html?query=livestock" id="footer-livestock">Livestock</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4 id="footer-social-title">Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p id="copyright">© 2025 FarmKnowledge. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/detection.js"></script>
+  <script src="js/image_to_query.js"></script>
+  <script src="js/detection_content.js"></script>
+  
+  <script>
+    // Add click events for category cards
+    document.addEventListener('DOMContentLoaded', () => {
+      // Handle category card clicks
+      document.querySelectorAll('.category-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+          const category = card.getAttribute('data-category');
+          if (category) {
+            e.preventDefault(); // Prevent default link behavior
+            // Redirect to the category-specific page instead of search
+            window.location.href = `category-${category}.html`;
+          }
+        });
+      });
+      
+      // Remove loading overlay when video feed is available
+      const videoFeed = document.getElementById('videoFeed');
+      if (videoFeed) {
+        videoFeed.addEventListener('load', function() {
+          if (this.src) {
+            document.querySelector('.loading-overlay').style.display = 'none';
+          }
+        });
+        
+        // If no video after 5 seconds, show error message
+        setTimeout(() => {
+          if (!videoFeed.src) {
+            const loadingOverlay = document.querySelector('.loading-overlay');
+            if (loadingOverlay) {
+              loadingOverlay.innerHTML = '<i class="fas fa-exclamation-circle" style="font-size: 3rem; color: #f44336;"></i><p>Camera access issue. Please check permissions.</p>';
+            }
+          }
+        }, 5000);
+      }
+      
+      // Simple Calendar Implementation
+      const toggleBtn = document.getElementById('toggle-calendar');
+      const calendarContainer = document.getElementById('calendar-container');
+      let currentDate = new Date();
+      let farmTasks = JSON.parse(localStorage.getItem('farmTasks') || '[]');
+      
+      function renderCalendar() {
+        const monthYearElement = document.getElementById('current-month');
+        const daysContainer = document.getElementById('calendar-days');
+        const taskList = document.getElementById('farm-tasks-list');
+        
+        // Update month display
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        monthYearElement.textContent = `${months[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
+        
+        // Clear days container
+        daysContainer.innerHTML = '';
+        
+        // Get first day of month
+        const firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+        const startingDay = firstDay.getDay(); // 0 is Sunday
+        
+        // Get number of days in month
+        const lastDay = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+        const totalDays = lastDay.getDate();
+        
+        // Get days from previous month
+        const prevMonthDays = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
+        
+        // Create days
+        let dayCount = 1;
+        const today = new Date();
+        
+        // Add previous month days
+        for (let i = startingDay - 1; i >= 0; i--) {
+          const dayElement = document.createElement('div');
+          dayElement.textContent = prevMonthDays - i;
+          dayElement.classList.add('other-month');
+          daysContainer.appendChild(dayElement);
+        }
+        
+        // Add current month days
+        for (let i = 1; i <= totalDays; i++) {
+          const dayElement = document.createElement('div');
+          dayElement.textContent = i;
+          
+          // Check if this is today
+          if (
+            today.getDate() === i &&
+            today.getMonth() === currentDate.getMonth() &&
+            today.getFullYear() === currentDate.getFullYear()
+          ) {
+            dayElement.classList.add('today');
+          }
+          
+          // Check if day has tasks
+          const dateString = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
+          if (farmTasks.some(task => task.date === dateString)) {
+            dayElement.classList.add('has-tasks');
+          }
+          
+          // Add click event to add tasks
+          dayElement.addEventListener('click', () => {
+            const taskTitle = prompt('Enter a farming task:');
+            if (taskTitle) {
+              const task = {
+                title: taskTitle,
+                date: dateString
+              };
+              
+              farmTasks.push(task);
+              localStorage.setItem('farmTasks', JSON.stringify(farmTasks));
+              
+              // Update UI
+              dayElement.classList.add('has-tasks');
+              updateTaskList();
+            }
+          });
+          
+          daysContainer.appendChild(dayElement);
+          dayCount++;
+        }
+        
+        // Add days from next month
+        const totalCells = 42; // 6 rows of 7 days
+        const remainingCells = totalCells - (startingDay + totalDays);
+        
+        for (let i = 1; i <= remainingCells; i++) {
+          const dayElement = document.createElement('div');
+          dayElement.textContent = i;
+          dayElement.classList.add('other-month');
+          daysContainer.appendChild(dayElement);
+        }
+        
+        // Update task list
+        updateTaskList();
+      }
+      
+      function updateTaskList() {
+        const taskList = document.getElementById('farm-tasks-list');
+        
+        // Filter tasks for current month
+        const monthTasks = farmTasks.filter(task => {
+          const taskDate = new Date(task.date);
+          return (
+            taskDate.getMonth() === currentDate.getMonth() &&
+            taskDate.getFullYear() === currentDate.getFullYear()
+          );
+        });
+        
+        // Display tasks
+        if (monthTasks.length === 0) {
+          taskList.innerHTML = '<li>No tasks scheduled yet. Click on a date to add a task.</li>';
+        } else {
+          taskList.innerHTML = '';
+          monthTasks.forEach(task => {
+            const taskDate = new Date(task.date);
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${taskDate.getDate()}</strong>: ${task.title}`;
+            taskList.appendChild(li);
+          });
+        }
+      }
+      
+      // Initialize calendar navigation
+      document.getElementById('prev-month').addEventListener('click', () => {
+        currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
+        renderCalendar();
+      });
+      
+      document.getElementById('next-month').addEventListener('click', () => {
+        currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
+        renderCalendar();
+      });
+      
+      // Calendar toggle
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', function() {
+          calendarContainer.classList.toggle('hidden');
+          
+          if (calendarContainer.classList.contains('hidden')) {
+            toggleBtn.innerHTML = '<i class="fas fa-calendar-alt"></i> Show Calendar';
+          } else {
+            toggleBtn.innerHTML = '<i class="fas fa-calendar-alt"></i> Hide Calendar';
+            renderCalendar();
+          }
+        });
+      }
+      
+      // Image upload functionality
+      const imageInput = document.getElementById('task-image-input');
+      const readImageBtn = document.getElementById('read-image-btn');
+      const imagePreview = document.getElementById('image-preview');
+      const imagePreviewContainer = document.getElementById('image-preview-container');
+      const imageTextResult = document.getElementById('image-text-result');
+      const extractedText = document.getElementById('extracted-text');
+      const soilType = document.getElementById('soil-type');
+      const diseaseName = document.getElementById('disease-name');
+      const soilConfidence = document.getElementById('soil-confidence');
+      const diseaseConfidence = document.getElementById('disease-confidence');
+      
+      // Database of soil types and their characteristics
+      const soilTypes = [
+        {
+          name: "Clay Soil",
+          characteristics: "Heavy, sticky when wet, hard when dry",
+          color: "brownish-red to dark brown",
+          recommendations: "Best for: Rice, wheat, vegetables. Improve drainage with organic matter. Avoid overwatering."
+        },
+        {
+          name: "Sandy Soil",
+          characteristics: "Light, easy to work with, drains quickly",
+          color: "light brown to yellowish",
+          recommendations: "Best for: Root vegetables, carrots, potatoes. Add organic matter to improve water retention. Frequent watering may be needed."
+        },
+        {
+          name: "Loamy Soil",
+          characteristics: "Perfect balance of sand, silt, and clay",
+          color: "dark brown",
+          recommendations: "Best for: Most crops. Maintain with regular addition of organic matter. Ideal for most farming activities."
+        },
+        {
+          name: "Red Soil",
+          characteristics: "Rich in iron oxide, medium fertility",
+          color: "reddish",
+          recommendations: "Best for: Millets, tobacco, groundnuts. Add organic matter to improve moisture retention. Supplement with nitrogen fertilizers."
+        },
+        {
+          name: "Alluvial Soil",
+          characteristics: "Fertile soil deposited by rivers",
+          color: "light to dark brown",
+          recommendations: "Best for: Rice, wheat, sugarcane. Maintain fertility with crop rotation. Highly productive soil."
+        },
+        {
+          name: "Black Soil (Regur)",
+          characteristics: "High clay content, retains moisture",
+          color: "dark black to deep brown",
+          recommendations: "Best for: Cotton, sugarcane, pulses. Good water retention. Avoid overwatering to prevent waterlogging."
+        }
+      ];
+      
+      // Database of plant diseases
+      const plantDiseases = [
+        {
+          name: "Rice Blast",
+          pathogen: "Magnaporthe oryzae (fungus)",
+          symptoms: "Diamond-shaped lesions on leaves, brown spots on stems and leaves",
+          crops: "Rice",
+          treatment: "Use disease-resistant varieties. Apply fungicides like tricyclazole. Proper field drainage."
+        },
+        {
+          name: "Wheat Rust",
+          pathogen: "Puccinia graminis (fungus)",
+          symptoms: "Reddish-brown pustules on stems and leaves",
+          crops: "Wheat",
+          treatment: "Plant resistant varieties. Apply fungicides. Early planting to avoid high disease pressure periods."
+        },
+        {
+          name: "Late Blight",
+          pathogen: "Phytophthora infestans (fungus-like)",
+          symptoms: "Dark brown spots on leaves, white fuzzy growth on undersides",
+          crops: "Potatoes, Tomatoes",
+          treatment: "Apply copper-based fungicides. Plant resistant varieties. Ensure good air circulation between plants."
+        },
+        {
+          name: "Bacterial Leaf Blight",
+          pathogen: "Xanthomonas oryzae (bacteria)",
+          symptoms: "Yellow-green to white lesions along leaf edges",
+          crops: "Rice",
+          treatment: "Use resistant varieties. Practice field sanitation. Avoid excess nitrogen fertilization."
+        },
+        {
+          name: "Powdery Mildew",
+          pathogen: "Various fungi",
+          symptoms: "White powdery coating on leaves and stems",
+          crops: "Various crops including grains and vegetables",
+          treatment: "Apply sulfur-based fungicides. Ensure proper spacing between plants. Remove infected plant parts."
+        },
+        {
+          name: "Leaf Spot",
+          pathogen: "Various fungi and bacteria",
+          symptoms: "Brown or black spots on leaves with yellow halos",
+          crops: "Various crops",
+          treatment: "Rotate crops. Apply appropriate fungicides. Remove infected leaves."
+        }
+      ];
+      
+      if (imageInput) {
+        imageInput.addEventListener('change', function(e) {
+          if (e.target.files && e.target.files[0]) {
+            const reader = new FileReader();
+            
+            reader.onload = function(event) {
+              imagePreview.src = event.target.result;
+              imagePreviewContainer.classList.remove('hidden');
+              readImageBtn.disabled = false;
+            };
+            
+            reader.readAsDataURL(e.target.files[0]);
+          }
+        });
+      }
+      
+      if (readImageBtn) {
+        readImageBtn.addEventListener('click', function() {
+          // Show loading state
+          readImageBtn.disabled = true;
+          readImageBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Analyzing...';
+          
+          // Reset previous results
+          soilType.textContent = "Analyzing soil...";
+          diseaseName.textContent = "Analyzing disease...";
+          soilConfidence.style.width = "0%";
+          diseaseConfidence.style.width = "0%";
+          extractedText.innerHTML = "";
+          
+          // Show the results container
+          imageTextResult.classList.remove('hidden');
+          
+          // Simulate image analysis (in a real app, you'd use a machine learning API)
+          setTimeout(function() {
+            // Analysis part 1 - Show initial results
+            analyzeSoilType(imagePreview.src);
+            
+            // Analysis part 2 - Show disease results after a short delay
+            setTimeout(function() {
+              analyzePlantDisease(imagePreview.src);
+            }, 1000);
+            
+            // Reset button state
+            readImageBtn.disabled = false;
+            readImageBtn.innerHTML = '<i class="fas fa-microscope"></i> Analyze Image';
+            
+          }, 2000); // 2-second delay to simulate processing
+        });
+      }
+      
+      function analyzeSoilType(imageSrc) {
+        // In a real app, this would send the image to an AI service
+        // For now, we'll randomly select a soil type based on the image
+        
+        // Extract dominant color from image for more realistic simulation
+        // This is a simplification - real detection would use machine learning
+        const dominantColorIndex = Math.floor(Date.now() % soilTypes.length);
+        const detectedSoil = soilTypes[dominantColorIndex];
+        
+        // Calculate confidence (simulated)
+        const confidence = 70 + Math.floor(Math.random() * 25); // 70-95%
+        
+        // Update UI with results
+        soilType.textContent = detectedSoil.name + " (" + confidence + "% confidence)";
+        soilConfidence.style.width = confidence + "%";
+        
+        // Add soil recommendations to the recommendations section
+        let recommendationsHTML = `
+          <h5>Soil Analysis: ${detectedSoil.name}</h5>
+          <p><strong>Characteristics:</strong> ${detectedSoil.characteristics}</p>
+          <p><strong>Recommendations:</strong> ${detectedSoil.recommendations}</p>
+        `;
+        
+        extractedText.innerHTML = recommendationsHTML;
+        
+        // Return the detected soil for possible use elsewhere
+        return detectedSoil;
+      }
+      
+      function analyzePlantDisease(imageSrc) {
+        // In a real app, this would use a trained ML model via an API
+        
+        // For simulation, use a combination of image data and random selection
+        // This gives some variability in results but maintains a realistic feel
+        const timeBasedIndex = Math.floor((Date.now() / 1000) % plantDiseases.length);
+        const detectedDisease = plantDiseases[timeBasedIndex];
+        
+        // Calculate confidence (simulated)
+        const confidence = 65 + Math.floor(Math.random() * 30); // 65-95%
+        
+        // Update UI with results
+        diseaseName.textContent = detectedDisease.name + " (" + confidence + "% confidence)";
+        diseaseConfidence.style.width = confidence + "%";
+        
+        // Add to recommendations
+        let diseaseHTML = `
+          <h5>Disease Analysis: ${detectedDisease.name}</h5>
+          <p><strong>Affects:</strong> ${detectedDisease.crops}</p>
+          <p><strong>Symptoms:</strong> ${detectedDisease.symptoms}</p>
+          <p><strong>Treatment:</strong> ${detectedDisease.treatment}</p>
+        `;
+        
+        extractedText.innerHTML += diseaseHTML;
+        
+        return detectedDisease;
+      }
+      
+      // Search functionality
+      const searchInput = document.getElementById('hero-search-input');
+      const searchBtn = document.getElementById('search-btn');
+      
+      if (searchBtn && searchInput) {
+        // Handle click on search button
+        searchBtn.addEventListener('click', function(e) {
+          const searchTerm = searchInput.value.trim();
+          if (searchTerm) {
+            e.preventDefault(); // Prevent default link behavior
+            window.location.href = `search.html?query=${encodeURIComponent(searchTerm)}`;
+          }
+        });
+        
+        // Handle enter key in search input
+        searchInput.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter') {
+            const searchTerm = searchInput.value.trim();
+            if (searchTerm) {
+              window.location.href = `search.html?query=${encodeURIComponent(searchTerm)}`;
+            }
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

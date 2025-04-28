@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combine Harvester Guide - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/combine-harvester.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .article-header h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .article-meta {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .article-section {
+            margin-bottom: 3rem;
+        }
+        .article-section h2 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .article-section p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .info-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .info-card h3 {
+            color: #2c5282;
+            margin-bottom: 1rem;
+        }
+        .tips-list {
+            list-style: none;
+            padding: 0;
+        }
+        .tips-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        .tips-list li:before {
+            content: "✓";
+            color: #2c5282;
+            position: absolute;
+            left: 0;
+        }
+        .harvester-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        @media (max-width: 768px) {
+            .harvester-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .component-list {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .component-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .component-name {
+            font-weight: 600;
+            color: #2c5282;
+            margin-bottom: 0.5rem;
+        }
+        .component-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="article-header">
+        <h1>Combine Harvesters</h1>
+        <p>Understanding and operating combine harvesters effectively</p>
+    </div>
+
+    <main class="article-content">
+        <div class="article-meta">
+            <span><i class="fas fa-calendar"></i> Last Updated: March 14, 2024</span>
+            <span class="mx-3">|</span>
+            <span><i class="fas fa-clock"></i> 15 min read</span>
+        </div>
+
+        <div class="article-section">
+            <h2>Understanding Combine Harvesters</h2>
+            <p>A combine harvester is a versatile machine that combines three separate harvesting operations - reaping, threshing, and winnowing - into a single process.</p>
+            
+            <div class="harvester-grid">
+                <div class="info-card">
+                    <h3>Key Functions</h3>
+                    <ul class="tips-list">
+                        <li>Cutting the crop</li>
+                        <li>Separating grain</li>
+                        <li>Cleaning process</li>
+                        <li>Grain collection</li>
+                        <li>Residue management</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>Advantages</h3>
+                    <ul class="tips-list">
+                        <li>Time efficiency</li>
+                        <li>Labor savings</li>
+                        <li>Reduced grain loss</li>
+                        <li>Multiple crop handling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Main Components</h2>
+            <div class="component-list">
+                <div class="component-item">
+                    <div class="component-name">Header</div>
+                    <div class="component-description">Cuts and gathers the crop, available in different types for various crops</div>
+                </div>
+                <div class="component-item">
+                    <div class="component-name">Threshing System</div>
+                    <div class="component-description">Separates grain from stalks and husks</div>
+                </div>
+                <div class="component-item">
+                    <div class="component-name">Cleaning System</div>
+                    <div class="component-description">Uses sieves and fans to remove chaff and debris</div>
+                </div>
+                <div class="component-item">
+                    <div class="component-name">Grain Tank</div>
+                    <div class="component-description">Stores cleaned grain until unloading</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Operation Guidelines</h2>
+            <div class="info-card">
+                <h3>Pre-Operation Checks</h3>
+                <ul class="tips-list">
+                    <li>Inspect all components</li>
+                    <li>Check fluid levels</li>
+                    <li>Test safety systems</li>
+                    <li>Adjust settings for crop</li>
+                    <li>Review field conditions</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Operating Tips</h3>
+                <ul class="tips-list">
+                    <li>Maintain proper speed</li>
+                    <li>Monitor grain quality</li>
+                    <li>Check for blockages</li>
+                    <li>Adjust settings as needed</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Maintenance and Care</h2>
+            <div class="info-card">
+                <h3>Daily Maintenance</h3>
+                <ul class="tips-list">
+                    <li>Clean thoroughly</li>
+                    <li>Check wear points</li>
+                    <li>Lubricate as needed</li>
+                    <li>Inspect belts</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Seasonal Maintenance</h3>
+                <ul class="tips-list">
+                    <li>Replace worn parts</li>
+                    <li>Service all systems</li>
+                    <li>Update software</li>
+                    <li>Calibrate sensors</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Troubleshooting</h2>
+            <div class="info-card">
+                <h3>Common Issues</h3>
+                <ul class="tips-list">
+                    <li>Poor grain quality</li>
+                    <li>Excessive losses</li>
+                    <li>Uneven cutting</li>
+                    <li>System blockages</li>
+                    <li>Performance issues</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Solutions</h3>
+                <ul class="tips-list">
+                    <li>Adjust settings</li>
+                    <li>Clear blockages safely</li>
+                    <li>Check component wear</li>
+                    <li>Consult manual</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                    <li><a href="../category-organic.html">Organic Farming</a></li>
+                    <li><a href="../category-equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

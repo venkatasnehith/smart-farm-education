@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composting Techniques - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .guide-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/composting.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .guide-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .guide-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .guide-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .guide-content h2 {
+            color: var(--primary-dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+        .guide-content h3 {
+            color: var(--primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .guide-content p, .guide-content ul, .guide-content ol {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: #444;
+        }
+        .guide-content ul, .guide-content ol {
+            padding-left: 1.5rem;
+        }
+        .guide-content li {
+            margin-bottom: 0.5rem;
+        }
+        .guide-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .tip-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .tip-box h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .tip-box p {
+            margin-bottom: 0;
+        }
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        .nav-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .nav-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        .material-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .material-table th, .material-table td {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+        }
+        .material-table th {
+            background-color: var(--primary);
+            color: white;
+            text-align: left;
+        }
+        .material-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="guide-header">
+        <h1>Composting Techniques</h1>
+        <p>Step-by-step guide to creating and using compost for soil improvement</p>
+    </div>
+
+    <div class="guide-container">
+        <div class="guide-content">
+            <h2>Understanding Composting</h2>
+            <p>Composting is the natural process of decomposition that transforms organic materials into a rich, soil-like substance that can improve soil structure, add nutrients, and enhance soil biology. When properly managed, composting converts farm waste into a valuable resource while reducing environmental impact.</p>
+            
+            <img src="../images/compost-pile.jpg" alt="Well-managed compost pile" class="guide-image">
+            
+            <h3>Benefits of Composting</h3>
+            <ul>
+                <li><strong>Soil Improvement:</strong> Adds organic matter, enhances water retention, and improves soil structure</li>
+                <li><strong>Nutrient Recycling:</strong> Returns nutrients from organic wastes back to the soil</li>
+                <li><strong>Waste Management:</strong> Reduces the volume of organic waste and keeps it out of landfills</li>
+                <li><strong>Disease Suppression:</strong> Properly managed compost can help suppress soil-borne diseases</li>
+                <li><strong>Cost Savings:</strong> Reduces the need for purchased fertilizers and soil amendments</li>
+                <li><strong>Environmental Protection:</strong> Minimizes leaching of nutrients and reduces greenhouse gas emissions from landfills</li>
+            </ul>
+            
+            <h2>Composting Basics: The Four Essential Elements</h2>
+            
+            <h3>1. Carbon-Rich Materials (Browns)</h3>
+            <p>These provide energy for composting microorganisms:</p>
+            <ul>
+                <li>Dry leaves, straw, and hay</li>
+                <li>Wood chips, sawdust (untreated wood)</li>
+                <li>Shredded paper and cardboard</li>
+                <li>Corn stalks and other dry crop residues</li>
+                <li>Prunings and small twigs</li>
+            </ul>
+            
+            <h3>2. Nitrogen-Rich Materials (Greens)</h3>
+            <p>These provide protein for microbial growth:</p>
+            <ul>
+                <li>Fresh grass clippings</li>
+                <li>Fruit and vegetable scraps</li>
+                <li>Manure from herbivores (cow, horse, chicken)</li>
+                <li>Coffee grounds and tea leaves</li>
+                <li>Fresh green plant material</li>
+                <li>Legume plants and residues</li>
+            </ul>
+            
+            <div class="tip-box">
+                <h4>The C:N Ratio</h4>
+                <p>For optimal composting, aim for a carbon-to-nitrogen ratio of about 30:1. Too much carbon (browns) slows decomposition; too much nitrogen (greens) can create odor problems. As a general rule, use about 3 parts carbon materials to 1 part nitrogen materials by volume.</p>
+            </div>
+            
+            <h3>3. Moisture</h3>
+            <p>Compost should have the moisture level of a wrung-out sponge—damp but not soaking wet:</p>
+            <ul>
+                <li>Too dry: Decomposition slows or stops</li>
+                <li>Too wet: Creates anaerobic conditions, leading to odors and slowed decomposition</li>
+                <li>Ideal: 40-60% moisture content</li>
+            </ul>
+            
+            <h3>4. Oxygen</h3>
+            <p>Aerobic composting (with oxygen) is faster, more efficient, and produces less odor:</p>
+            <ul>
+                <li>Regular turning aerates the pile</li>
+                <li>Bulky materials like straw or wood chips create air spaces</li>
+                <li>Some systems use pipes or other methods to introduce air</li>
+            </ul>
+            
+            <h2>Composting Methods for Farms</h2>
+            
+            <h3>Static Pile Composting</h3>
+            <p><strong>Best for:</strong> Small to medium farms with limited equipment</p>
+            <ol>
+                <li>Layer carbon and nitrogen materials in a pile at least 3' x 3' x 3'</li>
+                <li>Keep pile moist but not soggy</li>
+                <li>Optional: Cover with tarp in very wet or dry conditions</li>
+                <li>Turn occasionally (every 1-2 months) to speed up the process</li>
+                <li>Ready in 6-12 months</li>
+            </ol>
+            
+            <h3>Turned Windrow Composting</h3>
+            <p><strong>Best for:</strong> Larger operations with equipment for turning</p>
+            <ol>
+                <li>Create long piles (windrows) 4-8 feet high and 10-12 feet wide</li>
+                <li>Turn regularly (weekly in early stages) with front-end loader or specialized turner</li>
+                <li>Monitor temperature, which should reach 131-160°F in the center</li>
+                <li>Maintain moisture throughout turning</li>
+                <li>Ready in 3-6 months with regular turning</li>
+            </ol>
+            
+            <img src="../images/windrow-composting.jpg" alt="Windrow composting on a farm" class="guide-image">
+            
+            <h3>Aerated Static Pile</h3>
+            <p><strong>Best for:</strong> Farms wanting faster composting with less turning</p>
+            <ol>
+                <li>Build pile over perforated pipes connected to a blower</li>
+                <li>Blower provides oxygen without turning</li>
+                <li>Cover with layer of finished compost or wood chips to insulate and filter odors</li>
+                <li>Monitor temperature to control blower operation</li>
+                <li>Ready in 3-5 months with good management</li>
+            </ol>
+            
+            <h3>In-Vessel Composting</h3>
+            <p><strong>Best for:</strong> Farms needing rapid, controlled composting</p>
+            <ul>
+                <li>Uses containers, drums, or silos to contain materials</li>
+                <li>Provides highest level of control over temperature, moisture, and aeration</li>
+                <li>Can be mechanized for turning/mixing</li>
+                <li>Typically faster (weeks rather than months)</li>
+                <li>Higher cost but better for odor control and space efficiency</li>
+            </ul>
+            
+            <h2>Step-by-Step Composting Guide</h2>
+            
+            <h3>Step 1: Choose a Location</h3>
+            <p>Select a site that is:</p>
+            <ul>
+                <li>Convenient for adding materials and removing finished compost</li>
+                <li>Well-drained to prevent waterlogging</li>
+                <li>Away from surface water to prevent runoff issues</li>
+                <li>Level or slightly sloped for drainage</li>
+                <li>Accessible year-round, including in wet weather</li>
+                <li>Consider proximity to neighbors if odor could be an issue</li>
+            </ul>
+            
+            <h3>Step 2: Gather and Prepare Materials</h3>
+            <p>For efficient composting:</p>
+            <ul>
+                <li>Chop or shred materials when possible for faster decomposition</li>
+                <li>Sort materials to remove non-compostables</li>
+                <li>Have a mix of carbon and nitrogen materials ready</li>
+                <li>Consider having a "stockpile" of carbon materials to use year-round</li>
+            </ul>
+            
+            <table class="material-table">
+                <tr>
+                    <th>Material</th>
+                    <th>C:N Ratio</th>
+                    <th>Preparation</th>
+                </tr>
+                <tr>
+                    <td>Leaves</td>
+                    <td>40-80:1</td>
+                    <td>Shred if possible</td>
+                </tr>
+                <tr>
+                    <td>Straw</td>
+                    <td>40-100:1</td>
+                    <td>Chop into smaller pieces</td>
+                </tr>
+                <tr>
+                    <td>Wood chips</td>
+                    <td>100-500:1</td>
+                    <td>Use smaller chips; avoid treated wood</td>
+                </tr>
+                <tr>
+                    <td>Grass clippings</td>
+                    <td>15-25:1</td>
+                    <td>Mix with browns to prevent clumping</td>
+                </tr>
+                <tr>
+                    <td>Vegetable scraps</td>
+                    <td>15-20:1</td>
+                    <td>Chop larger pieces</td>
+                </tr>
+                <tr>
+                    <td>Cattle manure</td>
+                    <td>20:1</td>
+                    <td>Mix with bedding materials</td>
+                </tr>
+                <tr>
+                    <td>Poultry manure</td>
+                    <td>10:1</td>
+                    <td>Mix with high-carbon materials</td>
+                </tr>
+            </table>
+            
+            <div class="tip-box">
+                <h4>What to Avoid Composting</h4>
+                <p>Some materials can cause problems in farm compost: meat, bones, and fatty foods (attract pests); pet wastes (potential pathogens); diseased plants (if pile won't reach high temperatures); persistent weeds like bindweed or quackgrass; and any non-organic materials like plastic or metal.</p>
+            </div>
+            
+            <h3>Step 3: Build the Pile</h3>
+            <ol>
+                <li>Start with a 4-6 inch layer of coarse material (twigs, stalks) for drainage and aeration</li>
+                <li>Add alternating layers of carbon and nitrogen materials</li>
+                <li>Moisten each layer as you build</li>
+                <li>Make pile at least 3 feet cubed to retain heat</li>
+                <li>Cap pile with carbon material to reduce odors</li>
+            </ol>
+            
+            <h3>Step 4: Monitor and Maintain</h3>
+            <p>Regular monitoring helps ensure successful composting:</p>
+            <ul>
+                <li><strong>Temperature:</strong> Use a compost thermometer to track. Should reach 131-160°F in the center within a few days</li>
+                <li><strong>Moisture:</strong> Check weekly; squeeze a handful—should feel like a wrung-out sponge</li>
+                <li><strong>Odor:</strong> Should smell earthy; ammonia odor indicates too much nitrogen; rotten egg smell indicates anaerobic conditions (too wet/compacted)</li>
+                <li><strong>Turning:</strong> Turn when temperature drops or according to your chosen method's schedule</li>
+            </ul>
+            
+            <img src="../images/compost-thermometer.jpg" alt="Using a compost thermometer" class="guide-image">
+            
+            <h3>Step 5: Determine When Compost is Ready</h3>
+            <p>Finished compost has these characteristics:</p>
+            <ul>
+                <li>Dark brown to black color</li>
+                <li>Earthy, pleasant smell</li>
+                <li>Original materials are not recognizable</li>
+                <li>Temperature has cooled to ambient levels</li>
+                <li>Volume reduced by 30-50% from original</li>
+            </ul>
+            
+            <h3>Step 6: Use and Apply Compost</h3>
+            <p>Application methods depend on your farming system:</p>
+            <ul>
+                <li><strong>Field Crops:</strong> 3-5 tons per acre, incorporated before planting</li>
+                <li><strong>Vegetables:</strong> 1-2 inches applied to bed surface or incorporated</li>
+                <li><strong>Orchards/Vineyards:</strong> Apply as mulch around trees/vines, 2-4 inches deep</li>
+                <li><strong>Potting Mix:</strong> Use screened compost at 20-30% of total volume</li>
+                <li><strong>Compost Tea:</strong> Steep finished compost in water to create liquid fertilizer</li>
+            </ul>
+            
+            <h2>Troubleshooting Common Composting Problems</h2>
+            
+            <h3>Slow Decomposition</h3>
+            <p><strong>Possible causes:</strong> Too dry, insufficient nitrogen, pieces too large, cold weather</p>
+            <p><strong>Solutions:</strong> Add water, incorporate nitrogen-rich materials, chop materials smaller, increase pile size or insulate in cold weather</p>
+            
+            <h3>Foul Odors</h3>
+            <p><strong>Possible causes:</strong> Too wet, compacted, or anaerobic; too much nitrogen</p>
+            <p><strong>Solutions:</strong> Turn pile to add oxygen, incorporate dry carbon materials, cover nitrogen-rich materials with carbon layer</p>
+            
+            <h3>Pest Problems</h3>
+            <p><strong>Possible causes:</strong> Food scraps exposed, meat/fat in pile, pile too small to heat up</p>
+            <p><strong>Solutions:</strong> Bury food scraps in center of pile, avoid meat/dairy/oils, increase pile size, turn more frequently</p>
+            
+            <h3>Pile Not Heating Up</h3>
+            <p><strong>Possible causes:</strong> Insufficient nitrogen, too dry or wet, pile too small, cold weather</p>
+            <p><strong>Solutions:</strong> Add nitrogen-rich materials, adjust moisture, increase pile size, insulate in cold weather</p>
+            
+            <h2>Conclusion</h2>
+            <p>Composting is both a science and an art that improves with practice. By converting farm wastes into valuable compost, you can build soil health, reduce input costs, and contribute to sustainable farming practices. Remember that composting systems can be scaled and adapted to fit your specific farm situation—start small and expand as you gain experience and confidence.</p>
+            
+            <div class="guide-nav">
+                <a href="../category-soil.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Back to Soil Management</a>
+                <a href="organic-matter-guide.html" class="nav-btn">Organic Matter Management <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

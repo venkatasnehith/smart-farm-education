@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed Management - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/livestock-feed.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .article-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .feed-card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nutrition-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .info-box {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .warning-box {
+            background: #fff5f5;
+            border-left: 4px solid #f56565;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            text-align: left;
+        }
+        th {
+            background: #f7fafc;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="article-header">
+        <h1>Feed Management</h1>
+        <p>Optimizing nutrition for healthy and productive livestock</p>
+    </div>
+
+    <main class="article-content">
+        <div class="article-meta">
+            <span><i class="fas fa-calendar"></i> Last Updated: Mar 14, 2024</span>
+            <span class="mx-3">|</span>
+            <span><i class="fas fa-clock"></i> 18 min read</span>
+        </div>
+
+        <section>
+            <h2>Understanding Feed Requirements</h2>
+            <p>Proper feed management is crucial for livestock health, productivity, and profitability. Different species and life stages require specific nutritional considerations.</p>
+            
+            <div class="nutrition-grid">
+                <div class="feed-card">
+                    <h3>Essential Nutrients</h3>
+                    <ul>
+                        <li>Proteins</li>
+                        <li>Carbohydrates</li>
+                        <li>Fats</li>
+                        <li>Vitamins</li>
+                        <li>Minerals</li>
+                        <li>Water</li>
+                    </ul>
+                </div>
+
+                <div class="feed-card">
+                    <h3>Factors Affecting Requirements</h3>
+                    <ul>
+                        <li>Age</li>
+                        <li>Weight</li>
+                        <li>Production stage</li>
+                        <li>Environmental conditions</li>
+                        <li>Health status</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Species-Specific Feed Guidelines</h2>
+            
+            <div class="feed-card">
+                <h3>Cattle</h3>
+                <table>
+                    <tr>
+                        <th>Stage</th>
+                        <th>Protein (%)</th>
+                        <th>Energy (Mcal/kg)</th>
+                        <th>Feed Intake (% BW)</th>
+                    </tr>
+                    <tr>
+                        <td>Growing</td>
+                        <td>12-14</td>
+                        <td>2.4-2.6</td>
+                        <td>2.5-3.0</td>
+                    </tr>
+                    <tr>
+                        <td>Lactating</td>
+                        <td>16-18</td>
+                        <td>2.8-3.0</td>
+                        <td>3.5-4.0</td>
+                    </tr>
+                    <tr>
+                        <td>Dry</td>
+                        <td>10-12</td>
+                        <td>2.2-2.4</td>
+                        <td>2.0-2.5</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="feed-card">
+                <h3>Sheep & Goats</h3>
+                <table>
+                    <tr>
+                        <th>Stage</th>
+                        <th>Protein (%)</th>
+                        <th>Energy (Mcal/kg)</th>
+                        <th>Feed Intake (% BW)</th>
+                    </tr>
+                    <tr>
+                        <td>Growing</td>
+                        <td>14-16</td>
+                        <td>2.6-2.8</td>
+                        <td>3.0-3.5</td>
+                    </tr>
+                    <tr>
+                        <td>Lactating</td>
+                        <td>18-20</td>
+                        <td>2.8-3.0</td>
+                        <td>4.0-4.5</td>
+                    </tr>
+                    <tr>
+                        <td>Maintenance</td>
+                        <td>12-13</td>
+                        <td>2.2-2.4</td>
+                        <td>2.5-3.0</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Feed Storage and Management</h2>
+            <div class="info-box">
+                <h3>Storage Guidelines</h3>
+                <ul>
+                    <li>Keep feed in dry, well-ventilated areas</li>
+                    <li>Protect from pests and rodents</li>
+                    <li>Rotate stock (First In, First Out)</li>
+                    <li>Monitor for mold and spoilage</li>
+                    <li>Maintain proper temperature</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h3>Common Storage Mistakes</h3>
+                <ul>
+                    <li>Improper moisture control</li>
+                    <li>Poor ventilation</li>
+                    <li>Inadequate pest control</li>
+                    <li>Mixed feed storage</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Feed Quality Assessment</h2>
+            <div class="feed-card">
+                <h3>Quality Indicators</h3>
+                <ul>
+                    <li>Physical appearance</li>
+                    <li>Smell</li>
+                    <li>Moisture content</li>
+                    <li>Nutrient analysis</li>
+                    <li>Contamination levels</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Testing Requirements</h3>
+                <ul>
+                    <li>Regular nutrient analysis</li>
+                    <li>Mycotoxin screening</li>
+                    <li>Moisture testing</li>
+                    <li>Protein content verification</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Feed Cost Management</h2>
+            <div class="feed-card">
+                <h3>Cost Reduction Strategies</h3>
+                <ul>
+                    <li>Bulk purchasing</li>
+                    <li>Seasonal buying</li>
+                    <li>Alternative feed sources</li>
+                    <li>Waste reduction</li>
+                    <li>Feed efficiency monitoring</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Record Keeping</h2>
+            <div class="feed-card">
+                <h3>Essential Records</h3>
+                <ul>
+                    <li>Feed purchases and costs</li>
+                    <li>Feed analysis results</li>
+                    <li>Storage conditions</li>
+                    <li>Consumption rates</li>
+                    <li>Animal performance data</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                    <li><a href="../category-organic.html">Organic Farming</a></li>
+                    <li><a href="../category-equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

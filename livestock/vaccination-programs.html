@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination Programs - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/livestock-vaccination.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .article-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .vaccine-card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .schedule-list {
+            list-style: none;
+            padding: 0;
+        }
+        .schedule-list li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+        .schedule-list li:before {
+            content: "•";
+            color: #4299e1;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .important-box {
+            background: #fff5f5;
+            border-left: 4px solid #f56565;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .species-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="article-header">
+        <h1>Vaccination Programs</h1>
+        <p>Essential vaccination schedules for livestock health</p>
+    </div>
+
+    <main class="article-content">
+        <div class="article-meta">
+            <span><i class="fas fa-calendar"></i> Last Updated: Mar 14, 2024</span>
+            <span class="mx-3">|</span>
+            <span><i class="fas fa-clock"></i> 15 min read</span>
+        </div>
+
+        <section>
+            <h2>Importance of Vaccination</h2>
+            <p>Vaccination is a crucial preventive measure that helps protect livestock from various diseases, reducing mortality rates and improving overall herd health.</p>
+            
+            <div class="important-box">
+                <h3>Key Benefits</h3>
+                <ul>
+                    <li>Disease prevention</li>
+                    <li>Reduced mortality rates</li>
+                    <li>Improved productivity</li>
+                    <li>Cost-effective healthcare</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Species-Specific Schedules</h2>
+            <div class="species-grid">
+                <div class="vaccine-card">
+                    <h3>Cattle</h3>
+                    <ul class="schedule-list">
+                        <li>Brucellosis: 4-8 months</li>
+                        <li>BVD: 6 months</li>
+                        <li>IBR: Annual</li>
+                        <li>Blackleg: 6 months</li>
+                    </ul>
+                </div>
+
+                <div class="vaccine-card">
+                    <h3>Sheep & Goats</h3>
+                    <ul class="schedule-list">
+                        <li>Clostridial: 2-3 months</li>
+                        <li>Pasteurella: Annual</li>
+                        <li>Foot rot: Seasonal</li>
+                        <li>CLA: 6 months</li>
+                    </ul>
+                </div>
+
+                <div class="vaccine-card">
+                    <h3>Pigs</h3>
+                    <ul class="schedule-list">
+                        <li>Mycoplasma: 3-4 weeks</li>
+                        <li>PRRS: Pre-breeding</li>
+                        <li>E. coli: Pre-farrowing</li>
+                        <li>Swine flu: Seasonal</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Vaccination Best Practices</h2>
+            <div class="vaccine-card">
+                <h3>Storage and Handling</h3>
+                <ul class="schedule-list">
+                    <li>Maintain proper temperature (2-8°C)</li>
+                    <li>Check expiration dates</li>
+                    <li>Use sterile equipment</li>
+                    <li>Follow manufacturer guidelines</li>
+                </ul>
+            </div>
+
+            <div class="vaccine-card">
+                <h3>Administration</h3>
+                <ul class="schedule-list">
+                    <li>Use proper injection sites</li>
+                    <li>Follow dosage instructions</li>
+                    <li>Record all vaccinations</li>
+                    <li>Monitor for reactions</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Record Keeping</h2>
+            <div class="vaccine-card">
+                <h3>Essential Records</h3>
+                <ul class="schedule-list">
+                    <li>Vaccination dates</li>
+                    <li>Product information</li>
+                    <li>Batch numbers</li>
+                    <li>Animal identification</li>
+                    <li>Next due dates</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Common Mistakes to Avoid</h2>
+            <div class="important-box">
+                <h3>Critical Errors</h3>
+                <ul>
+                    <li>Improper storage temperature</li>
+                    <li>Missed booster shots</li>
+                    <li>Wrong injection technique</li>
+                    <li>Poor timing of vaccination</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                    <li><a href="../category-organic.html">Organic Farming</a></li>
+                    <li><a href="../category-equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

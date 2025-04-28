@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Systems - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/livestock-housing.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .article-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .housing-card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .system-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .info-box {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .requirement-box {
+            background: #f0fff4;
+            border-left: 4px solid #48bb78;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .warning-box {
+            background: #fff5f5;
+            border-left: 4px solid #f56565;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            text-align: left;
+        }
+        th {
+            background: #f7fafc;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="article-header">
+        <h1>Housing Systems</h1>
+        <p>Modern housing solutions for optimal livestock management</p>
+    </div>
+
+    <main class="article-content">
+        <div class="article-meta">
+            <span><i class="fas fa-calendar"></i> Last Updated: Mar 14, 2024</span>
+            <span class="mx-3">|</span>
+            <span><i class="fas fa-clock"></i> 18 min read</span>
+        </div>
+
+        <section>
+            <h2>Housing System Fundamentals</h2>
+            <p>Proper livestock housing is essential for animal welfare, productivity, and efficient farm management.</p>
+            
+            <div class="info-box">
+                <h3>Key Considerations</h3>
+                <ul>
+                    <li>Animal welfare</li>
+                    <li>Environmental control</li>
+                    <li>Labor efficiency</li>
+                    <li>Cost effectiveness</li>
+                    <li>Biosecurity measures</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Types of Housing Systems</h2>
+            <div class="system-grid">
+                <div class="housing-card">
+                    <h3>Intensive Systems</h3>
+                    <ul>
+                        <li>Confined housing</li>
+                        <li>Climate controlled</li>
+                        <li>High management input</li>
+                        <li>Maximum space efficiency</li>
+                    </ul>
+                </div>
+
+                <div class="housing-card">
+                    <h3>Semi-Intensive Systems</h3>
+                    <ul>
+                        <li>Combined indoor/outdoor</li>
+                        <li>Seasonal flexibility</li>
+                        <li>Moderate management</li>
+                        <li>Balance of space and control</li>
+                    </ul>
+                </div>
+
+                <div class="housing-card">
+                    <h3>Extensive Systems</h3>
+                    <ul>
+                        <li>Pasture-based</li>
+                        <li>Natural environment</li>
+                        <li>Lower management input</li>
+                        <li>Large space requirement</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Species-Specific Requirements</h2>
+            <div class="requirement-box">
+                <h3>Space Requirements</h3>
+                <table>
+                    <tr>
+                        <th>Species</th>
+                        <th>Indoor Space (m²/animal)</th>
+                        <th>Outdoor Space (m²/animal)</th>
+                    </tr>
+                    <tr>
+                        <td>Cattle</td>
+                        <td>6-10</td>
+                        <td>20-30</td>
+                    </tr>
+                    <tr>
+                        <td>Sheep/Goats</td>
+                        <td>1.5-2</td>
+                        <td>4-6</td>
+                    </tr>
+                    <tr>
+                        <td>Pigs</td>
+                        <td>1-3</td>
+                        <td>3-5</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Environmental Control</h2>
+            <div class="system-grid">
+                <div class="housing-card">
+                    <h3>Ventilation</h3>
+                    <ul>
+                        <li>Natural ventilation</li>
+                        <li>Mechanical systems</li>
+                        <li>Air quality control</li>
+                        <li>Temperature regulation</li>
+                    </ul>
+                </div>
+
+                <div class="housing-card">
+                    <h3>Temperature Management</h3>
+                    <ul>
+                        <li>Heating systems</li>
+                        <li>Cooling mechanisms</li>
+                        <li>Insulation</li>
+                        <li>Climate monitoring</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Facility Design</h2>
+            <div class="housing-card">
+                <h3>Essential Components</h3>
+                <ul>
+                    <li>Feeding areas</li>
+                    <li>Watering points</li>
+                    <li>Rest areas</li>
+                    <li>Handling facilities</li>
+                    <li>Storage spaces</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h3>Safety Considerations</h3>
+                <ul>
+                    <li>Non-slip flooring</li>
+                    <li>Proper drainage</li>
+                    <li>Fire prevention</li>
+                    <li>Emergency exits</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Waste Management</h2>
+            <div class="system-grid">
+                <div class="housing-card">
+                    <h3>Collection Systems</h3>
+                    <ul>
+                        <li>Scraper systems</li>
+                        <li>Slatted floors</li>
+                        <li>Bedding management</li>
+                        <li>Storage facilities</li>
+                    </ul>
+                </div>
+
+                <div class="housing-card">
+                    <h3>Treatment Options</h3>
+                    <ul>
+                        <li>Composting</li>
+                        <li>Biogas production</li>
+                        <li>Land application</li>
+                        <li>Waste recycling</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Maintenance and Upgrades</h2>
+            <div class="info-box">
+                <h3>Regular Maintenance</h3>
+                <ul>
+                    <li>Structure inspection</li>
+                    <li>Equipment checks</li>
+                    <li>Cleaning schedules</li>
+                    <li>Repair protocols</li>
+                </ul>
+            </div>
+
+            <div class="requirement-box">
+                <h3>Modernization Options</h3>
+                <ul>
+                    <li>Automation systems</li>
+                    <li>Energy efficiency</li>
+                    <li>Welfare improvements</li>
+                    <li>Technology integration</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                    <li><a href="../category-organic.html">Organic Farming</a></li>
+                    <li><a href="../category-equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

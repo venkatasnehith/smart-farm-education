@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrigation Systems - FarmKnowledge</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .category-banner {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/irrigation.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .category-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .quick-links {
+            background-color: var(--light-bg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        .quick-links h2 {
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+        }
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .link-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .link-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .link-item i {
+            color: var(--primary);
+            font-size: 1.25rem;
+        }
+        .topic-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        .topic-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .topic-content {
+            padding: 1.5rem;
+        }
+        .topic-content h2 {
+            color: var(--primary-dark);
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+        }
+        .topic-content p {
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        .topic-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        .read-more-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .read-more-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        .category-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="category-banner">
+        <h1>Irrigation Systems</h1>
+        <p>Explore modern irrigation techniques and water management strategies</p>
+    </div>
+
+    <div class="category-container">
+        <section class="quick-links">
+            <h2>Quick Links</h2>
+            <div class="links-grid">
+                <a href="#irrigation-systems" class="link-item">
+                    <i class="fas fa-tint"></i> Irrigation Systems
+                </a>
+                <a href="#water-management" class="link-item">
+                    <i class="fas fa-water"></i> Water Management
+                </a>
+                <a href="#drip-irrigation" class="link-item">
+                    <i class="fas fa-fill-drip"></i> Drip Irrigation
+                </a>
+                <a href="#smart-irrigation" class="link-item">
+                    <i class="fas fa-brain"></i> Smart Irrigation
+                </a>
+            </div>
+        </section>
+
+        <section id="irrigation-systems">
+            <div class="topic-card">
+                <img src="images/sprinkler-system.jpg" alt="Sprinkler System">
+                <div class="topic-content">
+                    <h2>Sprinkler Irrigation Systems</h2>
+                    <p>Complete guide to sprinkler irrigation systems, installation, and maintenance.</p>
+                    <a href="irrigation/sprinkler-irrigation-guide.html" class="read-more-btn">Read More</a>
+                    <div class="topic-meta">
+                        <span>Last updated: Mar 15, 2024</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="drip-irrigation">
+            <div class="topic-card">
+                <img src="images/drip-irrigation.jpg" alt="Drip Irrigation">
+                <div class="topic-content">
+                    <h2>Drip Irrigation Setup</h2>
+                    <p>Learn how to set up and maintain an efficient drip irrigation system.</p>
+                    <a href="irrigation/drip-irrigation.html" class="read-more-btn">Read More</a>
+                    <div class="topic-meta">
+                        <span>Last updated: Mar 15, 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <img src="images/drip-components.jpg" alt="Drip System Components">
+                <div class="topic-content">
+                    <h2>Drip System Components</h2>
+                    <p>Understanding the essential components of a drip irrigation system.</p>
+                    <a href="irrigation/drip-irrigation-guide.html" class="read-more-btn">Read More</a>
+                    <div class="topic-meta">
+                        <span>Last updated: Mar 15, 2024</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="water-management">
+            <div class="topic-card">
+                <img src="images/water-conservation.jpg" alt="Water Conservation">
+                <div class="topic-content">
+                    <h2>Water Conservation Techniques</h2>
+                    <p>Essential practices for efficient water use in agriculture.</p>
+                    <a href="irrigation/surface-irrigation-guide.html" class="read-more-btn">Read More</a>
+                    <div class="topic-meta">
+                        <span>Last updated: Mar 15, 2024</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="smart-irrigation">
+            <div class="topic-card">
+                <img src="images/smart-controller.jpg" alt="Smart Irrigation Controller">
+                <div class="topic-content">
+                    <h2>Smart Irrigation Controllers</h2>
+                    <p>Modern solutions for automated irrigation control.</p>
+                    <a href="irrigation/smart-irrigation-guide.html" class="read-more-btn">Read More</a>
+                    <div class="topic-meta">
+                        <span>Last updated: Mar 15, 2024</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="search.html">Search</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="category-crops.html">Crops</a></li>
+                    <li><a href="category-soil.html">Soil</a></li>
+                    <li><a href="category-irrigation.html">Irrigation</a></li>
+                    <li><a href="category-livestock.html">Livestock</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

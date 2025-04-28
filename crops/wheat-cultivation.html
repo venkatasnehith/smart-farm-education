@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheat Cultivation Guide - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/wheat-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .article-header h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            color: rgba(255,255,255,0.9);
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .article-nav {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            position: sticky;
+            top: 100px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .article-nav h3 {
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+        }
+        .nav-links {
+            list-style: none;
+        }
+        .nav-links li {
+            margin-bottom: 0.5rem;
+        }
+        .nav-links a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        .article-section {
+            margin-bottom: 3rem;
+        }
+        .article-section h2 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        .article-section p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        .article-section ul, .article-section ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+        .article-section li {
+            margin-bottom: 0.5rem;
+        }
+        .info-box {
+            background: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--primary);
+        }
+        .info-box h4 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+        .step-box {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .step-number {
+            font-size: 2rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        .step-content h4 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="article-header">
+        <h1>Wheat Cultivation Guide</h1>
+        <div class="article-meta">
+            <span><i class="fas fa-calendar"></i> Last Updated: March 15, 2024</span>
+            <span><i class="fas fa-user"></i> By Agricultural Expert</span>
+            <span><i class="fas fa-clock"></i> 15 min read</span>
+        </div>
+    </div>
+
+    <main class="article-content">
+        <nav class="article-nav">
+            <h3>Table of Contents</h3>
+            <ul class="nav-links">
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#soil-preparation">Soil Preparation</a></li>
+                <li><a href="#sowing">Sowing Techniques</a></li>
+                <li><a href="#irrigation">Irrigation Management</a></li>
+                <li><a href="#fertilization">Fertilization</a></li>
+                <li><a href="#pest-control">Pest Control</a></li>
+                <li><a href="#harvesting">Harvesting</a></li>
+                <li><a href="#storage">Storage</a></li>
+            </ul>
+        </nav>
+
+        <section id="introduction" class="article-section">
+            <h2>Introduction to Wheat Cultivation</h2>
+            <p>Wheat is one of the world's most important cereal crops, providing essential nutrients to billions of people. This guide will walk you through the complete process of wheat cultivation, from soil preparation to storage.</p>
+            
+            <div class="info-box">
+                <h4>Key Points</h4>
+                <ul>
+                    <li>Wheat is adaptable to various climates</li>
+                    <li>Requires moderate rainfall or irrigation</li>
+                    <li>Growing season: 100-150 days</li>
+                    <li>Optimal temperature: 15-25°C</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="soil-preparation" class="article-section">
+            <h2>Soil Preparation</h2>
+            <p>Proper soil preparation is crucial for successful wheat cultivation. The soil should be well-draining and have a pH between 6.0 and 7.0.</p>
+            
+            <div class="step-box">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Deep Plowing</h4>
+                    <p>Plow the field to a depth of 20-25 cm to ensure good root development. This helps break up compacted soil and incorporate any crop residues.</p>
+                </div>
+            </div>
+            
+            <div class="step-box">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Leveling</h4>
+                    <p>Level the field properly to ensure uniform water distribution and prevent waterlogging.</p>
+                </div>
+            </div>
+            
+            <div class="step-box">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Adding Organic Matter</h4>
+                    <p>Incorporate well-rotted manure or compost to improve soil structure and fertility.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sowing" class="article-section">
+            <h2>Sowing Techniques</h2>
+            <p>Proper sowing ensures good germination and establishes a strong foundation for your wheat crop.</p>
+            
+            <div class="info-box">
+                <h4>Sowing Guidelines</h4>
+                <ul>
+                    <li>Seed rate: 100-125 kg/hectare</li>
+                    <li>Row spacing: 20-22.5 cm</li>
+                    <li>Depth: 5-6 cm</li>
+                    <li>Best time: Early morning or late afternoon</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Additional sections would continue with similar structure -->
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

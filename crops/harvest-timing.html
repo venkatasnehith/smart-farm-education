@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvest Timing Guide - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .guide-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/harvest-timing-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .guide-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .guide-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        .section-title {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+        }
+        .harvest-indicator-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .harvest-indicator-table th, .harvest-indicator-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .harvest-indicator-table th {
+            background-color: var(--primary);
+            color: white;
+        }
+        .harvest-indicator-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .info-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        .step {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        .step::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .left::after {
+            right: -10px;
+        }
+        .right::after {
+            left: -10px;
+        }
+        .step-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="guide-header">
+        <h1>Harvest Timing Guide</h1>
+        <p>Optimal timing and techniques for maximizing crop yield and quality</p>
+    </div>
+
+    <main class="guide-content">
+        <div class="section">
+            <h2 class="section-title">Why Harvest Timing Matters</h2>
+            <p>The timing of harvest is one of the most critical factors affecting crop quality, yield, and storage life. Harvesting too early or too late can significantly impact nutritional content, flavor, texture, and market value of your produce.</p>
+            
+            <div class="info-box">
+                <h3><i class="fas fa-lightbulb"></i> Key Benefits of Proper Harvest Timing</h3>
+                <ul>
+                    <li>Improved crop quality and flavor</li>
+                    <li>Extended shelf life and storage duration</li>
+                    <li>Optimal nutritional content</li>
+                    <li>Better market prices and reduced waste</li>
+                    <li>Efficient labor and equipment utilization</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Factors Affecting Harvest Timing</h2>
+            <p>Multiple factors influence the optimal harvest window for any crop:</p>
+            
+            <h3>Environmental Factors</h3>
+            <ul>
+                <li><strong>Temperature:</strong> Affects ripening rates and quality development</li>
+                <li><strong>Rainfall:</strong> Recent precipitation can affect moisture content and harvest conditions</li>
+                <li><strong>Sunlight:</strong> Influences sugar development and color formation</li>
+                <li><strong>Humidity:</strong> Impacts drying rates and disease pressure</li>
+            </ul>
+
+            <h3>Crop-Specific Factors</h3>
+            <ul>
+                <li><strong>Maturity indicators:</strong> Physical and chemical changes that signal readiness</li>
+                <li><strong>Intended use:</strong> Different requirements for fresh market vs. processing vs. storage</li>
+                <li><strong>Variety:</strong> Different cultivars have different maturity timelines</li>
+            </ul>
+
+            <h3>Practical Considerations</h3>
+            <ul>
+                <li><strong>Market readiness:</strong> Timing to meet market demands</li>
+                <li><strong>Labor availability:</strong> Ensuring workforce is available for harvest operations</li>
+                <li><strong>Equipment readiness:</strong> Machinery preparation and scheduling</li>
+                <li><strong>Weather forecasts:</strong> Planning around upcoming weather events</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Harvest Indicators for Common Crops</h2>
+            
+            <h3>Vegetable Crops</h3>
+            <table class="harvest-indicator-table">
+                <thead>
+                    <tr>
+                        <th>Crop</th>
+                        <th>Visual Indicators</th>
+                        <th>Physical Tests</th>
+                        <th>Timing from Planting</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tomatoes</td>
+                        <td>Uniform color (red, yellow, etc.), slight softening at blossom end</td>
+                        <td>Slight give when gently squeezed</td>
+                        <td>60-85 days depending on variety</td>
+                    </tr>
+                    <tr>
+                        <td>Lettuce</td>
+                        <td>Full-sized heads, firm texture</td>
+                        <td>Resistance when pressed</td>
+                        <td>45-80 days depending on variety</td>
+                    </tr>
+                    <tr>
+                        <td>Sweet Corn</td>
+                        <td>Silks turn brown/dry, kernels plump and milky</td>
+                        <td>Puncture kernel test - milky fluid indicates readiness</td>
+                        <td>70-100 days</td>
+                    </tr>
+                    <tr>
+                        <td>Cucumbers</td>
+                        <td>Firm, medium to dark green, appropriate size for variety</td>
+                        <td>Firm with no yellowing</td>
+                        <td>50-70 days</td>
+                    </tr>
+                    <tr>
+                        <td>Broccoli</td>
+                        <td>Tight, firm head with compact beads</td>
+                        <td>Heads should feel tight and dense</td>
+                        <td>60-90 days</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Fruit Crops</h3>
+            <table class="harvest-indicator-table">
+                <thead>
+                    <tr>
+                        <th>Crop</th>
+                        <th>Visual Indicators</th>
+                        <th>Physical Tests</th>
+                        <th>Advanced Indicators</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Apples</td>
+                        <td>Background color change, developed color for variety</td>
+                        <td>Ease of separation from spur, flesh firmness</td>
+                        <td>Starch-iodine test, soluble solids (Brix) 11-15%</td>
+                    </tr>
+                    <tr>
+                        <td>Berries</td>
+                        <td>Full color development, slight glossiness</td>
+                        <td>Ease of separation from stem</td>
+                        <td>Sugar content (Brix) varies by type</td>
+                    </tr>
+                    <tr>
+                        <td>Watermelon</td>
+                        <td>Dried tendril nearest fruit, dull sound when thumped</td>
+                        <td>Yellow ground spot, waxy feel</td>
+                        <td>80-95 days from planting</td>
+                    </tr>
+                    <tr>
+                        <td>Peaches</td>
+                        <td>Background color change from green to yellow/white</td>
+                        <td>Slight give when gently pressed</td>
+                        <td>Soluble solids 10-12%, firmness test</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Grain Crops</h3>
+            <table class="harvest-indicator-table">
+                <thead>
+                    <tr>
+                        <th>Crop</th>
+                        <th>Visual Indicators</th>
+                        <th>Physical Tests</th>
+                        <th>Moisture Content Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Wheat</td>
+                        <td>Golden color, heads nodding, straw yellow and dry</td>
+                        <td>Grain hard, difficult to dent with fingernail</td>
+                        <td>13-14% moisture for storage</td>
+                    </tr>
+                    <tr>
+                        <td>Corn (field)</td>
+                        <td>Husks dry, kernels dented and hard</td>
+                        <td>Black layer formation at base of kernel</td>
+                        <td>15-20% for mechanical harvest, dry to 13-14% for storage</td>
+                    </tr>
+                    <tr>
+                        <td>Soybeans</td>
+                        <td>Pods brown, 95% of leaves dropped</td>
+                        <td>Seeds rattle in pods when shaken</td>
+                        <td>13-15% moisture for harvest</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Scientific Methods for Determining Harvest Readiness</h2>
+            
+            <h3>Instrumental Measurements</h3>
+            <ul>
+                <li><strong>Refractometers:</strong> Measure soluble solids content (Brix) to determine sugar levels</li>
+                <li><strong>Penetrometers:</strong> Measure fruit firmness</li>
+                <li><strong>Moisture meters:</strong> Essential for grain crops to determine optimal moisture content</li>
+                <li><strong>Colorimeters:</strong> Measure specific color parameters indicating ripeness</li>
+            </ul>
+
+            <h3>Chemical Tests</h3>
+            <ul>
+                <li><strong>Starch-iodine test:</strong> Used for apples and pears to determine starch conversion to sugar</li>
+                <li><strong>Sugar/acid ratio:</strong> Important for fruits where both sweetness and acidity affect flavor</li>
+                <li><strong>Ethylene production:</strong> Measuring ethylene can indicate ripening stage for climacteric fruits</li>
+            </ul>
+
+            <h3>Degree Day Calculations</h3>
+            <p>Many crops develop based on accumulated heat units or "growing degree days" (GDD). Tracking GDD can help predict harvest windows with increased precision. Modern farm management software often includes GDD calculators to help farmers anticipate optimal harvest timing.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Harvest Timing and Post-Harvest Quality</h2>
+            
+            <p>The moment of harvest directly impacts how a crop will store, ship, and maintain quality after harvest. Consider these relationships:</p>
+            
+            <div class="info-box">
+                <h3>Storage Potential Based on Harvest Timing</h3>
+                <ul>
+                    <li><strong>Early harvest:</strong> Generally extends storage life but may reduce flavor and nutritional quality</li>
+                    <li><strong>Peak harvest:</strong> Balances flavor/quality with reasonable storage potential</li>
+                    <li><strong>Late harvest:</strong> Maximizes flavor and nutrition but significantly reduces storage life</li>
+                </ul>
+            </div>
+
+            <p>For commercial operations, harvesting is often timed according to the intended use and shipping distance:</p>
+            <ul>
+                <li><strong>Local fresh market:</strong> Harvest closer to peak ripeness</li>
+                <li><strong>Distant shipping:</strong> Harvest earlier to allow for ripening during transport</li>
+                <li><strong>Processing:</strong> Often harvest at full maturity when sugar content and flavor are maximized</li>
+                <li><strong>Storage crops:</strong> Specific harvest timing to maximize dormancy and storage potential</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Harvest Planning and Management</h2>
+            
+            <h3>Creating a Harvest Calendar</h3>
+            <p>Developing a detailed harvest calendar can help optimize labor, equipment, and post-harvest handling resources:</p>
+            <ol>
+                <li>Record planting dates for each crop and variety</li>
+                <li>Calculate estimated harvest dates based on days to maturity</li>
+                <li>Adjust estimates based on current growing conditions and degree days</li>
+                <li>Schedule regular field assessments as harvest approaches</li>
+                <li>Coordinate with market needs and buyer expectations</li>
+                <li>Plan labor needs based on projected harvest windows</li>
+            </ol>
+
+            <h3>Weather Considerations</h3>
+            <p>Weather before and during harvest can dramatically affect crop quality and harvesting efficiency:</p>
+            <ul>
+                <li>Plan harvests around upcoming weather events when possible</li>
+                <li>Avoid harvesting fruits and vegetables when wet to reduce disease spread</li>
+                <li>For grain crops, monitor moisture and harvest when humidity is lower</li>
+                <li>Have contingency plans for unexpected weather events</li>
+            </ul>
+
+            <h3>Equipment Preparation</h3>
+            <p>Well-maintained equipment reduces delays and crop damage:</p>
+            <ul>
+                <li>Schedule pre-harvest equipment maintenance and calibration</li>
+                <li>Ensure proper settings for the specific crop and conditions</li>
+                <li>Have critical spare parts available</li>
+                <li>Train operators on proper harvesting techniques for each crop</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Harvest Decision Workflow</h2>
+            
+            <p>Follow this step-by-step approach to making optimal harvest timing decisions:</p>
+            
+            <div class="timeline">
+                <div class="step left">
+                    <div class="step-content">
+                        <h3>Pre-Harvest Assessment</h3>
+                        <p>Begin monitoring crop 7-14 days before expected harvest date. Check maturity indicators specific to your crop.</p>
+                    </div>
+                </div>
+                <div class="step right">
+                    <div class="step-content">
+                        <h3>Sample Testing</h3>
+                        <p>Collect representative samples from different parts of the field. Test for appropriate indicators (sugar content, firmness, moisture, etc.).</p>
+                    </div>
+                </div>
+                <div class="step left">
+                    <div class="step-content">
+                        <h3>Weather Forecasting</h3>
+                        <p>Review short and medium-range weather forecasts. Adjust harvest timing to avoid detrimental weather events.</p>
+                    </div>
+                </div>
+                <div class="step right">
+                    <div class="step-content">
+                        <h3>Resource Planning</h3>
+                        <p>Confirm availability of labor, equipment, and post-harvest handling facilities for the planned harvest window.</p>
+                    </div>
+                </div>
+                <div class="step left">
+                    <div class="step-content">
+                        <h3>Market Coordination</h3>
+                        <p>Communicate with buyers about expected harvest dates and volumes. Confirm packaging and quality requirements.</p>
+                    </div>
+                </div>
+                <div class="step right">
+                    <div class="step-content">
+                        <h3>Final Decision</h3>
+                        <p>Balance all factors (crop readiness, market needs, weather, resources) to determine the optimal harvest date.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Conclusion</h2>
+            <p>Optimal harvest timing represents the culmination of an entire season's worth of planning and crop management. By understanding the specific maturity indicators for your crops and balancing these against practical considerations, you can maximize both yield and quality.</p>
+            <p>Remember that harvest timing is as much an art as it is a science. Experience with specific crops in your local conditions will help refine your approach over time. Keep detailed records of harvest dates, quality outcomes, and storage performance to continue improving your harvest timing decisions year after year.</p>
+            <p>For specific crops not covered in this guide, consult extension publications, crop-specific industry resources, or experienced growers in your region.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

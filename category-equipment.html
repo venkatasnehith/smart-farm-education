@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Equipment - FarmKnowledge</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .category-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/equipment-header.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .category-header h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .category-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .topic-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .topic-card:hover {
+            transform: translateY(-5px);
+        }
+        .topic-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .topic-content {
+            padding: 1.5rem;
+        }
+        .topic-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .topic-description {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        .topic-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #718096;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        .read-more {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #4299e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+        .read-more:hover {
+            background: #3182ce;
+        }
+        .quick-links {
+            background: #f8fafc;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+        }
+        .quick-links h2 {
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .quick-link-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .quick-link-item:hover {
+            transform: translateY(-5px);
+        }
+        .quick-link-item i {
+            font-size: 2rem;
+            color: #4a5568;
+            margin-bottom: 1rem;
+        }
+        .quick-link-item a {
+            color: #2d3748;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .content-section {
+            padding: 4rem 2rem;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .quick-links-grid {
+                grid-template-columns: 1fr;
+            }
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="category-header">
+        <h1>Farm Equipment</h1>
+        <p>Comprehensive guides on agricultural machinery and tools</p>
+    </div>
+
+    <div class="quick-links">
+        <h2>Quick Links</h2>
+        <div class="quick-links-grid">
+            <div class="quick-link-item">
+                <i class="fas fa-tractor"></i>
+                <a href="equipment/tractor-maintenance-guide.html">Tractors</a>
+            </div>
+            <div class="quick-link-item">
+                <i class="fas fa-cog"></i>
+                <a href="equipment/combine-harvester-guide.html">Harvesting Equipment</a>
+            </div>
+            <div class="quick-link-item">
+                <i class="fas fa-tools"></i>
+                <a href="equipment/specialized-harvesting-guide.html">Specialized Tools</a>
+            </div>
+            <div class="quick-link-item">
+                <i class="fas fa-wrench"></i>
+                <a href="equipment/equipment-maintenance-guide.html">Maintenance</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="content-grid">
+            <div class="topic-card">
+                <img src="images/tractor.jpg" alt="Tractor" class="topic-image">
+                <div class="topic-content">
+                    <h3>Tractor Maintenance</h3>
+                    <p>Essential maintenance tips and guidelines for keeping your tractor in optimal condition.</p>
+                    <div class="topic-meta">
+                        <span>Last updated: March 14, 2024</span>
+                        <a href="equipment/tractor-maintenance-guide.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <img src="images/combine-harvester.jpg" alt="Combine Harvester" class="topic-image">
+                <div class="topic-content">
+                    <h3>Combine Harvesters</h3>
+                    <p>Understanding and operating combine harvesters effectively for maximum efficiency.</p>
+                    <div class="topic-meta">
+                        <span>Last updated: March 14, 2024</span>
+                        <a href="equipment/combine-harvester-guide.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <img src="images/specialized-harvesting.jpg" alt="Specialized Harvesting Tools" class="topic-image">
+                <div class="topic-content">
+                    <h3>Specialized Harvesting Tools</h3>
+                    <p>Guide to specialized harvesting equipment for various crops and applications.</p>
+                    <div class="topic-meta">
+                        <span>Last updated: March 14, 2024</span>
+                        <a href="equipment/specialized-harvesting-guide.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <img src="images/equipment-maintenance.jpg" alt="Equipment Maintenance" class="topic-image">
+                <div class="topic-content">
+                    <h3>Equipment Maintenance</h3>
+                    <p>General maintenance guidelines and best practices for farm equipment.</p>
+                    <div class="topic-meta">
+                        <span>Last updated: March 14, 2024</span>
+                        <a href="equipment/equipment-maintenance-guide.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="search.html">Search</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="category-crops.html">Crops</a></li>
+                    <li><a href="category-soil.html">Soil</a></li>
+                    <li><a href="category-irrigation.html">Irrigation</a></li>
+                    <li><a href="category-livestock.html">Livestock</a></li>
+                    <li><a href="category-organic.html">Organic Farming</a></li>
+                    <li><a href="category-equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

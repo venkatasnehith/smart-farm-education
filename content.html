@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content - FarmKnowledge</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="language-selector">
+    <button class="lang-btn active" data-lang="en">English</button>
+    <button class="lang-btn" data-lang="hi">हिंदी</button>
+    <button class="lang-btn" data-lang="te">తెలుగు</button>
+    <button class="accessibility-btn" id="signLanguageToggle">
+      <i class="fas fa-american-sign-language-interpreting"></i>
+    </button>
+  </div>
+
+  <header>
+    <div class="logo">
+      <img src="images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+      <h1 id="site-title">FarmKnowledge</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="search.html" id="nav-search">Search</a></li>
+        <li><a href="index.html#about" id="nav-about">About</a></li>
+        <li><a href="index.html#contact" id="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-nav-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <main>
+    <div id="contentLoader" class="content-loader">
+      <div class="loader-animation">
+        <div class="plant-loader">
+          <div class="stem"></div>
+          <div class="leaf leaf-1"></div>
+          <div class="leaf leaf-2"></div>
+          <div class="leaf leaf-3"></div>
+        </div>
+      </div>
+      <p id="loading-text">Loading content...</p>
+    </div>
+
+    <section class="content-section">
+      <div class="back-navigation">
+        <a href="search.html" class="back-button"><i class="fas fa-arrow-left"></i> <span id="back-to-search">Back to Search</span></a>
+      </div>
+      
+      <article id="contentArticle" class="content-article">
+        <!-- Content will be loaded dynamically here -->
+      </article>
+      
+      <div class="content-navigation">
+        <div class="navigation-container">
+          <button id="textToSpeech" class="feature-button"><i class="fas fa-volume-up"></i> <span id="read-aloud">Read Aloud</span></button>
+          <button id="printContent" class="feature-button"><i class="fas fa-print"></i> <span id="print">Print</span></button>
+          <button id="shareContent" class="feature-button"><i class="fas fa-share-alt"></i> <span id="share">Share</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="relatedTopics" class="related-topics">
+      <h2 id="related-topics-title">Related Topics</h2>
+      <div class="related-topics-container">
+        <!-- Related topics will be loaded dynamically here -->
+      </div>
+    </section>
+
+    <section id="signLanguageSection" class="sign-language-section hidden">
+      <h2 id="sign-language-title">Sign Language Assistance</h2>
+      <div class="sign-language-container">
+        <video id="signLanguageVideo" controls class="sign-language-video">
+          <source src="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="sign-language-text">
+          <p id="sign-instructions">This video provides sign language interpretation for the content. Use the controls to play, pause, or replay.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/logo.jpeg" alt="FarmKnowledge Logo">
+        <h3>FarmKnowledge</h3>
+      </div>
+      <div class="footer-links">
+        <h4 id="footer-links-title">Quick Links</h4>
+        <ul>
+          <li><a href="index.html" id="footer-home">Home</a></li>
+          <li><a href="search.html" id="footer-search">Search</a></li>
+          <li><a href="index.html#about" id="footer-about">About</a></li>
+          <li><a href="index.html#contact" id="footer-contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-categories">
+        <h4 id="footer-categories-title">Categories</h4>
+        <ul>
+          <li><a href="search.html?query=crops" id="footer-crops">Crops</a></li>
+          <li><a href="search.html?query=soil" id="footer-soil">Soil</a></li>
+          <li><a href="search.html?query=irrigation" id="footer-irrigation">Irrigation</a></li>
+          <li><a href="search.html?query=livestock" id="footer-livestock">Livestock</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4 id="footer-social-title">Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p id="copyright">© 2025 FarmKnowledge. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/farmingData.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/content.js"></script>
+</body>
+</html>

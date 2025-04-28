@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results - FarmKnowledge</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .search-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 20px;
+    }
+    .search-header {
+      margin-bottom: 2rem;
+    }
+    .search-input {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .result-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .result-card:hover {
+      transform: translateY(-5px);
+    }
+    .result-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .result-content {
+      padding: 1.5rem;
+    }
+    .result-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    .result-description {
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .result-meta {
+      display: flex;
+      justify-content: space-between;
+      color: #888;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+    .no-results {
+      text-align: center;
+      padding: 3rem;
+      color: #666;
+    }
+    
+    /* New styles for detailed view */
+    .result-details {
+      margin: 1rem 0;
+      padding: 0.5rem 0;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    
+    .view-details-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background-color 0.3s;
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+    
+    .view-details-btn:hover {
+      background-color: #3d8b40;
+    }
+    
+    /* Modal styles */
+    .details-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .modal-content {
+      background-color: #fff;
+      width: 90%;
+      max-width: 800px;
+      max-height: 80vh;
+      border-radius: 10px;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .close-modal {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #888;
+      cursor: pointer;
+      z-index: 10;
+    }
+    
+    .close-modal:hover {
+      color: #333;
+    }
+    
+    .modal-header {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      background-color: #f9f9f9;
+    }
+    
+    .modal-image {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+    
+    .modal-header h2 {
+      margin: 0 0 10px 0;
+      color: #333;
+    }
+    
+    .modal-category {
+      display: inline-block;
+      background-color: #eaf6ea;
+      color: #4CAF50;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      margin: 0 0 5px 0;
+    }
+    
+    .modal-date {
+      color: #888;
+      font-size: 0.9rem;
+      margin: 5px 0 0 0;
+    }
+    
+    .modal-body {
+      padding: 20px;
+    }
+    
+    .modal-description {
+      color: #555;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    
+    .details-section {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    
+    .details-section h4 {
+      color: #4CAF50;
+      margin-top: 0;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 5px;
+    }
+    
+    .details-section p {
+      margin: 10px 0;
+    }
+    
+    .details-section ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    
+    .details-section li {
+      margin-bottom: 5px;
+    }
+    
+    /* Responsive fixes */
+    @media (max-width: 768px) {
+      .modal-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .modal-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .results-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .search-header {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .search-input {
+      flex: 1;
+    }
+    
+    #searchButton {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    
+    #searchButton:hover {
+      background-color: #3d8b40;
+    }
+  </style>
+</head>
+<body>
+  <div class="language-selector">
+    <button class="lang-btn active" data-lang="en">English</button>
+    <button class="lang-btn" data-lang="hi">हिंदी</button>
+    <button class="lang-btn" data-lang="te">తెలుగు</button>
+    <button class="accessibility-btn" id="signLanguageToggle">
+      <i class="fas fa-american-sign-language-interpreting"></i>
+    </button>
+  </div>
+
+  <header>
+    <div class="logo">
+      <img src="images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+      <h1 id="site-title">FarmKnowledge</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="search.html" class="active" id="nav-search">Search</a></li>
+        <li><a href="index.html#about" id="nav-about">About</a></li>
+        <li><a href="index.html#contact" id="nav-contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-nav-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <main class="search-container">
+    <div class="search-header">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search farming information...">
+      <button id="searchButton" class="btn primary-btn">
+        <i class="fas fa-search"></i> Search
+      </button>
+    </div>
+    
+    <div id="searchLoading" style="display: none; justify-content: center; align-items: center; margin: 30px 0;">
+      <div class="spinner" style="border: 4px solid #f3f3f3; border-top: 4px solid #4CAF50; border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite;"></div>
+      <span style="margin-left: 15px;">Searching for farming information...</span>
+    </div>
+    
+    <div class="results-grid" id="searchResults">
+      <!-- Results will be dynamically populated here -->
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/logo.jpeg" alt="FarmKnowledge Logo">
+        <h3>FarmKnowledge</h3>
+      </div>
+      <div class="footer-links">
+        <h4 id="footer-links-title">Quick Links</h4>
+        <ul>
+          <li><a href="index.html" id="footer-home">Home</a></li>
+          <li><a href="search.html" id="footer-search">Search</a></li>
+          <li><a href="index.html#about" id="footer-about">About</a></li>
+          <li><a href="index.html#contact" id="footer-contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-categories">
+        <h4 id="footer-categories-title">Categories</h4>
+        <ul>
+          <li><a href="search.html?query=crops" id="footer-crops">Crops</a></li>
+          <li><a href="search.html?query=soil" id="footer-soil">Soil</a></li>
+          <li><a href="search.html?query=irrigation" id="footer-irrigation">Irrigation</a></li>
+          <li><a href="search.html?query=livestock" id="footer-livestock">Livestock</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4 id="footer-social-title">Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p id="copyright">© 2025 FarmKnowledge. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Common farming terms and their related categories
+    const farmingTerms = {
+      "farming": ["crops", "soil", "irrigation", "equipment", "organic"],
+      "grow": ["crops", "soil", "organic"],
+      "plant": ["crops", "soil", "organic", "seasonal"],
+      "harvest": ["crops", "equipment", "seasonal"],
+      "seed": ["crops", "seeds", "organic"],
+      "soil": ["soil", "organic"],
+      "water": ["irrigation", "weather"],
+      "season": ["crops", "seasonal", "weather"],
+      "organic": ["organic", "soil"],
+      "fertilizer": ["soil", "organic"],
+      "pest": ["organic", "crops"],
+      "equipment": ["equipment"],
+      "weather": ["crops", "irrigation", "weather", "seasonal"],
+      "livestock": ["livestock"],
+      "rice": ["crops"],
+      "wheat": ["crops"],
+      "corn": ["crops"],
+      "vegetable": ["crops", "organic"],
+      "drought": ["weather", "irrigation"],
+      "rain": ["weather", "irrigation"],
+      "temperature": ["weather", "seasonal"],
+      "frost": ["weather", "seasonal"],
+      "winter": ["seasonal", "weather"],
+      "spring": ["seasonal", "weather"],
+      "summer": ["seasonal", "weather"],
+      "fall": ["seasonal", "weather", "crops"],
+      "autumn": ["seasonal", "weather", "crops"],
+      "cattle": ["livestock"],
+      "poultry": ["livestock"],
+      "goat": ["livestock"],
+      "dairy": ["livestock"],
+      "tractor": ["equipment"],
+      "irrigation": ["irrigation", "equipment"],
+      "compost": ["organic", "soil"],
+      "fertilize": ["soil", "organic"],
+      "planting": ["crops", "seasonal"],
+      "protection": ["weather", "crops", "equipment"],
+      "conservation": ["soil", "irrigation", "weather"],
+      "sustainable": ["organic", "livestock", "soil"],
+      "technology": ["equipment", "irrigation"],
+      "maintenance": ["equipment", "irrigation"],
+      "certification": ["organic"],
+      "rotation": ["crops", "soil"],
+      "planning": ["seasonal", "crops", "weather"],
+      "climate": ["weather", "seasonal"],
+      "precipitation": ["weather", "rainfall", "irrigation"],
+      "humidity": ["weather", "crops", "irrigation"],
+      "frost": ["weather", "seasonal", "crops", "protection"],
+      "drought": ["weather", "irrigation", "crops"],
+      "monsoon": ["weather", "seasonal", "irrigation"],
+      "dry season": ["weather", "seasonal", "irrigation"],
+      "wet season": ["weather", "seasonal", "irrigation"],
+      "cold": ["weather", "seasonal", "crops", "protection"],
+      "hot": ["weather", "seasonal", "crops", "irrigation"],
+      "warm": ["weather", "seasonal", "crops"],
+      "cool": ["weather", "seasonal", "crops"],
+      "freeze": ["weather", "seasonal", "protection"],
+      "snow": ["weather", "seasonal"],
+      "ice": ["weather", "seasonal", "protection"],
+      "wind": ["weather", "crops", "protection"],
+      "storm": ["weather", "protection"],
+      "flood": ["weather", "irrigation", "protection"],
+      "sunshine": ["weather", "crops", "seasonal"],
+      "germination": ["seeds", "seasonal", "crops"],
+      "flowering": ["crops", "seasonal", "weather"],
+      "pruning": ["crops", "seasonal"],
+      "dormant": ["crops", "seasonal"],
+      "perennial": ["crops", "seasonal"],
+      "annual": ["crops", "seasonal"],
+      "biennial": ["crops", "seasonal"]
+    };
+
+    // Comprehensive Farming Data for Search
+    const dummyData = {
+      crops: [
+        {
+          title: "Rice Cultivation Techniques",
+          description: "Complete guide on rice cultivation from land preparation to harvesting for optimal yields.",
+          image: "https://source.unsplash.com/random/300x200/?rice",
+          date: "2023-08-15"
+        },
+        {
+          title: "Wheat Production Best Practices",
+          description: "Latest techniques for growing wheat with higher productivity and disease resistance.",
+          image: "https://source.unsplash.com/random/300x200/?wheat",
+          date: "2023-09-10"
+        },
+        {
+          title: "Sustainable Corn Farming",
+          description: "Methods for growing corn using sustainable practices that minimize environmental impact.",
+          image: "https://source.unsplash.com/random/300x200/?corn",
+          date: "2023-07-22"
+        },
+        {
+          title: "Vegetable Gardening for Beginners",
+          description: "Step-by-step guide to starting your own vegetable garden with minimal resources.",
+          image: "https://source.unsplash.com/random/300x200/?vegetables",
+          date: "2023-10-05"
+        },
+        {
+          title: "Crop Rotation Benefits",
+          description: "How implementing crop rotation can improve soil health and increase yield over time.",
+          image: "https://source.unsplash.com/random/300x200/?cropfield",
+          date: "2023-11-12"
+        }
+      ],
+      soil: [
+        {
+          title: "Soil Testing Methods",
+          description: "Comprehensive guide to testing soil quality and nutrient content for better farming decisions.",
+          image: "https://source.unsplash.com/random/300x200/?soiltest",
+          date: "2023-06-18"
+        },
+        {
+          title: "Improving Soil Fertility Naturally",
+          description: "Natural methods to enhance soil fertility without harmful chemicals.",
+          image: "https://source.unsplash.com/random/300x200/?soilfertility",
+          date: "2023-05-30"
+        },
+        {
+          title: "Soil Conservation Techniques",
+          description: "Practices to prevent soil erosion and maintain long-term agricultural productivity.",
+          image: "https://source.unsplash.com/random/300x200/?soilconservation",
+          date: "2023-09-25"
+        },
+        {
+          title: "Understanding Soil pH",
+          description: "How soil pH affects plant growth and methods to adjust it for different crops.",
+          image: "https://source.unsplash.com/random/300x200/?soilph",
+          date: "2023-08-08"
+        }
+      ],
+      irrigation: [
+        {
+          title: "Drip Irrigation Systems",
+          description: "Installation and benefits of water-efficient drip irrigation for various crops.",
+          image: "https://source.unsplash.com/random/300x200/?dripirrigation",
+          date: "2023-07-14"
+        },
+        {
+          title: "Efficient Water Management",
+          description: "Strategies for conserving water while maintaining optimal crop yields.",
+          image: "https://source.unsplash.com/random/300x200/?watermanagement",
+          date: "2023-10-20"
+        },
+        {
+          title: "Rainwater Harvesting for Farms",
+          description: "Methods to collect and store rainwater for agricultural use during dry periods.",
+          image: "https://source.unsplash.com/random/300x200/?rainwaterharvesting",
+          date: "2023-06-05"
+        },
+        {
+          title: "Sprinkler Systems Comparison",
+          description: "Analysis of different sprinkler irrigation systems for various farm sizes and crops.",
+          image: "https://source.unsplash.com/random/300x200/?sprinklerirrigation",
+          date: "2023-09-18"
+        }
+      ],
+      seeds: [
+        {
+          title: "Seed Selection Guide",
+          description: "How to choose the right seeds for your climate, soil type, and growing conditions.",
+          image: "https://source.unsplash.com/random/300x200/?seeds",
+          date: "2023-08-30"
+        },
+        {
+          title: "Seed Preservation Techniques",
+          description: "Methods for preserving and storing seeds to maintain viability and genetic diversity.",
+          title: "Sprinkler Irrigation Guide",
+          description: "Guide to different types of sprinkler irrigation systems, their applications, and efficient water management strategies.",
+          image: "images/sprinkler.jpg",
+          date: "2024-03-15"
+        },
+        {
+          title: "Water Conservation Techniques",
+          description: "Techniques for conserving water in agricultural operations while maintaining crop productivity and soil health.",
+          image: "images/water-conservation.jpg",
+          date: "2024-01-20"
+        },
+        {
+          title: "Irrigation Scheduling",
+          description: "How to create optimal irrigation schedules based on crop type, growth stage, soil conditions, and weather patterns.",
+          image: "images/irrigation-schedule.jpg",
+          date: "2024-02-25"
+        },
+        {
+          title: "Rainwater Harvesting",
+          description: "Methods for capturing and storing rainwater for agricultural use, including design considerations and storage options.",
+          image: "images/rainwater.jpg",
+          date: "2024-03-30"
+        },
+        {
+          title: "Smart Irrigation Technologies",
+          description: "Overview of smart irrigation technologies using sensors, weather data, and automation to optimize water usage.",
+          image: "images/smart-irrigation.jpg",
+          date: "2024-04-10"
+        }
+      ],
+      seeds: [
+        {
+          title: "Seed Selection Guide",
+          description: "How to select the right seeds for your climate, soil conditions, and farming goals for maximum yield and quality.",
+          image: "images/seed-selection.jpg",
+          date: "2024-01-10"
+        },
+        {
+          title: "Seed Storage Best Practices",
+          description: "Best practices for storing seeds to maintain viability, prevent pest damage, and ensure quality planting material.",
+          image: "images/seed-storage.jpg",
+          date: "2024-02-15"
+        },
+        {
+          title: "Organic Seed Production",
+          description: "Guidelines for producing organic seeds, including isolation distances, selection practices, and certification requirements.",
+          image: "images/organic-seeds.jpg",
+          date: "2024-03-20"
+        },
+        {
+          title: "Seed Treatment Methods",
+          description: "Different seed treatment methods to enhance germination, protect against diseases, and improve seedling vigor.",
+          image: "images/seed-treatment.jpg",
+          date: "2024-01-25"
+        },
+        {
+          title: "Hybrid vs. Open-Pollinated Seeds",
+          description: "Comparison of hybrid and open-pollinated seeds, their advantages, disadvantages, and appropriate uses in farming.",
+          image: "images/hybrid-seeds.jpg",
+          date: "2024-02-28"
+        },
+        {
+          title: "Seed Germination Testing",
+          description: "How to test seed germination rates and vigor to ensure successful planting and establishment of crops.",
+          image: "images/germination-test.jpg",
+          date: "2024-03-25"
+        }
+      ],
+      organic: [
+        {
+          title: "Organic Pest Control",
+          description: "Natural and organic methods for controlling common agricultural pests without synthetic chemicals.",
+          image: "images/organic-pest.jpg",
+          date: "2024-02-08"
+        },
+        {
+          title: "Composting Techniques",
+          description: "Different composting methods and techniques for creating nutrient-rich organic fertilizer from farm waste.",
+          image: "images/composting.jpg",
+          date: "2024-03-12"
+        },
+        {
+          title: "Organic Certification Guide",
+          description: "Step-by-step guide to obtaining organic certification, including required practices, documentation, and inspection process.",
+          image: "images/organic-cert.jpg",
+          date: "2024-01-18"
+        },
+        {
+          title: "Natural Weed Management",
+          description: "Strategies for managing weeds without herbicides, including cultural practices, mechanical methods, and biological control.",
+          image: "images/weed-management.jpg",
+          date: "2024-02-22"
+        },
+        {
+          title: "Beneficial Insects in Farming",
+          description: "How to attract and maintain beneficial insects for pest control and pollination in organic farming systems.",
+          image: "images/beneficial-insects.jpg",
+          date: "2024-03-28"
+        },
+        {
+          title: "Organic Soil Building",
+          description: "Long-term strategies for building healthy, productive soil in organic farming systems through sustainable practices.",
+          image: "images/organic-soil.jpg",
+          date: "2024-04-15"
+        }
+      ],
+      equipment: [
+        {
+          title: "Farm Tractor Maintenance",
+          description: "Essential maintenance practices for farm tractors to ensure reliability, longevity, and optimal performance.",
+          image: "images/tractor.jpg",
+          date: "2024-01-12"
+        },
+        {
+          title: "Small Farm Equipment Guide",
+          description: "Guide to essential equipment for small farms, including cost-effective options and multipurpose tools.",
+          image: "images/small-farm-equipment.jpg",
+          date: "2024-02-18"
+        },
+        {
+          title: "Harvesting Equipment Selection",
+          description: "How to select the right harvesting equipment based on crop type, farm size, and budget considerations.",
+          image: "images/harvesting-equipment.jpg",
+          date: "2024-03-22"
+        },
+        {
+          title: "Irrigation Equipment Maintenance",
+          description: "Maintenance procedures for different types of irrigation equipment to ensure efficient operation and longevity.",
+          image: "images/irrigation-equipment.jpg",
+          date: "2024-01-28"
+        },
+        {
+          title: "Precision Farming Technologies",
+          description: "Overview of precision farming technologies including GPS guidance, variable rate application, and yield monitoring.",
+          image: "images/precision-farming.jpg",
+          date: "2024-03-05"
+        },
+        {
+          title: "Equipment Rental vs. Purchase",
+          description: "Analysis of when to rent versus purchase farm equipment, with considerations for different farm sizes and operations.",
+          image: "images/equipment-rental.jpg",
+          date: "2024-04-08"
+        }
+      ],
+      livestock: [
+        {
+          title: "Cattle Breeding Guide",
+          description: "Comprehensive guide to cattle breeding, including selection criteria, breeding methods, and genetic improvement strategies.",
+          image: "images/cattle.jpg",
+          date: "2024-01-15"
+        },
+        {
+          title: "Poultry Management",
+          description: "Best practices for poultry management including housing, nutrition, health, and egg production optimization.",
+          image: "images/poultry.jpg",
+          date: "2024-02-20"
+        },
+        {
+          title: "Goat Farming Essentials",
+          description: "Essential information for successful goat farming, covering breeds, housing, feeding, and health management.",
+          image: "images/goats.jpg",
+          date: "2024-03-25"
+        },
+        {
+          title: "Dairy Farm Management",
+          description: "Management practices for dairy farms including herd health, milking procedures, and milk quality assurance.",
+          image: "images/dairy.jpg",
+          date: "2024-01-30"
+        },
+        {
+          title: "Sustainable Grazing Systems",
+          description: "How to implement sustainable grazing systems that improve pasture health, soil quality, and livestock productivity.",
+          image: "images/grazing.jpg",
+          date: "2024-03-08"
+        },
+        {
+          title: "Livestock Health Monitoring",
+          description: "Techniques for monitoring and maintaining livestock health, including disease prevention and early detection strategies.",
+          image: "images/livestock-health.jpg",
+          date: "2024-04-12"
+        }
+      ],
+      weather: [
+        {
+          title: "Weather-Based Planting Guide",
+          description: "How to use weather forecasts and patterns to optimize planting times for different crops and regions.",
+          image: "images/weather-planting.jpg",
+          date: "2024-02-05"
+        },
+        {
+          title: "Drought Management Strategies",
+          description: "Proactive strategies for managing agricultural operations during drought conditions to minimize crop losses.",
+          image: "images/drought.jpg",
+          date: "2024-03-10"
+        },
+        {
+          title: "Frost Protection Methods",
+          description: "Methods for protecting crops from frost damage, including active and passive protection techniques.",
+          image: "images/frost-protection.jpg",
+          date: "2024-01-22"
+        },
+        {
+          title: "Extreme Weather Preparedness",
+          description: "How to prepare farming operations for extreme weather events including storms, floods, and heat waves.",
+          image: "images/extreme-weather.jpg",
+          date: "2024-02-26"
+        },
+        {
+          title: "Climate Change Adaptation",
+          description: "Strategies for adapting agricultural practices to changing climate conditions and increasing weather variability.",
+          image: "images/climate-adaptation.jpg",
+          date: "2024-03-30"
+        },
+        {
+          title: "Weather Monitoring Tools",
+          description: "Overview of weather monitoring tools and technologies that help farmers make informed decisions based on accurate data.",
+          image: "images/weather-tools.jpg",
+          date: "2024-04-18"
+        }
+      ],
+      seasonal: [
+        {
+          title: "Spring Planting Calendar",
+          description: "Month-by-month calendar for spring planting activities, including soil preparation, seeding, and early crop management.",
+          image: "images/spring-calendar.jpg",
+          date: "2024-02-10"
+        },
+        {
+          title: "Summer Farm Management",
+          description: "Essential management practices for farms during hot summer months, including irrigation, pest control, and heat stress prevention.",
+          image: "images/summer-farm.jpg",
+          date: "2024-05-15"
+        },
+        {
+          title: "Fall Harvest Planning",
+          description: "Planning guide for fall harvest operations, including timing, equipment preparation, and storage considerations.",
+          image: "images/fall-harvest.jpg",
+          date: "2024-08-20"
+        },
+        {
+          title: "Winter Farm Preparations",
+          description: "How to prepare farm operations for winter, including equipment winterization, livestock management, and planning for next season.",
+          image: "images/winter-farm.jpg",
+          date: "2024-11-10"
+        },
+        {
+          title: "Seasonal Pest Calendar",
+          description: "Calendar of pest emergence and control measures throughout the growing season to help with timely prevention and management.",
+          image: "images/pest-calendar.jpg",
+          date: "2024-03-05"
+        },
+        {
+          title: "Seasonal Market Planning",
+          description: "How to plan production and marketing strategies based on seasonal demand patterns and price fluctuations.",
+          image: "images/seasonal-market.jpg",
+          date: "2024-01-25"
+        }
+      ]
+    };
+
+    // Function to display search results
+    function displayResults(searchTerm) {
+      const resultsContainer = document.getElementById('searchResults');
+      resultsContainer.innerHTML = ''; // Clear previous results
+      
+      if (!searchTerm.trim()) {
+        resultsContainer.innerHTML = '<div class="no-results">Please enter a search term</div>';
+        return;
+      }
+      
+      // Get current month (0-indexed, 0 = January)
+      const currentMonth = new Date().getMonth();
+      
+      let results = [];
+      let exactMatch = false;
+      let categoryMatches = [];
+      
+      // Lower case search term for case-insensitive comparison
+      const lowerSearchTerm = searchTerm.toLowerCase();
+      
+      // Step 1: Check for exact category match
+      if (farmingTerms[lowerSearchTerm]) {
+        exactMatch = true;
+        const categories = farmingTerms[lowerSearchTerm];
+        
+        // Add items from matched categories
+        categories.forEach(category => {
+          if (dummyData[category]) {
+            const categoryItems = dummyData[category].map(item => ({
+              ...item,
+              category: category,
+              relevanceScore: calculateRelevance(item, lowerSearchTerm, category, true)
+            }));
+            results = [...results, ...categoryItems];
+          }
+        });
+        
+        // Also check for multi-word phrases
+        const words = lowerSearchTerm.split(/\s+/);
+        if (words.length > 1) {
+          for (const word of words) {
+            if (farmingTerms[word]) {
+              const wordCategories = farmingTerms[word];
+              
+              wordCategories.forEach(wordCategory => {
+                if (!categoryMatches.includes(wordCategory)) {
+                  categoryMatches.push(wordCategory);
+                }
+                
+                if (dummyData[wordCategory] && !categories.includes(wordCategory)) {
+                  // Add items from this additional category
+                  const additionalResults = dummyData[wordCategory].map(item => ({
+                    ...item,
+                    category: wordCategory,
+                    relevanceScore: calculateRelevance(item, word, wordCategory, false)
+                  }));
+                  results = [...results, ...additionalResults];
+                }
+              });
+            }
+          }
+        }
+      }
+      // Step 2: Check for partial category matches
+      else {
+        // Check for partial matches in farmingTerms dictionary
+        for (const term in farmingTerms) {
+          if (term.includes(lowerSearchTerm) || lowerSearchTerm.includes(term)) {
+            const categories = farmingTerms[term];
+            
+            categories.forEach(category => {
+              if (!categoryMatches.includes(category)) {
+                categoryMatches.push(category);
+              }
+            });
+          }
+        }
+        
+        // Check for matches in each category's data
+        let allResults = [];
+        for (const category in dummyData) {
+          const categoryResults = dummyData[category]
+            .filter(item => isRelatedToSearchTerm(item, lowerSearchTerm))
+            .map(item => ({
+              ...item,
+              category: category,
+              relevanceScore: calculateRelevance(item, lowerSearchTerm, category, false)
+            }));
+          
+          allResults = [...allResults, ...categoryResults];
+        }
+        
+        // If we have category matches but no specific item matches, add all items from matched categories
+        if (categoryMatches.length > 0 && allResults.length === 0) {
+          for (const category of categoryMatches) {
+            if (dummyData[category]) {
+              const categoryItems = dummyData[category].map(item => ({
+                ...item,
+                category: category,
+                relevanceScore: 50 // Medium relevance score
+              }));
+              allResults = [...allResults, ...categoryItems];
+            }
+          }
+        }
+        
+        results = allResults;
+      }
+      
+      // Step 3: Enhance with seasonal and weather-related information
+      // Check for seasonal or weather keywords
+      const isSeasonalQuery = ['season', 'spring', 'summer', 'fall', 'autumn', 'winter', 'planting', 'harvest'].some(term => 
+        lowerSearchTerm.includes(term)
+      );
+      
+      const isWeatherQuery = ['weather', 'climate', 'rain', 'drought', 'precipitation', 'frost', 'temperature', 'humidity', 'monsoon'].some(term => 
+        lowerSearchTerm.includes(term)
+      );
+      
+      // Add seasonal recommendations if applicable
+      if (isSeasonalQuery || isWeatherQuery || results.length === 0) {
+        const seasonalRecommendations = getSeasonalRecommendations(currentMonth, lowerSearchTerm);
+        
+        // Remove any duplicates
+        const existingTitles = results.map(item => item.title);
+        const uniqueSeasonalRecs = seasonalRecommendations.filter(item => 
+          !existingTitles.includes(item.title)
+        );
+        
+        results = [...results, ...uniqueSeasonalRecs];
+      }
+      
+      // Step 4: Sort results by relevance
+      results.sort((a, b) => b.relevanceScore - a.relevanceScore);
+      
+      // Display results
+      if (results.length > 0) {
+        results.forEach(result => {
+          const resultCard = document.createElement('div');
+          resultCard.className = 'result-card';
+          
+          resultCard.innerHTML = `
+            <img src="${result.image}" alt="${result.title}" class="result-image">
+            <div class="result-content">
+              <h3 class="result-title">${result.title}</h3>
+              <p class="result-description">${result.description}</p>
+              ${result.note ? `<p class="result-note" style="color:#4CAF50;font-style:italic">${result.note}</p>` : ''}
+              <div class="result-details">
+                <p><strong>Date:</strong> ${result.date}</p>
+                <p><strong>Category:</strong> ${result.category ? (result.category.charAt(0).toUpperCase() + result.category.slice(1)) : 'General'}</p>
+              </div>
+              <button class="view-details-btn" data-title="${result.title}">View Full Details</button>
+              <div class="result-meta">
+                <span>${result.date}</span>
+                <span><i class="fas fa-arrow-right"></i></span>
+              </div>
+            </div>
+          `;
+          
+          resultsContainer.appendChild(resultCard);
+        });
+        
+        // Add event listeners to the "View Full Details" buttons
+        document.querySelectorAll('.view-details-btn').forEach(button => {
+          button.addEventListener('click', function() {
+            const title = this.getAttribute('data-title');
+            showFullDetails(title);
+          });
+        });
+      } else {
+        resultsContainer.innerHTML = '<div class="no-results">No results found. Try different keywords.</div>';
+      }
+    }
+    
+    // Function to check if an item is related to the search term
+    function isRelatedToSearchTerm(item, searchTerm) {
+      const searchLower = searchTerm.toLowerCase();
+      
+      // Common farming-related terms and their synonyms
+      const farmingTerms = {
+        "planting": ["sow", "seed", "grow", "cultivate"],
+        "growing": ["cultivate", "raise", "farm", "produce"],
+        "harvesting": ["collect", "gather", "pick", "reap"],
+        "watering": ["irrigate", "hydrate", "moisten"],
+        "fertilizing": ["feed", "nourish", "enrich"],
+        "season": ["spring", "summer", "fall", "winter", "seasonal"],
+        "soil": ["dirt", "earth", "ground", "land"],
+        "organic": ["natural", "chemical-free", "eco-friendly"],
+        "weather": ["climate", "temperature", "rain", "frost"],
+        "climate": ["environment", "conditions", "atmosphere"],
+        "temperature": ["heat", "warmth", "cold", "chill"],
+        "precipitation": ["rain", "rainfall", "snow", "moisture"],
+        "humidity": ["dampness", "moisture", "mugginess"],
+        "frost": ["freeze", "cold snap", "icy"],
+        "drought": ["dry spell", "arid conditions", "water shortage"],
+        "seasonal": ["cyclic", "periodic", "recurring", "time-based"],
+        "winter crops": ["rabi crops", "cold season crops"],
+        "summer crops": ["kharif crops", "warm season crops"],
+        "monsoon": ["rainy season", "wet season"]
+      };
+      
+      // Check if search term is related to any farming term
+      for (const term in farmingTerms) {
+        if (searchLower.includes(term) || farmingTerms[term].some(synonym => searchLower.includes(synonym))) {
+          // Check if item contains the term or any of its synonyms
+          if (
+            item.title.toLowerCase().includes(term) ||
+            item.description.toLowerCase().includes(term) ||
+            farmingTerms[term].some(synonym => 
+              item.title.toLowerCase().includes(synonym) ||
+              item.description.toLowerCase().includes(synonym)
+            )
+          ) {
+            return true;
+          }
+        }
+      }
+      
+      // Check for seasonal matches based on context
+      const seasonTerms = {
+        "spring planting": ["early season", "spring sowing", "spring crops"],
+        "summer care": ["hot weather", "drought management", "summer growth"],
+        "fall harvest": ["autumn collection", "fall crops", "harvest season"],
+        "winter preparation": ["cold protection", "winter planning", "frost management"]
+      };
+      
+      for (const seasonTerm in seasonTerms) {
+        if (searchLower.includes(seasonTerm) || 
+            seasonTerms[seasonTerm].some(term => searchLower.includes(term))) {
+          if (
+            item.title.toLowerCase().includes(seasonTerm) ||
+            item.description.toLowerCase().includes(seasonTerm) ||
+            seasonTerms[seasonTerm].some(term => 
+              item.title.toLowerCase().includes(term) ||
+              item.description.toLowerCase().includes(term)
+            )
+          ) {
+            return true;
+          }
+        }
+      }
+      
+      // Weather condition-specific matching
+      const weatherConditions = {
+        "rainy": ["wet", "drizzle", "downpour", "precipitation"],
+        "dry": ["arid", "drought", "water shortage"],
+        "hot": ["heat", "warm", "high temperature"],
+        "cold": ["chilly", "cool", "low temperature", "frost"]
+      };
+      
+      for (const condition in weatherConditions) {
+        if (searchLower.includes(condition) || 
+            weatherConditions[condition].some(term => searchLower.includes(term))) {
+          if (
+            item.title.toLowerCase().includes(condition) ||
+            item.description.toLowerCase().includes(condition) ||
+            weatherConditions[condition].some(term => 
+              item.title.toLowerCase().includes(term) ||
+              item.description.toLowerCase().includes(term)
+            )
+          ) {
+            return true;
+          }
+        }
+      }
+      
+      return false;
+    }
+    
+    // Calculate relevance score for sorting results
+    function calculateRelevance(item, searchTerm, category, priorityCategories) {
+      let score = 0;
+      const searchLower = searchTerm.toLowerCase();
+      
+      // Title match is highest priority
+      if (item.title.toLowerCase().includes(searchLower)) {
+        score += 100;
+        // Exact title match is even better
+        if (item.title.toLowerCase() === searchLower) {
+          score += 50;
+        }
+        // Title starts with search term is better than just including it
+        if (item.title.toLowerCase().startsWith(searchLower)) {
+          score += 25;
+        }
+      }
+      
+      // Description match
+      if (item.description.toLowerCase().includes(searchLower)) {
+        score += 50;
+      }
+      
+      // Boost items in seasonal or weather categories when those are priority categories
+      if ((category === 'seasonal' || category === 'weather') && 
+          (priorityCategories.includes('seasonal') || priorityCategories.includes('weather'))) {
+        score += 40;
+      }
+      
+      // If searching for seasonal content, boost items with seasonal keywords
+      if (priorityCategories.includes('seasonal')) {
+        const seasonalKeywords = ['spring', 'summer', 'fall', 'autumn', 'winter', 'season'];
+        if (seasonalKeywords.some(keyword => 
+            item.title.toLowerCase().includes(keyword) || 
+            item.description.toLowerCase().includes(keyword))) {
+          score += 30;
+        }
+      }
+      
+      // If searching for weather content, boost items with weather keywords
+      if (priorityCategories.includes('weather')) {
+        const weatherKeywords = ['weather', 'climate', 'temperature', 'rain', 'frost', 'drought', 'humid'];
+        if (weatherKeywords.some(keyword => 
+            item.title.toLowerCase().includes(keyword) || 
+            item.description.toLowerCase().includes(keyword))) {
+          score += 30;
+        }
+      }
+      
+      // Recent content gets a boost
+      const dateScore = new Date(item.date).getTime() / 1000000000;
+      score += dateScore;
+      
+      return score;
+    }
+    
+    // Generate seasonal recommendations based on current month
+    function getSeasonalRecommendations(month, searchTerm) {
+      const results = [];
+      
+      // Determine current season
+      let currentSeason = '';
+      if (month >= 2 && month <= 4) {
+        currentSeason = 'spring';
+      } else if (month >= 5 && month <= 7) {
+        currentSeason = 'summer';
+      } else if (month >= 8 && month <= 10) {
+        currentSeason = 'fall';
+      } else {
+        currentSeason = 'winter';
+      }
+      
+      // Find seasonal recommendations
+      if (dummyData.seasonal) {
+        // Get items specifically for the current season first
+        const seasonalItems = dummyData.seasonal.filter(item => 
+          item.title.toLowerCase().includes(currentSeason) || 
+          item.description.toLowerCase().includes(currentSeason)
+        );
+        
+        results.push(...seasonalItems);
+      }
+      
+      // Get weather-related items
+      if (dummyData.weather && results.length < 5) {
+        const weatherItems = dummyData.weather.filter(item => 
+          !results.some(r => r.title === item.title)
+        ).slice(0, 3);
+        
+        results.push(...weatherItems);
+      }
+      
+      // Add some crop recommendations based on season
+      if (dummyData.crops && results.length < 8) {
+        // Seasonal crop mapping
+        const seasonalCrops = {
+          'spring': ['planting', 'sowing', 'prepare', 'seed'],
+          'summer': ['care', 'maintain', 'water', 'protect'],
+          'fall': ['harvest', 'collect', 'store'],
+          'winter': ['plan', 'prepare', 'protect', 'store']
+        };
+        
+        const keywordsToSearch = seasonalCrops[currentSeason] || [];
+        
+        const cropItems = dummyData.crops.filter(item => 
+          keywordsToSearch.some(keyword => 
+            item.title.toLowerCase().includes(keyword) || 
+            item.description.toLowerCase().includes(keyword)
+          ) && 
+          !results.some(r => r.title === item.title)
+        ).slice(0, 3);
+        
+        results.push(...cropItems);
+      }
+      
+      // If we still need more results, add general seasonal information
+      if (results.length < 5 && Object.keys(dummyData).length > 0) {
+        // Just use first 5 results from any category
+        for (const category in dummyData) {
+          if (results.length >= 5) break;
+          
+          const itemsToAdd = dummyData[category].filter(item => 
+            !results.some(r => r.title === item.title)
+          ).slice(0, 5 - results.length);
+          
+          results.push(...itemsToAdd);
+        }
+      }
+      
+      // Add a note to each result indicating it's a seasonal recommendation
+      return results.map(item => ({
+        ...item,
+        note: `Recommended for ${currentSeason}`,
+        relevanceScore: 50 // Medium relevance score
+      }));
+    }
+
+    // Function to display result cards with more details
+    function displayResultCards(results) {
+      const resultsContainer = document.getElementById('searchResults');
+      
+      results.forEach(result => {
+        // Create result card with detailed information
+        const resultCard = document.createElement('div');
+        resultCard.className = 'result-card';
+        
+        // Create full content with detailed information
+        resultCard.innerHTML = `
+          <img src="${result.image}" alt="${result.title}" class="result-image">
+          <div class="result-content">
+            <h3 class="result-title">${result.title}</h3>
+            <p class="result-description">${result.description}</p>
+            <div class="result-details">
+              <p><strong>Date:</strong> ${result.date}</p>
+              <p><strong>Category:</strong> ${result.category.charAt(0).toUpperCase() + result.category.slice(1)}</p>
+            </div>
+            <button class="view-details-btn" data-title="${result.title}">View Full Details</button>
+            <div class="result-meta">
+              <span>${result.date}</span>
+              <span><i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
+        `;
+        
+        resultsContainer.appendChild(resultCard);
+      });
+      
+      // Add event listeners to the "View Full Details" buttons
+      document.querySelectorAll('.view-details-btn').forEach(button => {
+        button.addEventListener('click', function() {
+          const title = this.getAttribute('data-title');
+          showFullDetails(title);
+        });
+      });
+    }
+    
+    // Function to show full details of a selected result
+    function showFullDetails(title) {
+      // Find the result with the matching title
+      let selectedResult = null;
+      let category = null;
+      
+      for (const cat in dummyData) {
+        const found = dummyData[cat].find(item => item.title === title);
+        if (found) {
+          selectedResult = found;
+          category = cat;
+          break;
+        }
+      }
+      
+      if (!selectedResult) return;
+      
+      // Generate additional detailed content based on the category and title
+      let additionalContent = '';
+      
+      if (category === 'crops') {
+        additionalContent = `
+          <div class="details-section">
+            <h4>Growing Information</h4>
+            <p><strong>Planting Season:</strong> ${selectedResult.title.includes('Rice') ? 'Rainy season' : 
+                                                selectedResult.title.includes('Wheat') ? 'Winter season' : 
+                                                'Spring to early summer'}</p>
+            <p><strong>Growth Duration:</strong> ${selectedResult.title.includes('Rice') ? '120-150 days' : 
+                                                 selectedResult.title.includes('Wheat') ? '100-130 days' : 
+                                                 '70-100 days'}</p>
+            <p><strong>Water Requirements:</strong> ${selectedResult.title.includes('Rice') ? 'High (flooding)' : 
+                                                   selectedResult.title.includes('Wheat') ? 'Moderate' : 
+                                                   'Moderate to high'}</p>
+            <h4>Harvesting Tips</h4>
+            <p>${selectedResult.title.includes('Rice') ? 'Harvest when 80% of the grains turn golden yellow.' : 
+                selectedResult.title.includes('Wheat') ? 'Harvest when the crop turns golden and grain hardens.' : 
+                'Harvest when corn silk turns brown and kernels are firm.'}</p>
+            <h4>Common Pests & Diseases</h4>
+            <ul>
+              ${selectedResult.title.includes('Rice') ? '<li>Rice blast</li><li>Brown plant hopper</li><li>Stem borer</li>' : 
+                selectedResult.title.includes('Wheat') ? '<li>Wheat rust</li><li>Powdery mildew</li><li>Aphids</li>' : 
+                '<li>Corn earworm</li><li>Fall armyworm</li><li>Corn smut</li>'}
+            </ul>
+          </div>
+        `;
+      } else if (category === 'soil') {
+        additionalContent = `
+          <div class="details-section">
+            <h4>Soil Properties</h4>
+            <p><strong>pH Level:</strong> ${selectedResult.title.includes('pH') ? '6.0-7.5 (optimal range)' : '5.5-7.0 (typical range)'}</p>
+            <p><strong>Testing Frequency:</strong> Every 2-3 years for optimal farm management</p>
+            <h4>Improvement Methods</h4>
+            <ul>
+              <li>Add organic matter like compost or well-rotted manure</li>
+              <li>Use cover crops to prevent erosion and add nutrients</li>
+              <li>Rotate crops to maintain soil health</li>
+              ${selectedResult.title.includes('pH') ? '<li>Add lime to raise pH or sulfur to lower pH</li>' : ''}
+              ${selectedResult.title.includes('Organic') ? '<li>Implement vermicomposting for nutrient-rich soil amendments</li>' : ''}
+            </ul>
+          </div>
+        `;
+      } else if (category === 'irrigation') {
+        additionalContent = `
+          <div class="details-section">
+            <h4>System Specifications</h4>
+            <p><strong>Water Efficiency:</strong> ${selectedResult.title.includes('Drip') ? 'Up to 90% efficient' : 
+                                                 selectedResult.title.includes('Sprinkler') ? '70-80% efficient' : 
+                                                 'Varies by method'}</p>
+            <p><strong>Installation Cost:</strong> ${selectedResult.title.includes('Drip') ? 'Moderate to high initial cost' : 
+                                                  selectedResult.title.includes('Sprinkler') ? 'Moderate initial cost' : 
+                                                  'Varies by system'}</p>
+            <h4>Maintenance Requirements</h4>
+            <ul>
+              ${selectedResult.title.includes('Drip') ? '<li>Regular filter cleaning</li><li>Check for clogged emitters</li><li>Flush system periodically</li>' : 
+                selectedResult.title.includes('Sprinkler') ? '<li>Check for broken sprinkler heads</li><li>Adjust spray patterns seasonally</li><li>Winterize system in cold climates</li>' : 
+                '<li>Regular system inspections</li><li>Preventative maintenance</li>'}
+            </ul>
+          </div>
+        `;
+      } else {
+        // Generic additional content for other categories
+        additionalContent = `
+          <div class="details-section">
+            <h4>Detailed Information</h4>
+            <p>This comprehensive guide provides in-depth information about ${selectedResult.title}.</p>
+            <p>For practical implementation, follow the step-by-step instructions and best practices outlined here.</p>
+            <h4>Benefits</h4>
+            <ul>
+              <li>Improved productivity and efficiency</li>
+              <li>Sustainable farming practices</li>
+              <li>Cost-effective solutions for farmers</li>
+            </ul>
+            <p>For more specific advice tailored to your location and conditions, consult with local agricultural experts.</p>
+          </div>
+        `;
+      }
+      
+      // Create modal with full details
+      const modal = document.createElement('div');
+      modal.className = 'details-modal';
+      modal.innerHTML = `
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <div class="modal-header">
+            <img src="${selectedResult.image}" alt="${selectedResult.title}" class="modal-image">
+            <div>
+              <h2>${selectedResult.title}</h2>
+              <p class="modal-category">${selectedResult.category.charAt(0).toUpperCase() + selectedResult.category.slice(1)}</p>
+              <p class="modal-date">${selectedResult.date}</p>
+            </div>
+          </div>
+          <div class="modal-body">
+            <p class="modal-description">${selectedResult.description}</p>
+            ${additionalContent}
+          </div>
+        </div>
+      `;
+      
+      // Add modal to the page
+      document.body.appendChild(modal);
+      
+      // Show the modal
+      setTimeout(() => {
+        modal.style.opacity = '1';
+        modal.style.display = 'flex';
+      }, 10);
+      
+      // Close modal when clicking on close button or outside the modal
+      const closeBtn = modal.querySelector('.close-modal');
+      closeBtn.addEventListener('click', () => {
+        modal.style.opacity = '0';
+        setTimeout(() => {
+          document.body.removeChild(modal);
+        }, 300);
+      });
+      
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.style.opacity = '0';
+          setTimeout(() => {
+            document.body.removeChild(modal);
+          }, 300);
+        }
+      });
+    }
+
+    // Get query parameter from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query');
+
+    // Display results based on query parameter
+    if (query) {
+      document.getElementById('searchInput').value = query;
+      displayResults(query);
+    }
+
+    // Add search input functionality
+    document.getElementById('searchInput').addEventListener('keyup', function(e) {
+      const searchTerm = e.target.value.toLowerCase().trim();
+      
+      if (searchTerm.length > 2) { // Only search if at least 3 characters are entered
+        displayResults(searchTerm);
+      } else if (searchTerm.length === 0) {
+        // If search is cleared, show a selection of results from all categories
+        displayRandomResults();
+      }
+    });
+    
+    // For Enter key press
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        const searchTerm = e.target.value.toLowerCase().trim();
+        if (searchTerm.length > 0) {
+          displayResults(searchTerm);
+        }
+      }
+    });
+    
+    // Function to display some random results from all categories
+    function displayRandomResults() {
+      const resultsContainer = document.getElementById('searchResults');
+      resultsContainer.innerHTML = ''; // Clear existing results
+      
+      const allResults = [];
+      
+      // Get one result from each category
+      Object.keys(dummyData).forEach(category => {
+        if (dummyData[category] && dummyData[category].length > 0) {
+          allResults.push(dummyData[category][0]); // Add the first item from each category
+        }
+      });
+      
+      displayResultCards(allResults);
+    }
+    
+    // Initial display of random results if no query
+    if (!query) {
+      displayRandomResults();
+    }
+  </script>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/image_to_query.js"></script>
+</body>
+</html>

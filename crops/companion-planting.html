@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companion Planting Guide - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .guide-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/companion-planting.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .guide-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .guide-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .guide-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .guide-content h2 {
+            color: var(--primary-dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+        .guide-content h3 {
+            color: var(--primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .guide-content p, .guide-content ul, .guide-content ol {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: #444;
+        }
+        .guide-content ul, .guide-content ol {
+            padding-left: 1.5rem;
+        }
+        .guide-content li {
+            margin-bottom: 0.5rem;
+        }
+        .guide-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .guide-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .guide-table th, .guide-table td {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+        }
+        .guide-table th {
+            background-color: var(--primary);
+            color: white;
+            text-align: left;
+        }
+        .guide-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .tip-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .tip-box h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .tip-box p {
+            margin-bottom: 0;
+        }
+        .guide-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        .nav-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .nav-btn:hover {
+            background-color: var(--primary-dark);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="guide-header">
+        <h1>Companion Planting Guide</h1>
+        <p>Guide to beneficial plant combinations and spacing</p>
+    </div>
+
+    <div class="guide-container">
+        <div class="guide-content">
+            <h2>What is Companion Planting?</h2>
+            <p>Companion planting is the strategic placement of different plant species in close proximity to promote growth, deter pests, and improve yields. This practice has been used for centuries by farmers and gardeners who observed that certain plants grow better alongside others, while some combinations can inhibit growth.</p>
+            
+            <img src="../images/companion-planting-diagram.jpg" alt="Companion Planting Diagram" class="guide-image">
+            
+            <h2>Benefits of Companion Planting</h2>
+            
+            <h3>Pest Management</h3>
+            <p>One of the primary benefits of companion planting is natural pest control:</p>
+            <ul>
+                <li><strong>Repellent Plants:</strong> Some plants release compounds that confuse or repel specific pests</li>
+                <li><strong>Trap Crops:</strong> Certain plants attract pests away from your main crop</li>
+                <li><strong>Beneficial Insect Attraction:</strong> Plants with small flowers often attract predatory insects that feed on pests</li>
+                <li><strong>Masking:</strong> Strong-smelling plants can mask the scent of pest-vulnerable crops</li>
+            </ul>
+            
+            <h3>Pollination Enhancement</h3>
+            <p>Increasing pollinator activity in your field or garden:</p>
+            <ul>
+                <li>Flowering companion plants attract bees, butterflies, and other pollinators</li>
+                <li>Higher pollinator activity often results in increased yields for fruiting crops</li>
+                <li>Continuous blooming throughout the season supports pollinator populations</li>
+            </ul>
+            
+            <h3>Space Maximization</h3>
+            <p>Efficient use of growing space:</p>
+            <ul>
+                <li><strong>Vertical Stacking:</strong> Tall plants can provide support for climbing species</li>
+                <li><strong>Root Depth Differences:</strong> Plants with different root depths access nutrients at various soil levels</li>
+                <li><strong>Growth Rate Staggering:</strong> Fast-growing plants can be harvested before slower companions need the space</li>
+            </ul>
+            
+            <h3>Soil Improvement</h3>
+            <p>Enhancing soil health and structure:</p>
+            <ul>
+                <li><strong>Nitrogen Fixation:</strong> Legumes (peas, beans) add nitrogen to the soil</li>
+                <li><strong>Dynamic Accumulators:</strong> Deep-rooted plants bring up minerals from subsoil</li>
+                <li><strong>Living Mulch:</strong> Low-growing plants cover soil, reducing evaporation and erosion</li>
+                <li><strong>Soil Structure:</strong> Different root systems improve soil aeration and water penetration</li>
+            </ul>
+            
+            <h3>Climate Protection</h3>
+            <p>Creating microclimate benefits:</p>
+            <ul>
+                <li><strong>Shade Provision:</strong> Taller plants protect heat-sensitive crops during summer</li>
+                <li><strong>Wind Protection:</strong> Sturdy plants can shield more delicate varieties</li>
+                <li><strong>Moisture Retention:</strong> Ground-covering companions reduce soil moisture evaporation</li>
+            </ul>
+            
+            <div class="tip-box">
+                <h4>Traditional Knowledge</h4>
+                <p>The "Three Sisters" planting method (corn, beans, and squash) used by Native American cultures is one of the most famous companion planting systems. Corn provides support for beans, beans fix nitrogen for corn and squash, and squash suppresses weeds and deters pests with prickly stems and shade.</p>
+            </div>
+            
+            <h2>Classic Companion Plant Combinations</h2>
+            
+            <table class="guide-table">
+                <tr>
+                    <th>Main Crop</th>
+                    <th>Beneficial Companions</th>
+                    <th>Plants to Avoid</th>
+                    <th>Benefits</th>
+                </tr>
+                <tr>
+                    <td>Tomatoes</td>
+                    <td>Basil, marigolds, nasturtiums, onions, garlic</td>
+                    <td>Potatoes, fennel, cabbage family</td>
+                    <td>Pest deterrence, flavor enhancement, improved growth</td>
+                </tr>
+                <tr>
+                    <td>Corn</td>
+                    <td>Beans, squash, cucumber, pumpkin, melons</td>
+                    <td>Tomatoes</td>
+                    <td>Structural support, nitrogen fixing, weed suppression</td>
+                </tr>
+                <tr>
+                    <td>Carrots</td>
+                    <td>Onions, leeks, rosemary, sage, tomatoes</td>
+                    <td>Dill, parsnips</td>
+                    <td>Pest control, especially carrot fly</td>
+                </tr>
+                <tr>
+                    <td>Cabbage family</td>
+                    <td>Aromatic herbs, celery, beets, onions</td>
+                    <td>Strawberries, tomatoes, pole beans</td>
+                    <td>Reduced pest pressure, especially cabbage worms</td>
+                </tr>
+                <tr>
+                    <td>Potatoes</td>
+                    <td>Horseradish, beans, corn, cabbage</td>
+                    <td>Tomatoes, squash, cucumber, sunflower</td>
+                    <td>Disease resistance, improved growth</td>
+                </tr>
+                <tr>
+                    <td>Cucumber</td>
+                    <td>Corn, peas, beans, sunflowers, radishes</td>
+                    <td>Potatoes, aromatic herbs</td>
+                    <td>Structural support, improved flavor, pest control</td>
+                </tr>
+                <tr>
+                    <td>Lettuce</td>
+                    <td>Carrots, radishes, strawberries, cucumbers</td>
+                    <td>Parsley, broccoli</td>
+                    <td>Shade provision, weed suppression</td>
+                </tr>
+            </table>
+            
+            <h2>Planning Your Companion Planting</h2>
+            
+            <h3>Step 1: Assess Your Main Crops</h3>
+            <p>Start by identifying the primary crops you wish to grow based on your:</p>
+            <ul>
+                <li>Climate and growing season</li>
+                <li>Available space</li>
+                <li>Soil conditions</li>
+                <li>Personal preferences or market demands</li>
+            </ul>
+            
+            <h3>Step 2: Identify Compatible Companions</h3>
+            <p>For each main crop, research beneficial companions considering:</p>
+            <ul>
+                <li>Pest management needs</li>
+                <li>Nutrient requirements</li>
+                <li>Growth habits and spacing needs</li>
+                <li>Timing of planting and harvest</li>
+            </ul>
+            
+            <h3>Step 3: Create a Layout Plan</h3>
+            <p>Design your planting layout with attention to:</p>
+            <ul>
+                <li>Mature heights of plants (place taller plants where they won't shade sun-loving companions)</li>
+                <li>Spacing requirements for healthy growth</li>
+                <li>Access for maintenance and harvesting</li>
+                <li>Integration with irrigation systems</li>
+            </ul>
+            
+            <img src="../images/companion-planting-layout.jpg" alt="Companion Planting Layout" class="guide-image">
+            
+            <h3>Step 4: Consider Timing and Succession</h3>
+            <p>Plan for the temporal aspects of companion planting:</p>
+            <ul>
+                <li>Stagger plantings for continuous harvest</li>
+                <li>Schedule fast-growing crops between slower-developing ones</li>
+                <li>Plan for season-long beneficial insect attraction with sequential blooms</li>
+                <li>Consider cool-season crops that can be planted before or after warm-season varieties</li>
+            </ul>
+            
+            <div class="tip-box">
+                <h4>Recording Results</h4>
+                <p>Keep detailed records of your companion planting arrangements, including what worked well and what didn't. This personal data is invaluable as you refine your approach over multiple growing seasons.</p>
+            </div>
+            
+            <h2>Common Companion Planting Methods</h2>
+            
+            <h3>Interplanting</h3>
+            <p>Mixing different crops within the same row or bed:</p>
+            <ul>
+                <li>Alternating plants within rows</li>
+                <li>Creating patterns of compatible species</li>
+                <li>Best for smaller-scale plantings where hand maintenance is practical</li>
+            </ul>
+            
+            <h3>Strip Cropping</h3>
+            <p>Planting complementary crops in alternating strips:</p>
+            <ul>
+                <li>Allows for mechanized maintenance while preserving companion benefits</li>
+                <li>Typically used in larger-scale farming</li>
+                <li>Width of strips depends on equipment used and crops grown</li>
+            </ul>
+            
+            <h3>Border Planting</h3>
+            <p>Surrounding main crops with beneficial companions:</p>
+            <ul>
+                <li>Creating protective barriers around vulnerable crops</li>
+                <li>Using flower borders to attract beneficial insects</li>
+                <li>Establishing herb borders for pest repellent effects</li>
+            </ul>
+            
+            <h3>Relay Planting</h3>
+            <p>Timing plantings so one crop follows another:</p>
+            <ul>
+                <li>Seeding slow-growing crops when fast-growing companions are nearly mature</li>
+                <li>Maximizes garden productivity throughout the season</li>
+                <li>Reduces periods when soil is bare</li>
+            </ul>
+            
+            <h2>Troubleshooting Companion Planting Issues</h2>
+            
+            <h3>Competition Problems</h3>
+            <p><strong>Symptoms:</strong> Stunted growth, reduced yields, signs of nutrient deficiency</p>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+                <li>Increase spacing between companion plants</li>
+                <li>Adjust planting times to reduce competition</li>
+                <li>Ensure adequate fertilization for all plants</li>
+                <li>Choose companions with different nutrient needs</li>
+            </ul>
+            
+            <h3>Incompatibility Issues</h3>
+            <p><strong>Symptoms:</strong> Poor growth despite adequate care, allelopathic effects (chemical inhibition)</p>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+                <li>Separate incompatible plants in future plantings</li>
+                <li>Create physical barriers between antagonistic species</li>
+                <li>Research less common combinations that might work better</li>
+            </ul>
+            
+            <h3>Pest Management Failures</h3>
+            <p><strong>Symptoms:</strong> Pest problems persist despite companion planting</p>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+                <li>Increase diversity with multiple pest-repelling companions</li>
+                <li>Add more flowering plants to attract beneficial insects</li>
+                <li>Combine companion planting with other organic pest management strategies</li>
+                <li>Consider using trap crops farther from main plantings</li>
+            </ul>
+            
+            <h2>Conclusion</h2>
+            <p>Companion planting offers numerous benefits for sustainable agriculture, from natural pest management to improved soil health and increased yields. While it requires more planning than monocultural approaches, the rewards include reduced input costs, greater biodiversity, and more resilient growing systems. By understanding the principles and continuously adapting based on your observations, you can develop companion planting strategies uniquely suited to your specific growing conditions and crop preferences.</p>
+            
+            <div class="guide-nav">
+                <a href="../category-crops.html" class="nav-btn"><i class="fas fa-arrow-left"></i> Back to Crop Management</a>
+                <a href="seasonal-planning.html" class="nav-btn">Seasonal Planning <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

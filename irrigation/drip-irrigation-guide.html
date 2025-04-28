@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drip Irrigation Systems - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/drip-irrigation.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .article-header h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .article-meta {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .article-section {
+            margin-bottom: 3rem;
+        }
+        .article-section h2 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .article-section p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .info-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .info-card h3 {
+            color: #2c5282;
+            margin-bottom: 1rem;
+        }
+        .tips-list {
+            list-style: none;
+            padding: 0;
+        }
+        .tips-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        .tips-list li:before {
+            content: "✓";
+            color: #2c5282;
+            position: absolute;
+            left: 0;
+        }
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        @media (max-width: 768px) {
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+        }
+        .system-components {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .component-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .component-name {
+            font-weight: 600;
+            color: #2c5282;
+            margin-bottom: 0.5rem;
+        }
+        .component-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="article-header">
+        <h1>Drip Irrigation Systems</h1>
+        <p>Efficient water management through precise delivery</p>
+    </div>
+
+    <main class="article-content">
+        <div class="article-meta">
+            <span><i class="fas fa-calendar"></i> Last Updated: March 14, 2024</span>
+            <span class="mx-3">|</span>
+            <span><i class="fas fa-clock"></i> 15 min read</span>
+        </div>
+
+        <div class="article-section">
+            <h2>What is Drip Irrigation?</h2>
+            <p>Drip irrigation is a highly efficient watering method that delivers water directly to plant roots through a network of pipes, valves, and emitters. This system minimizes water waste and maximizes crop yield by providing precise water delivery.</p>
+            
+            <div class="pros-cons">
+                <div class="info-card">
+                    <h3>Advantages</h3>
+                    <ul class="tips-list">
+                        <li>Water efficiency up to 95%</li>
+                        <li>Reduced weed growth</li>
+                        <li>Precise nutrient delivery</li>
+                        <li>Lower labor costs</li>
+                        <li>Minimal soil erosion</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>Challenges</h3>
+                    <ul class="tips-list">
+                        <li>Initial setup cost</li>
+                        <li>Regular maintenance needed</li>
+                        <li>Potential clogging issues</li>
+                        <li>Technical expertise required</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>System Components</h2>
+            <div class="system-components">
+                <div class="component-item">
+                    <div class="component-name">Control Head</div>
+                    <div class="component-description">Includes filters, pressure regulators, and fertilizer injectors</div>
+                </div>
+                <div class="component-item">
+                    <div class="component-name">Main Lines</div>
+                    <div class="component-description">Primary water distribution pipes</div>
+                </div>
+                <div class="component-item">
+                    <div class="component-name">Sub-main Lines</div>
+                    <div class="component-description">Secondary distribution network</div>
+                </div>
+                <div class="component-item">
+                    <div class="component-name">Laterals</div>
+                    <div class="component-description">Pipes with emitters that deliver water to plants</div>
+                </div>
+                <div class="component-item">
+                    <div class="component-name">Emitters/Drippers</div>
+                    <div class="component-description">Devices that control water flow to plants</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Design and Installation</h2>
+            <div class="info-card">
+                <h3>Planning Considerations</h3>
+                <ul class="tips-list">
+                    <li>Assess water source and quality</li>
+                    <li>Calculate water requirements</li>
+                    <li>Consider terrain and soil type</li>
+                    <li>Plan for crop spacing</li>
+                    <li>Design for future expansion</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Installation Steps</h3>
+                <ul class="tips-list">
+                    <li>Install main water source connection</li>
+                    <li>Set up filtration system</li>
+                    <li>Lay main and sub-main lines</li>
+                    <li>Install lateral lines and emitters</li>
+                    <li>Test system pressure and flow</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Maintenance and Troubleshooting</h2>
+            <div class="info-card">
+                <h3>Regular Maintenance</h3>
+                <ul class="tips-list">
+                    <li>Clean filters regularly</li>
+                    <li>Flush lines periodically</li>
+                    <li>Check for leaks and clogs</li>
+                    <li>Monitor pressure gauges</li>
+                    <li>Inspect emitters for damage</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Common Issues</h3>
+                <ul class="tips-list">
+                    <li>Clogged emitters</li>
+                    <li>Pressure fluctuations</li>
+                    <li>Line damage from animals</li>
+                    <li>Salt buildup in emitters</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Best Practices</h2>
+            <div class="info-card">
+                <h3>Operation Tips</h3>
+                <ul class="tips-list">
+                    <li>Schedule irrigation based on crop needs</li>
+                    <li>Monitor soil moisture levels</li>
+                    <li>Adjust flow rates seasonally</li>
+                    <li>Use automation when possible</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Water Management</h3>
+                <ul class="tips-list">
+                    <li>Calculate correct irrigation timing</li>
+                    <li>Consider weather conditions</li>
+                    <li>Use soil moisture sensors</li>
+                    <li>Implement fertigation when needed</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                    <li><a href="../category-organic.html">Organic Farming</a></li>
+                    <li><a href="../category-equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

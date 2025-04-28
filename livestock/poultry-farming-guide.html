@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poultry Farming Guide - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/poultry-farming.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .article-header h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .article-meta {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .article-section {
+            margin-bottom: 3rem;
+        }
+        .article-section h2 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .article-section p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .info-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .info-card h3 {
+            color: #2c5282;
+            margin-bottom: 1rem;
+        }
+        .tips-list {
+            list-style: none;
+            padding: 0;
+        }
+        .tips-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        .tips-list li:before {
+            content: "✓";
+            color: #2c5282;
+            position: absolute;
+            left: 0;
+        }
+        .management-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        @media (max-width: 768px) {
+            .management-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .breed-types {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .breed-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .breed-name {
+            font-weight: 600;
+            color: #2c5282;
+            margin-bottom: 0.5rem;
+        }
+        .breed-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="article-header">
+        <h1>Poultry Farming Guide</h1>
+        <p>Complete guide to successful poultry management</p>
+    </div>
+
+    <main class="article-content">
+        <div class="article-meta">
+            <span><i class="fas fa-calendar"></i> Last Updated: March 14, 2024</span>
+            <span class="mx-3">|</span>
+            <span><i class="fas fa-clock"></i> 12 min read</span>
+        </div>
+
+        <div class="article-section">
+            <h2>Getting Started with Poultry Farming</h2>
+            <p>Poultry farming involves raising domesticated birds such as chickens, ducks, turkeys, and geese for meat, eggs, or both. Success in poultry farming requires proper planning, management, and attention to detail.</p>
+            
+            <div class="management-grid">
+                <div class="info-card">
+                    <h3>Basic Requirements</h3>
+                    <ul class="tips-list">
+                        <li>Suitable housing</li>
+                        <li>Quality feed supply</li>
+                        <li>Clean water system</li>
+                        <li>Proper ventilation</li>
+                        <li>Healthcare facilities</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>Business Planning</h3>
+                    <ul class="tips-list">
+                        <li>Market research</li>
+                        <li>Financial planning</li>
+                        <li>Scale of operation</li>
+                        <li>Legal requirements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Poultry Breeds</h2>
+            <div class="breed-types">
+                <div class="breed-item">
+                    <div class="breed-name">Broilers</div>
+                    <div class="breed-description">Fast-growing birds raised for meat production</div>
+                </div>
+                <div class="breed-item">
+                    <div class="breed-name">Layers</div>
+                    <div class="breed-description">Specialized breeds for egg production</div>
+                </div>
+                <div class="breed-item">
+                    <div class="breed-name">Dual Purpose</div>
+                    <div class="breed-description">Breeds suitable for both meat and egg production</div>
+                </div>
+                <div class="breed-item">
+                    <div class="breed-name">Heritage Breeds</div>
+                    <div class="breed-description">Traditional breeds with unique characteristics</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Housing Management</h2>
+            <div class="info-card">
+                <h3>Housing Systems</h3>
+                <ul class="tips-list">
+                    <li>Deep litter system</li>
+                    <li>Cage system</li>
+                    <li>Free-range system</li>
+                    <li>Semi-intensive system</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Essential Features</h3>
+                <ul class="tips-list">
+                    <li>Proper ventilation</li>
+                    <li>Temperature control</li>
+                    <li>Lighting system</li>
+                    <li>Nesting boxes</li>
+                    <li>Roosting areas</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Nutrition Management</h2>
+            <div class="info-card">
+                <h3>Feed Requirements</h3>
+                <ul class="tips-list">
+                    <li>Age-appropriate feed</li>
+                    <li>Protein content</li>
+                    <li>Vitamin supplements</li>
+                    <li>Grit and calcium</li>
+                    <li>Clean water supply</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Feeding Schedule</h3>
+                <ul class="tips-list">
+                    <li>Regular feeding times</li>
+                    <li>Monitor consumption</li>
+                    <li>Feed storage</li>
+                    <li>Waste management</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Health Management</h2>
+            <div class="info-card">
+                <h3>Disease Prevention</h3>
+                <ul class="tips-list">
+                    <li>Vaccination schedule</li>
+                    <li>Biosecurity measures</li>
+                    <li>Regular health checks</li>
+                    <li>Sanitation protocols</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Common Health Issues</h3>
+                <ul class="tips-list">
+                    <li>Respiratory diseases</li>
+                    <li>Parasitic infections</li>
+                    <li>Nutritional deficiencies</li>
+                    <li>Stress-related problems</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Production Management</h2>
+            <div class="info-card">
+                <h3>Record Keeping</h3>
+                <ul class="tips-list">
+                    <li>Daily egg production</li>
+                    <li>Feed consumption</li>
+                    <li>Mortality rates</li>
+                    <li>Health records</li>
+                    <li>Financial records</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Quality Control</h3>
+                <ul class="tips-list">
+                    <li>Egg grading</li>
+                    <li>Meat quality checks</li>
+                    <li>Storage conditions</li>
+                    <li>Hygiene standards</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                    <li><a href="../category-organic.html">Organic Farming</a></li>
+                    <li><a href="../category-equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

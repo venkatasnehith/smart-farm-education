@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composting Basics Guide - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/composting.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .article-header h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .article-meta {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .article-section {
+            margin-bottom: 3rem;
+        }
+        .article-section h2 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .article-section p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .compost-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .compost-card h3 {
+            color: #2c5282;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        .compost-details {
+            margin-top: 1rem;
+        }
+        .compost-details ul {
+            list-style: none;
+            padding: 0;
+        }
+        .compost-details li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        .compost-details li:before {
+            content: "•";
+            color: #2c5282;
+            position: absolute;
+            left: 0;
+        }
+        .info-box {
+            background: #ebf8ff;
+            border-left: 4px solid #4299e1;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .info-box h4 {
+            color: #2b6cb0;
+            margin-bottom: 0.5rem;
+        }
+        .info-box p {
+            color: #4a5568;
+            margin: 0;
+        }
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .ratio-box {
+            background: #f0fff4;
+            border-left: 4px solid #48bb78;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .ratio-box h4 {
+            color: #2f855a;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="article-header">
+        <h1>Composting Basics</h1>
+        <p>Learn the fundamentals of creating nutrient-rich compost for your farm</p>
+    </div>
+
+    <main class="article-content">
+        <div class="article-meta">
+            <span><i class="fas fa-calendar"></i> Last Updated: March 14, 2024</span>
+            <span class="mx-3">|</span>
+            <span><i class="fas fa-clock"></i> 15 min read</span>
+        </div>
+
+        <div class="article-section">
+            <h2>What is Composting?</h2>
+            <p>Composting is the natural process of breaking down organic materials into a rich, dark soil amendment known as compost. This process recycles various organic materials that would otherwise be considered waste.</p>
+            
+            <div class="info-box">
+                <h4>Benefits of Composting</h4>
+                <p>Composting improves soil structure, adds nutrients, enhances water retention, and promotes beneficial microorganisms, leading to healthier plants and better yields.</p>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Compost Materials</h2>
+            <div class="materials-grid">
+                <div class="compost-card">
+                    <h3>Green Materials (Nitrogen-Rich)</h3>
+                    <div class="compost-details">
+                        <ul>
+                            <li>Grass clippings</li>
+                            <li>Fresh plant trimmings</li>
+                            <li>Kitchen scraps</li>
+                            <li>Coffee grounds</li>
+                            <li>Animal manure</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="compost-card">
+                    <h3>Brown Materials (Carbon-Rich)</h3>
+                    <div class="compost-details">
+                        <ul>
+                            <li>Dry leaves</li>
+                            <li>Straw or hay</li>
+                            <li>Wood chips</li>
+                            <li>Paper products</li>
+                            <li>Cardboard</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="compost-card">
+                    <h3>Materials to Avoid</h3>
+                    <div class="compost-details">
+                        <ul>
+                            <li>Meat and dairy</li>
+                            <li>Oils and fats</li>
+                            <li>Diseased plants</li>
+                            <li>Chemically treated materials</li>
+                            <li>Non-biodegradables</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Building Your Compost Pile</h2>
+            
+            <div class="ratio-box">
+                <h4>The Perfect Ratio</h4>
+                <p>Aim for a ratio of 3:1 brown to green materials for optimal decomposition. This provides the right balance of carbon to nitrogen.</p>
+            </div>
+
+            <div class="compost-card">
+                <h3>Layer Structure</h3>
+                <div class="compost-details">
+                    <p>Create alternating layers for effective decomposition:</p>
+                    <ul>
+                        <li>Bottom: Coarse browns for drainage</li>
+                        <li>Middle: Alternating greens and browns</li>
+                        <li>Top: Brown layer to reduce odors</li>
+                        <li>Add water between layers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="compost-card">
+                <h3>Size and Location</h3>
+                <div class="compost-details">
+                    <ul>
+                        <li>Minimum size: 3x3x3 feet</li>
+                        <li>Partial sun to shade</li>
+                        <li>Good drainage</li>
+                        <li>Easy access to water</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Maintaining Your Compost</h2>
+            <div class="compost-card">
+                <h3>Moisture Management</h3>
+                <div class="compost-details">
+                    <ul>
+                        <li>Keep as moist as a wrung-out sponge</li>
+                        <li>Water during dry periods</li>
+                        <li>Cover during heavy rain</li>
+                        <li>Check moisture weekly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="compost-card">
+                <h3>Aeration</h3>
+                <div class="compost-details">
+                    <ul>
+                        <li>Turn pile every 1-2 weeks</li>
+                        <li>Mix materials thoroughly</li>
+                        <li>Ensure oxygen circulation</li>
+                        <li>Monitor temperature</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Troubleshooting</h2>
+            <div class="compost-card">
+                <h3>Common Problems</h3>
+                <div class="compost-details">
+                    <ul>
+                        <li>Bad odors: Add more browns</li>
+                        <li>Slow decomposition: Add greens</li>
+                        <li>Too wet: Add dry materials</li>
+                        <li>Too dry: Add water</li>
+                        <li>Pests: Cover food scraps</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Using Your Compost</h2>
+            <div class="info-box">
+                <h4>When is it Ready?</h4>
+                <p>Finished compost should be dark, crumbly, and smell earthy. This typically takes 2-6 months depending on conditions and maintenance.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                    <li><a href="../category-organic.html">Organic Farming</a></li>
+                    <li><a href="../category-equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

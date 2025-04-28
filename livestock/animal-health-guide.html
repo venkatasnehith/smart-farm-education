@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Health Guide - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .article-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/animal-health.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .article-header h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .article-meta {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .article-section {
+            margin-bottom: 3rem;
+        }
+        .article-section h2 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        .article-section p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .info-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .info-card h3 {
+            color: #2c5282;
+            margin-bottom: 1rem;
+        }
+        .tips-list {
+            list-style: none;
+            padding: 0;
+        }
+        .tips-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        .tips-list li:before {
+            content: "✓";
+            color: #2c5282;
+            position: absolute;
+            left: 0;
+        }
+        .health-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        @media (max-width: 768px) {
+            .health-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .health-indicators {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .indicator-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        .indicator-name {
+            font-weight: 600;
+            color: #2c5282;
+            margin-bottom: 0.5rem;
+        }
+        .indicator-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="article-header">
+        <h1>Animal Health Management</h1>
+        <p>Essential practices for maintaining livestock health</p>
+    </div>
+
+    <main class="article-content">
+        <div class="article-meta">
+            <span><i class="fas fa-calendar"></i> Last Updated: March 14, 2024</span>
+            <span class="mx-3">|</span>
+            <span><i class="fas fa-clock"></i> 15 min read</span>
+        </div>
+
+        <div class="article-section">
+            <h2>Fundamentals of Animal Health</h2>
+            <p>Maintaining good animal health is crucial for successful livestock farming. It involves preventive care, regular monitoring, and prompt treatment of health issues when they arise.</p>
+            
+            <div class="health-grid">
+                <div class="info-card">
+                    <h3>Key Health Indicators</h3>
+                    <ul class="tips-list">
+                        <li>Physical appearance</li>
+                        <li>Behavior patterns</li>
+                        <li>Feed consumption</li>
+                        <li>Water intake</li>
+                        <li>Body temperature</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>Daily Health Checks</h3>
+                    <ul class="tips-list">
+                        <li>Monitor eating habits</li>
+                        <li>Check for injuries</li>
+                        <li>Observe movement</li>
+                        <li>Note unusual behavior</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Preventive Healthcare</h2>
+            <div class="health-indicators">
+                <div class="indicator-item">
+                    <div class="indicator-name">Vaccination Programs</div>
+                    <div class="indicator-description">Regular vaccination schedules to prevent common diseases</div>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-name">Parasite Control</div>
+                    <div class="indicator-description">Internal and external parasite management strategies</div>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-name">Biosecurity</div>
+                    <div class="indicator-description">Measures to prevent disease introduction and spread</div>
+                </div>
+                <div class="indicator-item">
+                    <div class="indicator-name">Nutrition Management</div>
+                    <div class="indicator-description">Proper feeding for optimal health and immunity</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Health Monitoring</h2>
+            <div class="info-card">
+                <h3>Regular Health Checks</h3>
+                <ul class="tips-list">
+                    <li>Body condition scoring</li>
+                    <li>Temperature monitoring</li>
+                    <li>Respiratory rate checks</li>
+                    <li>Mucous membrane examination</li>
+                    <li>Fecal consistency monitoring</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Record Keeping</h3>
+                <ul class="tips-list">
+                    <li>Treatment records</li>
+                    <li>Vaccination history</li>
+                    <li>Health incidents</li>
+                    <li>Medication inventory</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Common Health Issues</h2>
+            <div class="info-card">
+                <h3>Physical Conditions</h3>
+                <ul class="tips-list">
+                    <li>Lameness</li>
+                    <li>Injuries</li>
+                    <li>Digestive problems</li>
+                    <li>Respiratory issues</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Disease Recognition</h3>
+                <ul class="tips-list">
+                    <li>Early warning signs</li>
+                    <li>Behavioral changes</li>
+                    <li>Physical symptoms</li>
+                    <li>When to call a vet</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <h2>Emergency Care</h2>
+            <div class="info-card">
+                <h3>Emergency Kit Contents</h3>
+                <ul class="tips-list">
+                    <li>Basic medications</li>
+                    <li>Bandaging materials</li>
+                    <li>Thermometer</li>
+                    <li>Disinfectants</li>
+                    <li>Emergency contacts</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Emergency Procedures</h3>
+                <ul class="tips-list">
+                    <li>First aid basics</li>
+                    <li>Isolation protocols</li>
+                    <li>Emergency transport</li>
+                    <li>Documentation</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                    <li><a href="../category-organic.html">Organic Farming</a></li>
+                    <li><a href="../category-equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

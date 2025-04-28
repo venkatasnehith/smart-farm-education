@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Testing - FarmKnowledge</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .content-banner {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/soil.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .content-banner h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .content-section {
+            margin-bottom: 3rem;
+        }
+        .content-section h2 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-light);
+        }
+        .content-section p {
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        .content-section ul, .content-section ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        .content-section li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+        .content-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .soil-test-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        .soil-test-table th, .soil-test-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .soil-test-table th {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+        }
+        .soil-test-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            color: var(--primary-dark);
+            transform: translateX(-5px);
+        }
+        .related-content {
+            background: #f5f5f5;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+        }
+        .related-content h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+        }
+        .related-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .related-link {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .related-link:hover {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+        .step-box {
+            background-color: #f9f9f9;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        .step-box h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+        .nutrient-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background-color: #f9f9f9;
+        }
+        .nutrient-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--primary-light);
+            padding-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.jpeg" alt="FarmKnowledge Logo" id="logo">
+            <h1 id="site-title">FarmKnowledge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search.html">Search</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-banner">
+        <h1>Soil Testing</h1>
+        <p>Understanding your soil's composition for optimal farming</p>
+    </div>
+
+    <div class="content-container">
+        <a href="../category-soil.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Soil Management
+        </a>
+
+        <article>
+            <section class="content-section">
+                <h2>Why Soil Testing is Important</h2>
+                <p>Soil testing is a vital practice for successful farming and gardening. It provides crucial information about your soil's composition, nutrient levels, pH, and other properties that directly affect plant growth and crop yields. Regular soil testing helps farmers make informed decisions about soil amendments, fertilization, and crop selection.</p>
+                <p>Without proper soil testing, farmers may apply too much or too little fertilizer, waste resources, harm the environment, or fail to address specific soil issues that limit plant growth. Soil testing takes the guesswork out of soil management and allows for precise, targeted improvements.</p>
+                <img src="../images/soil-testing.jpg" alt="Soil Testing Process" class="content-image">
+                <p>A comprehensive soil testing program should be the foundation of any soil management plan. By understanding your soil's exact needs, you can optimize inputs, save money, reduce environmental impact, and increase crop productivity.</p>
+            </section>
+
+            <section class="content-section">
+                <h2>Benefits of Regular Soil Testing</h2>
+                <ul>
+                    <li><strong>Optimize Fertilizer Use</strong> - Apply only the nutrients your soil actually needs, saving money and preventing over-application.</li>
+                    <li><strong>Increase Crop Yields</strong> - Identify and address nutrient deficiencies that may be limiting your crop productivity.</li>
+                    <li><strong>Improve Soil Health</strong> - Monitor soil organic matter, microbial activity, and overall soil quality over time.</li>
+                    <li><strong>Environmental Protection</strong> - Reduce nutrient runoff and leaching by applying only necessary amounts of fertilizers.</li>
+                    <li><strong>Problem Diagnosis</strong> - Identify potential issues like salinity, toxicity, or imbalanced nutrient ratios before they harm plants.</li>
+                    <li><strong>Track Progress</strong> - Monitor changes in soil health and nutrient levels in response to management practices.</li>
+                    <li><strong>Crop Selection</strong> - Choose crops that are well-suited to your soil's characteristics.</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>What Soil Tests Measure</h2>
+                
+                <div class="nutrient-card">
+                    <h3>Basic Soil Properties</h3>
+                    <ul>
+                        <li><strong>pH</strong> - Measures soil acidity or alkalinity on a scale of 0-14. Most crops grow best in soil with a pH between 6.0 and 7.5.</li>
+                        <li><strong>Texture</strong> - The proportion of sand, silt, and clay particles, which affects water retention, drainage, and nutrient holding capacity.</li>
+                        <li><strong>Organic Matter</strong> - The amount of decomposed plant and animal material in soil, which impacts soil structure, water retention, and nutrient cycling.</li>
+                        <li><strong>Cation Exchange Capacity (CEC)</strong> - Measures the soil's ability to hold and exchange nutrients, particularly positively charged ions.</li>
+                    </ul>
+                </div>
+                
+                <div class="nutrient-card">
+                    <h3>Macronutrients</h3>
+                    <ul>
+                        <li><strong>Nitrogen (N)</strong> - Essential for leaf and stem growth, protein formation, and chlorophyll production.</li>
+                        <li><strong>Phosphorus (P)</strong> - Critical for root development, flowering, fruiting, and energy transfer within plants.</li>
+                        <li><strong>Potassium (K)</strong> - Important for overall plant health, disease resistance, and water regulation.</li>
+                        <li><strong>Calcium (Ca)</strong> - Necessary for cell wall structure, new growth, and soil pH regulation.</li>
+                        <li><strong>Magnesium (Mg)</strong> - A core component of chlorophyll and essential for photosynthesis.</li>
+                        <li><strong>Sulfur (S)</strong> - Required for protein synthesis and enzyme production.</li>
+                    </ul>
+                </div>
+                
+                <div class="nutrient-card">
+                    <h3>Micronutrients</h3>
+                    <ul>
+                        <li><strong>Iron (Fe)</strong> - Essential for chlorophyll synthesis and enzyme functions.</li>
+                        <li><strong>Manganese (Mn)</strong> - Involved in photosynthesis and nitrogen metabolism.</li>
+                        <li><strong>Zinc (Zn)</strong> - Important for enzyme activity and hormone production.</li>
+                        <li><strong>Copper (Cu)</strong> - Required for enzyme activation and chlorophyll production.</li>
+                        <li><strong>Boron (B)</strong> - Necessary for cell wall formation and reproductive growth.</li>
+                        <li><strong>Molybdenum (Mo)</strong> - Essential for nitrogen fixation and nitrate reduction.</li>
+                    </ul>
+                </div>
+                
+                <div class="nutrient-card">
+                    <h3>Other Parameters</h3>
+                    <ul>
+                        <li><strong>Salinity/EC</strong> - Measures soluble salts that can harm plants if too high.</li>
+                        <li><strong>Sodium Adsorption Ratio (SAR)</strong> - Indicates potential sodium-related soil structure problems.</li>
+                        <li><strong>Heavy Metals</strong> - Tests for potentially toxic elements like lead, arsenic, or cadmium.</li>
+                        <li><strong>Soil Biology</strong> - Advanced tests can assess microbial populations and activity.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>How to Collect Soil Samples</h2>
+                <p>Proper soil sampling is critical for accurate test results. Follow these steps to collect representative soil samples:</p>
+                
+                <div class="step-box">
+                    <h3>Step 1: Plan Your Sampling Strategy</h3>
+                    <p>Divide your land into sampling zones based on:</p>
+                    <ul>
+                        <li>Different crop or management areas</li>
+                        <li>Variations in soil type, color, or texture</li>
+                        <li>Topography (hills, valleys, slopes)</li>
+                        <li>Areas with different drainage patterns</li>
+                        <li>Historically different management zones</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>Step 2: Gather Your Equipment</h3>
+                    <ul>
+                        <li>Clean soil probe, auger, or spade</li>
+                        <li>Clean plastic bucket (avoid metal containers)</li>
+                        <li>Clean plastic bags or soil sample boxes</li>
+                        <li>Permanent marker and labels</li>
+                        <li>Field map to record sampling locations</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>Step 3: Take Multiple Subsamples</h3>
+                    <p>For each sampling zone:</p>
+                    <ul>
+                        <li>Collect 15-20 subsamples in a random zigzag pattern across the area</li>
+                        <li>Remove surface debris before sampling</li>
+                        <li>For row crops, take samples from both in-row and between-row positions</li>
+                        <li>Sample to the appropriate depth (usually 0-8 inches for most field crops)</li>
+                        <li>Avoid sampling in unusual areas (near fence rows, roads, or manure/compost piles)</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>Step 4: Mix and Prepare the Sample</h3>
+                    <ul>
+                        <li>Thoroughly mix all subsamples from a zone in the clean bucket</li>
+                        <li>Remove stones, roots, and other debris</li>
+                        <li>Air-dry the sample if recommended by your testing lab</li>
+                        <li>Place about 2 cups of the mixed soil in a labeled sample bag or box</li>
+                    </ul>
+                </div>
+                
+                <div class="step-box">
+                    <h3>Step 5: Submit Your Samples</h3>
+                    <ul>
+                        <li>Complete the sample information form with details about the field, cropping history, and planned crops</li>
+                        <li>Indicate which tests you want performed</li>
+                        <li>Deliver or mail samples to the lab promptly</li>
+                        <li>Consider the timing - fall or early spring is often ideal for planning the next growing season</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Interpreting Soil Test Results</h2>
+                <p>Soil test reports can be complex. Here's how to make sense of the information:</p>
+                
+                <h3>Understanding Test Values</h3>
+                <ul>
+                    <li><strong>Actual Values</strong> - The measured amounts of nutrients, usually in parts per million (ppm) or pounds per acre.</li>
+                    <li><strong>Relative Levels</strong> - Ratings like "Low," "Medium," "High," or "Excessive" that indicate sufficiency for plant growth.</li>
+                    <li><strong>Optimal Ranges</strong> - The ideal range for each nutrient based on your crop needs.</li>
+                </ul>
+                
+                <h3>Common Soil pH Ranges and Their Effects</h3>
+                <table class="soil-test-table">
+                    <thead>
+                        <tr>
+                            <th>pH Range</th>
+                            <th>Classification</th>
+                            <th>Effects</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Below 5.5</td>
+                            <td>Strongly acidic</td>
+                            <td>Limited availability of P, Ca, Mg; potential Al and Mn toxicity</td>
+                        </tr>
+                        <tr>
+                            <td>5.5 - 6.5</td>
+                            <td>Moderately acidic</td>
+                            <td>Preferred range for many crops; good nutrient availability</td>
+                        </tr>
+                        <tr>
+                            <td>6.6 - 7.3</td>
+                            <td>Neutral</td>
+                            <td>Optimal for many crops; maximum nutrient availability</td>
+                        </tr>
+                        <tr>
+                            <td>7.4 - 8.0</td>
+                            <td>Moderately alkaline</td>
+                            <td>Reduced availability of P, Fe, Mn, Zn, Cu, and B</td>
+                        </tr>
+                        <tr>
+                            <td>Above 8.0</td>
+                            <td>Strongly alkaline</td>
+                            <td>Severe micronutrient deficiencies; possible sodium issues</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Working with Recommendations</h3>
+                <p>Soil test reports typically include recommendations for:</p>
+                <ul>
+                    <li>Lime or sulfur applications to adjust pH</li>
+                    <li>Fertilizer types and application rates</li>
+                    <li>Organic matter additions</li>
+                    <li>Special treatments for specific issues</li>
+                </ul>
+                
+                <p>Always consider these recommendations in context with your specific farming practices, budget, environmental considerations, and crop requirements.</p>
+            </section>
+
+            <section class="content-section">
+                <h2>Soil Testing Frequency</h2>
+                <p>How often should you test your soil? Consider these guidelines:</p>
+                
+                <ul>
+                    <li><strong>Basic Testing</strong> - Test major fields every 2-3 years for pH, macronutrients, and organic matter.</li>
+                    <li><strong>Micronutrient Testing</strong> - Every 3-5 years unless deficiency symptoms appear.</li>
+                    <li><strong>Problem Areas</strong> - Test annually until issues are resolved.</li>
+                    <li><strong>New Land</strong> - Test before the first planting to establish baseline conditions.</li>
+                    <li><strong>After Major Changes</strong> - Test after significant management changes or amendments.</li>
+                </ul>
+                
+                <p>Remember that soil testing is most valuable when done consistently over time, allowing you to track changes and the effectiveness of your management practices.</p>
+            </section>
+
+            <div class="related-content">
+                <h3>Related Content</h3>
+                <div class="related-links">
+                    <a href="soil-fertility.html" class="related-link">
+                        <i class="fas fa-leaf"></i>
+                        Soil Fertility Management
+                    </a>
+                    <a href="soil-types.html" class="related-link">
+                        <i class="fas fa-mountain"></i>
+                        Understanding Soil Types
+                    </a>
+                    <a href="../crops/crop-rotation.html" class="related-link">
+                        <i class="fas fa-sync-alt"></i>
+                        Crop Rotation
+                    </a>
+                    <a href="../organic/composting.html" class="related-link">
+                        <i class="fas fa-recycle"></i>
+                        Composting Techniques
+                    </a>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../images/logo.jpeg" alt="FarmKnowledge Logo">
+                <h3>FarmKnowledge</h3>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-categories">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="../category-crops.html">Crops</a></li>
+                    <li><a href="../category-soil.html">Soil</a></li>
+                    <li><a href="../category-irrigation.html">Irrigation</a></li>
+                    <li><a href="../category-livestock.html">Livestock</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 FarmKnowledge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 
