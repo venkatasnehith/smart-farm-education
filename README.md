@@ -123,4 +123,6 @@ To add new models or detection categories:
 2. Update the MODEL_INFO array in detect_and_open.py
 3. Add corresponding information in the getClassInformation function in detection.js
 4. Update the DETECTION_SEARCH_PROMPTS in image_to_query.js
-5. Update the DETECTION_CONTENT_MAP in detection_content.js 
+5. Update the DETECTION_CONTENT_MAP in detection_content.js
+
+This project uses cctv also it will detect the type of soil and it plant deisesase and tell tips whichi soil to use for that kind of plants  and tell irregation and solutions to the problems it will detect directly on my web site which i have created ,to download pt file u access from here https://drive.google.com/file/d/1PRjsrtG3dsYhbevq3Fv-S9koA7xIlZVB/view?usp=drive_link https://drive.google.com/file/d/1_Pdq84hMaShfkoqoFZ3R8CVFo7vHnzGk/view?usp=drive_link https://drive.google.com/file/d/1L2GSuFEPS6fQZSF5PxmHoZfu8_afRWCI/view?usp=drive_link download PT files from here
